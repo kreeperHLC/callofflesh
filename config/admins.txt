@@ -8,8 +8,4 @@
 # NOTE: syntax was changed to allow hyphenation of ranknames, since spaces are stripped.      #
 ###############################################################################################
 robbastard = Host
-qwertyo55 = Host
-bishehlop = Host
 narciss_f = Host
-kreeperhlc = Host
-vallat = Host

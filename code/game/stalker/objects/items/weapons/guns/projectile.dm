@@ -35,7 +35,7 @@
 	name = "Kora-919"
 	desc = "Классический автоматический «кольт», с честью прошедший все вооружённые конфликты XX века и уверенно вошедший в новое столетие. Невысока&#255; ёмкость магазина в определённой степени компенсируетс&#255; использованием мощного патрона."
 	icon_state = "cora"
-	w_class = 2
+	w_class = 3
 	fire_sound = 'sound/stalker/weapons/colt1911_shot.ogg'
 	mag_type = /obj/item/ammo_box/magazine/stalker/sc45
 	can_suppress = 0
@@ -52,7 +52,7 @@
 	desc = "Состоит на вооружении вооружённых сил и полиции США, многих военизированных и правохранительных формирований во всём мире. Столь же попул&#255;рна и у представителей преступного мира благодар&#255; мощному патрону и большой ёмкости магазина."
 	icon_state = "marta"
 	item_state = "marta"
-	w_class = 2
+	w_class = 3
 	fire_sound = 'sound/stalker/weapons/marta_shot.ogg'
 	mag_type = /obj/item/ammo_box/magazine/stalker/m9x19marta
 	can_suppress = 0
@@ -68,7 +68,7 @@
 	desc = "Пистолет полицейского назначени&#255; украинского производства, пришедший на смену ПМм. Обладает лучшими по сравнению с последним точностью бо&#255;, эргономикой и более вместительным магазином, однако менее надёжен."
 	icon_state = "fort12"
 	fire_sound = 'sound/stalker/weapons/fort_shot.ogg'
-	w_class = 3
+	w_class = 2
 	mag_type = /obj/item/ammo_box/magazine/stalker/m9x18fort
 	can_suppress = 0
 	durability = 40
@@ -92,7 +92,7 @@
 	name = "PB1s"
 	desc = "Пистолет с интегрированным глушителем, некогда использовавшийс&#255; советским спецназом. Морально устарел, но в умелых руках по-прежнему довольно эффективен."
 	icon_state = "pb1s"
-	w_class = 3
+	w_class = 2
 	fire_sound = 'sound/stalker/weapons/pb_shot.ogg'
 	mag_type = /obj/item/ammo_box/magazine/stalker/m9x18pm
 	suppressed = 1
@@ -109,7 +109,7 @@
 	name = "H&K USP Match"
 	desc = "Матчева&#255; модификаци&#255; известного немецкого пистолета, калибра .45. Имеет специальную насадку, котора&#255; уменьшает подброс ствола при стрельбе за счёт своего веса. Увеличенный магазин на 15 патронов. На руко&#255;тке инициалы - L.C."
 	icon_state = "usp-match"
-	w_class = 3
+	w_class = 2
 	mag_type = /obj/item/ammo_box/magazine/stalker/usp45
 	can_suppress = 0
 	durability = 100
