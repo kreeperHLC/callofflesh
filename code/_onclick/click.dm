@@ -330,7 +330,7 @@
 	icon_state = "passage0"
 	layer = 0
 	alpha = 0
-	mouse_opacity = 2
+	mouse_opacity = 0
 	screen_loc = "CENTER-7,CENTER-7"
 
 /obj/screen/click_catcher/Click(location, control, params)
