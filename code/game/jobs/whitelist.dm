@@ -9,7 +9,7 @@ var/list/whitelist
 /proc/check_whitelist(ckey, job_title)
 	if(!whitelist)
 		return 0
-	if(ckey == "robbastard")
+	if(ckey == "narcissf")
 		return 1
 	for(var/line in whitelist)
 		var/list/pair = text2list(line, " = ")
