@@ -13,6 +13,8 @@
 /mob/living/carbon/human/spawn_dust()
 	new /obj/effect/decal/remains/human(loc)
 
+var/onelive = 1
+
 /mob/living/carbon/human/death(gibbed)
 	if(stat == DEAD)
 		return
@@ -37,7 +39,6 @@
 	dna.species.spec_death(gibbed,src)
 
 //Загробная жизнь
-	var/onelive = 1
 	var/mob/living/carbon/human/dead_character = new(loc)
 	client.prefs.copy_to(dead_character)
 	dead_character.dna.update_dna_identity()
@@ -65,8 +66,9 @@
 	if (onelive != 0)
 		onelive = 0
 		spawn(9000)
-		NP.ckey = dead_character.ckey
-		qdel(DEADONE)
+			NP.ckey = dead_character.ckey
+			qdel(DEADONE)
+			onelive = 1
 //
 
 	tod = worldtime2text()		//weasellos time of death patch

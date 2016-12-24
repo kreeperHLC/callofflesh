@@ -14,7 +14,7 @@
 	name = "Anomaly"
 	var/damage_amount = 0 				//Сколько дамажит
 	var/damage_type = DMG_TYPE_ENERGY	//Тип дамага
-	var/activated_itcon_state = null 	//Спрайт при активации
+	var/activated_icon_state = null 	//Спрайт при активации
 	var/cooldown = 5 					//Кулдаун в секундах
 	var/incooldown = 0
 	var/list/trapped = new/list()
@@ -39,21 +39,36 @@
 
 /obj/anomaly/Crossed(atom/A)
 	..()
-	if(!incooldown)
+	if(!incooldown && !istype(A,/obj/item/projectile))
 		icon_state = active_icon_state
 		spawn(10)
 			icon_state = inactive_icon_state
-	if (istype(A,/mob/living))
-		var/mob/living/carbon/M = A
-		src.trapped.Add(M)
-		if(src.trapped.len == 1 && !incooldown)
-			src.Think()
-	else
-		if(!incooldown)
+
+		if (istype(A,/mob/living))
+			playsound(src.loc, src.sound, 50, 1, channel = 0)
+			var/mob/living/carbon/M = A
+			src.trapped.Add(M)
+			if(src.trapped.len == 1 && !incooldown)
+				src.Think()
+
+		else if(istype(A,/obj/item))
 			playsound(src.loc, src.sound, 50, 1, channel = 0)
 			src.incooldown = 1
-			spawn(src.cooldown * 10)
-				src.incooldown = 0
+			var/obj/item/Q = A
+			src.trapped.Add(Q)
+			if(src.trapped.len == 1 && Q.unacidable == 0)
+				spawn(10)
+					var/turf/T = get_turf(Q)
+					var/obj/effect/decal/cleanable/molten_item/I = new (T)
+					I.pixel_x = rand(-16,16)
+					I.pixel_y = rand(-16,16)
+					I.desc = "Looks like this was \an [Q] some time ago."
+					if(istype(A,/obj/item/weapon/storage))
+						var/obj/item/weapon/storage/S = Q
+						S.do_quick_empty()
+					qdel(Q)
+			src.incooldown = 0
+			trapped.Remove(Q)
 
 /obj/anomaly/Uncrossed(atom/A)
 	..()
@@ -154,22 +169,81 @@
 	inactive_icon_state = "puh2"
 	active_icon_state = "puh2"
 
-/obj/anomaly/rad 	//Не наносит урона
-	name = "anomaly"
-	cooldown = 1
-	damage_type = DMG_TYPE_RADIATION
-
 /obj/anomaly/fake
 	name = "anomaly"
 
-/obj/anomaly/rad/rad_low
+/obj/rad 	//Не наносит урона
+	name = "Anomaly"
+	var/damage_amount = 0 				//Сколько дамажит
+	var/damage_type = DMG_TYPE_RADIATION	//Тип дамага
+	var/activated_icon_state = null 	//Спрайт при активации
+	var/cooldown = 1 					//Кулдаун в секундах
+	var/incooldown = 0
+	var/list/trapped = new/list()
+	var/idle_luminosity = 0
+	var/activated_luminosity = 0
+	var/sound = null
+	var/delay = 0
+	var/attachedSpawner = null
+	var/active_icon_state = null
+	var/inactive_icon_state = null;
+	icon = 'icons/stalker/anomalies.dmi'
+	unacidable = 1
+	anchored = 1
+	pass_flags = PASSTABLE | PASSGRILLE
+
+/obj/rad/rad_low
 	damage_amount = 1
 	sound = 'sound/stalker/pda/geiger_1.ogg'
 
-/obj/anomaly/rad/rad_medium
+/obj/rad/rad_medium
 	damage_amount = 5
 	sound = 'sound/stalker/pda/geiger_4.ogg'
 
-/obj/anomaly/rad/rad_high
+/obj/rad/rad_high
 	damage_amount = 20
 	sound = 'sound/stalker/pda/geiger_6.ogg'
+
+
+/obj/rad/Crossed(atom/A)
+	..()
+	if(!incooldown && istype(A,/mob/living))
+		var/mob/living/carbon/M = A
+		M << sound(src.sound, repeat = 0, wait = 0, volume = 50, channel = 3)
+		src.trapped.Add(M)
+		if(src.trapped.len == 1 && !incooldown)
+			src.ThinkRad()
+
+/obj/rad/Uncrossed(atom/A)
+	..()
+	if (istype(A,/mob/living/carbon))
+		var/mob/living/carbon/M = A
+		src.trapped.Remove(M)
+
+/obj/rad/proc/ThinkRad()
+	//playsound(src.loc, src.sound, 50, 1, channel = 0)
+	spawn(src.delay * 10)
+		for(var/atom/A in src.trapped)
+			if(istype(A, /mob/living))
+				var/mob/living/carbon/human/M = A
+				switch(src.damage_type)
+					if(DMG_TYPE_ENERGY)
+						M.apply_damage(src.damage_amount, BURN, null, M.getarmor(null, "electro"))
+					if(DMG_TYPE_BIO)
+						M.apply_damage(src.damage_amount, BURN, null, M.getarmor(null, "bio"))
+					if(DMG_TYPE_RADIATION)
+						M.rad_act(src.damage_amount)
+					if(DMG_TYPE_GIB)
+						M.gib()
+						trapped.Remove(M)
+					if(DMG_TYPE_IGNITION)
+						A.fire_act()
+	src.set_light(src.activated_luminosity)
+	spawn(10)
+		src.set_light(src.idle_luminosity)
+	src.incooldown = 1
+	spawn(src.cooldown * 10)
+		src.incooldown = 0
+		if(src.trapped.len > 0)
+			src.ThinkRad()
+	return

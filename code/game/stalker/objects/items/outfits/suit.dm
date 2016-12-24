@@ -11,6 +11,7 @@
 	allowed = list(/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/restraints/handcuffs,/obj/item/device/flashlight/seclite,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/lighter,/obj/item/weapon/stalker/knife)
 	hooded = 1
 	action_button_name = "Toggle Hood"
+	unacidable = 1
 	hoodtype = /obj/item/clothing/head/winterhood/stalker/kozhanka
 
 /obj/item/clothing/suit/olympic
@@ -261,6 +262,7 @@
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	flags_inv = HIDEJUMPSUIT
+	unacidable = 1
 	armor = list(melee = 20, bullet = 20, laser = 10,burn = 10, bomb = 10, bio = 0, rad = 0, electro = 0)
 	allowed = list(/obj/item/weapon/gun/projectile,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/weapon/restraints/handcuffs,/obj/item/device/flashlight/seclite,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/lighter,/obj/item/weapon/stalker/knife)
 

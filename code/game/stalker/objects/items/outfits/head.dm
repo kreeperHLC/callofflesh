@@ -10,6 +10,7 @@
 	armor = list(melee = 30, bullet = 30, laser = 0,energy = 30, bomb = 0, bio = 30, rad = 20)
 	brightness_on = 2 //luminosity when on
 	flags_cover = HEADCOVERSEYES
+	unacidable = 1
 
 /obj/item/clothing/head/gopcap
 	name = "Ñap"
@@ -33,6 +34,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	armor = list(melee = 35, bullet = 30, laser = 0,energy = 35, bomb = 0, bio = 30, rad = 25)
 	flags_cover = HEADCOVERSEYES
+	unacidable = 1
 
 /obj/item/clothing/head/skathelmet
 	name = "SKAT M9"
@@ -42,6 +44,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	armor = list(melee = 35, bullet = 30, laser = 0,energy = 35, bomb = 0, bio = 30, rad = 25)
 	flags_cover = HEADCOVERSEYES
+	unacidable = 1
 
 /obj/item/clothing/head/beret_ua
 	name = "military beret"
@@ -60,6 +63,7 @@
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
 	flags = BLOCKHAIR
 	burn_state = FIRE_PROOF
+	unacidable = 1
 
 /obj/item/clothing/head/gasmask_mercenary
 	name = "Mercenary gas mask"
@@ -72,3 +76,4 @@
 	flags = BLOCKHAIR
 	armor = list(melee = 25, bullet = 0, laser = 30,burn = 30, bomb = 0, bio = 20, rad = 30, electro = 30)
 	burn_state = FIRE_PROOF
+	unacidable = 1
