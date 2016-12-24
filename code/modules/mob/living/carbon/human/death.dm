@@ -34,7 +34,9 @@ var/onelive = 1
 		emote("deathgasp") //let the world KNOW WE ARE DEAD
 
 		update_canmove()
-		if(client) blind.layer = 0
+		if(client)
+			blind.layer = 0
+			blind.alpha = 0
 
 	dna.species.spec_death(gibbed,src)
 
