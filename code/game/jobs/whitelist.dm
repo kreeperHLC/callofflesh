@@ -1,4 +1,4 @@
-#define WHITELISTFILE "config/whitelist.txt"
+#define WHITELISTFILE "config/alienwhitelist.txt"
 
 var/list/whitelist
 
