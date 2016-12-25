@@ -8,7 +8,7 @@ Assistant
 	faction = "Station"
 	total_positions = -1
 	spawn_positions = -1
-	supervisors = ""
+	supervisors = "Pahan"
 	selection_color = "#000000"
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
@@ -16,15 +16,30 @@ Assistant
 	limit_per_player = 3
 	outfit = /datum/outfit/job/bandit
 
-/datum/job/bandit/pahan
+/datum/job/bandit_pahan
 	title = "Pahan"
+	faction = "Station"
+	total_positions = -1
+	spawn_positions = -1
+	supervisors = ""
+	selection_color = "#000000"
+	access = list()			//See /datum/job/assistant/get_access()
+	minimal_access = list()	//See /datum/job/assistant/get_access(
 	whitelist_only = 1
-	outfit = /datum/outfit/job/bandit/pahan
+	outfit = /datum/outfit/job/bandit_pahan
 
-/datum/job/bandit/barman
+/datum/job/bandit_barman
 	title = "Bandit Barman"
+	faction = "Station"
+	total_positions = -1
+	spawn_positions = -1
+	supervisors = ""
+	selection_color = "#000000"
+	access = list()			//See /datum/job/assistant/get_access()
+	minimal_access = list()
 	whitelist_only = 1
-	outfit = /datum/outfit/job/bandit/barman
+	limit_per_player = 3
+	outfit = /datum/outfit/job/bandit_barman
 
 /datum/outfit/job/bandit
 	name = "Bandit"
@@ -44,10 +59,10 @@ Assistant
 	l_pocket = pick(/obj/item/weapon/reagent_containers/food/snacks/stalker/kolbasa,/obj/item/stack/medical/bruise_pack/bint,/obj/item/weapon/reagent_containers/food/snacks/stalker/baton)
 	r_pocket = /obj/item/weapon/gun/projectile/automatic/pistol/pm
 
-/datum/outfit/job/bandit/pahan
+/datum/outfit/job/bandit_pahan
 	name = "Pahan"
 
-/datum/outfit/job/bandit/pahan/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/bandit_pahan/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = /obj/item/clothing/under/color/switer/dark
 	suit = /obj/item/clothing/suit/hooded/kozhanka/banditka/coat
@@ -62,10 +77,10 @@ Assistant
 	l_pocket = /obj/item/weapon/reagent_containers/food/snacks/stalker/konserva/shproti
 	r_pocket = /obj/item/weapon/gun/projectile/automatic/pistol/pm
 
-/datum/outfit/job/bandit/barman
+/datum/outfit/job/bandit_barman
 	name = "Bandit Barman"
 
-/datum/outfit/job/bandit/barman/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/bandit_barman/pre_equip(mob/living/carbon/human/H)
 	uniform = /obj/item/clothing/under/color/switer/dark
 	suit = /obj/item/clothing/suit/hooded/kozhanka/banditka
 	ears = null

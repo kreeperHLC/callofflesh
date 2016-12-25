@@ -15,11 +15,11 @@ Assistant
 	whitelist_only = 1
 	outfit = /datum/outfit/job/army
 
-/datum/job/army/eliteagro
+/datum/job/army_eliteagro
 	title = "EliteAgro"
 	outfit = /datum/outfit/job/army/eliteagro
 
-/datum/outfit/job/army/eliteagro
+/datum/outfit/job/army_eliteagro
 	name = "EliteAgro"
 
 /datum/outfit/job/army/eliteagro/pre_equip(mob/living/carbon/human/H)
@@ -58,14 +58,14 @@ Assistant
 	l_pocket = pick(/obj/item/weapon/reagent_containers/food/snacks/stalker/kolbasa,/obj/item/weapon/reagent_containers/food/snacks/stalker/baton)
 
 
-/datum/job/army/petrovich
+/datum/job/army_petrovich
 	title = "Petrovich"
-	outfit = /datum/outfit/job/army/petrovich
+	outfit = /datum/outfit/job/army_petrovich
 
-/datum/outfit/job/army/petrovich
+/datum/outfit/job/army_petrovich
 	name = "Petrovich"
 
-/datum/outfit/job/army/petrovich/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/army_petrovich/pre_equip(mob/living/carbon/human/H)
 	..()
 	backpack_contents = list(/obj/item/ammo_box/stalker/b545ap = 1,
 							/obj/item/ammo_box/magazine/stalker/m545 = 2,

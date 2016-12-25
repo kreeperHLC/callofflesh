@@ -64,5 +64,5 @@
 	name = "snork mutant"
 	lootcount = 1
 	radius = 1
-	cooldown = 6000
+	cooldown = 9000
 	loot = list(/mob/living/simple_animal/hostile/mutant/snork = 100)

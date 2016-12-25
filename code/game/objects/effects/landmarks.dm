@@ -272,20 +272,23 @@
 /obj/effect/landmark/latejoin/bandit
 	name = "JoinLateBandit"
 
-/obj/effect/landmark/latejoin/bandit/barman
+/obj/effect/landmark/latejoin/bandit_barman
 	name = "JoinLateBanditBarman"
 
-/obj/effect/landmark/latejoin/bandit/pahan
+/obj/effect/landmark/latejoin/bandit_pahan
 	name = "JoinLateBanditPahan"
 
 /obj/effect/landmark/latejoin/army
 	name = "JoinLateArmy"
 
-/obj/effect/landmark/latejoin/army/eliteagro
+/obj/effect/landmark/latejoin/army_eliteagro
 	name = "JoinLateEliteAgro"
 
-/obj/effect/landmark/latejoin/army/petrovich
+/obj/effect/landmark/latejoin/army_petrovich
 	name = "JoinLatePetrovich"
 
 /obj/effect/landmark/latejoin/sidorovich
 	name = "JoinLateSidorovich"
+
+/obj/effect/landmark/latejoin/oldstalker
+	name = "JoinLateOldStalker"
