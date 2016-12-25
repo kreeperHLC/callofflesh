@@ -36,6 +36,7 @@ Assistant
 	ears = null
 	id = /obj/item/weapon/storage/wallet/stalker
 	belt = /obj/item/weapon/stalker/knife
+	gloves = pick(/obj/item/clothing/gloves/fingerless, /obj/item/clothing/gloves/color/black)
 	shoes = /obj/item/clothing/shoes/jackboots/warm
 	mask = /obj/item/clothing/mask/balaclava
 	back = /obj/item/weapon/storage/backpack/stalker
@@ -53,6 +54,7 @@ Assistant
 	ears = null
 	id = /obj/item/weapon/storage/wallet/stalker
 	belt = /obj/item/weapon/gun/projectile/automatic/mp5
+	gloves = pick(/obj/item/clothing/gloves/fingerless, /obj/item/clothing/gloves/color/black)
 	shoes = /obj/item/clothing/shoes/jackboots/warm
 	mask = /obj/item/clothing/mask/balaclava
 	back = /obj/item/weapon/storage/backpack/stalker
@@ -69,6 +71,7 @@ Assistant
 	ears = null
 	id = /obj/item/weapon/storage/wallet/stalker
 	belt = /obj/item/weapon/gun/projectile/revolver/bm16/sawnoff
+	gloves = pick(/obj/item/clothing/gloves/fingerless, /obj/item/clothing/gloves/color/black)
 	shoes = /obj/item/clothing/shoes/jackboots/warm
 	head = /obj/item/clothing/head/bowler
 	back = /obj/item/weapon/storage/backpack/stalker
@@ -83,6 +86,7 @@ Assistant
 	ears = null
 	id = /obj/item/weapon/storage/wallet/stalker
 	belt = /obj/item/weapon/stalker/knife
+	gloves = pick(/obj/item/clothing/gloves/fingerless, /obj/item/clothing/gloves/color/black)
 	shoes = /obj/item/clothing/shoes/jackboots/warm
 	mask = /obj/item/clothing/mask/balaclava
 	back = /obj/item/weapon/storage/backpack/stalker

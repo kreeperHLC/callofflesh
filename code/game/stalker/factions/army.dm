@@ -26,6 +26,7 @@ Assistant
 	..()
 	head = /obj/item/clothing/head/beret_ua
 	suit = /obj/item/clothing/suit/army/skat
+	gloves = pick(/obj/item/clothing/gloves/fingerless, /obj/item/clothing/gloves/color/black)
 	back2 = pick(/obj/item/weapon/gun/projectile/automatic/ak74, /obj/item/weapon/gun/projectile/automatic/ak74/green)
 	backpack_contents = list(/obj/item/ammo_box/stalker/b545ap = 1,
 							/obj/item/ammo_box/magazine/stalker/m545 = 2,
@@ -44,6 +45,7 @@ Assistant
 	suit = pick(/obj/item/clothing/suit/army, /obj/item/clothing/suit/army/army2)
 	ears = null
 	belt = /obj/item/weapon/stalker/knife
+	gloves = pick(/obj/item/clothing/gloves/fingerless, /obj/item/clothing/gloves/color/black)
 	id = /obj/item/weapon/storage/wallet/stalker
 	back = /obj/item/weapon/storage/backpack/stalker
 	back2 = pick(/obj/item/weapon/gun/projectile/automatic/aksu74, /obj/item/weapon/gun/projectile/automatic/aksu74/green)
@@ -77,6 +79,7 @@ Assistant
 	head = null
 	ears = null
 	belt = /obj/item/weapon/stalker/knife
+	gloves = pick(/obj/item/clothing/gloves/fingerless, /obj/item/clothing/gloves/color/black)
 	id = /obj/item/weapon/storage/wallet/stalker
 	back = /obj/item/weapon/storage/backpack/stalker
 	back2 = /obj/item/weapon/gun/projectile/automatic/aksu74
@@ -102,6 +105,7 @@ Assistant
 	suit = /obj/item/clothing/suit/army/army2
 	ears = null
 	belt = /obj/item/weapon/gun/projectile/automatic/pistol/fort12
+	gloves = pick(/obj/item/clothing/gloves/fingerless, /obj/item/clothing/gloves/color/black)
 	id = /obj/item/weapon/storage/wallet/stalker
 	back = /obj/item/weapon/storage/backpack/stalker
 	back2 = /obj/item/weapon/gun/projectile/automatic/ak74/m
