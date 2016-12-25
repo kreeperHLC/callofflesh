@@ -60,7 +60,7 @@ Assistant
 
 /datum/job/petrovich
 	title = "Petrovich"
-	outfit = /datum/outfit/job/_petrovich
+	outfit = /datum/outfit/job/petrovich
 	faction = "Station"
 	total_positions = -1
 	spawn_positions = -1
