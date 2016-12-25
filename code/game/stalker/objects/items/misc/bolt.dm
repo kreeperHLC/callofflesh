@@ -38,11 +38,11 @@
 	add_fingerprint(M)
 
 
-/obj/item/weapon/paper_bin/attack_paw(mob/user)
+/obj/item/weapon/stalker/bolts/attack_paw(mob/user)
 	return attack_hand(user)
 
 
-/obj/item/weapon/paper_bin/attack_hand(mob/user)
+/obj/item/weapon/stalker/bolts/attack_hand(mob/user)
 	if(user.lying)
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
