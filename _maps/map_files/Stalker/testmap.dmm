@@ -125,80 +125,81 @@
 "cu" = (/obj/machinery/light{tag = "icon-tube1 (EAST)"; icon_state = "tube1"; dir = 4},/obj/effect/decal/warning_stripes{tag = "icon-border4"; icon_state = "border4"},/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
 "cv" = (/obj/structure/stalker/lift,/obj/structure/window{dir = 4; icon_state = "clear"; maxhealth = 1e+006; name = ""; tag = "icon-window (EAST)"},/obj/structure/window{dir = 8; icon_state = "clear"; maxhealth = 1e+006; name = ""; tag = "icon-window (WEST)"},/obj/effect/step_trigger/teleporter{teleport_x = 41; teleport_y = 2; teleport_z = 1},/turf/simulated/wall/stalker/bricks{density = 0},/area/stalker/blowout/outdoor)
 "cw" = (/obj/machinery/light{tag = "icon-tube1 (WEST)"; icon_state = "tube1"; dir = 8},/obj/effect/decal/warning_stripes{tag = "icon-border8"; icon_state = "border8"},/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
-"cx" = (/obj/effect/spawner/lootdrop/stalker/mobspawner/snork_spawner,/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
-"cy" = (/obj/machinery/door/window/westleft,/obj/effect/step_trigger/teleporter{teleport_x = 39; teleport_y = 19; teleport_z = 1},/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
-"cz" = (/obj/structure/stalker/porog/porog2{tag = "icon-porog2 (EAST)"; icon_state = "porog2"; dir = 4},/obj/effect/step_trigger/teleporter{teleport_x = 37; teleport_y = 19; teleport_z = 1},/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
-"cA" = (/obj/structure/stalker/porog/porog2{tag = "icon-porog2 (WEST)"; icon_state = "porog2"; dir = 8},/obj/effect/step_trigger/teleporter{teleport_x = 45; teleport_y = 19; teleport_z = 1},/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
-"cB" = (/obj/machinery/door/window/eastright,/obj/effect/step_trigger/teleporter{teleport_x = 43; teleport_y = 19; teleport_z = 1},/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
-"cC" = (/obj/effect/spawner/lootdrop/stalker/mobspawner/kaban_spawner{radius = 0},/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
-"cD" = (/obj/structure/stalker/oscillograph,/obj/structure/table/stalker/wood,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
-"cE" = (/obj/structure/stalker/radio{dir = 8; icon_state = "radio"; pixel_x = 6; pixel_y = 6; tag = "icon-radio (WEST)"},/obj/structure/table/stalker/wood,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
-"cF" = (/obj/structure/stalker/musor_yashik/green,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
-"cG" = (/obj/structure/stalker/musor_yashik/green/full,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
-"cH" = (/obj/structure/stalker/musor_yashik/red,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
-"cI" = (/obj/structure/stalker/musor_yashik/red/full,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
-"cJ" = (/obj/structure/stalker/radiation/stop,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
-"cK" = (/obj/structure/stalker/blocks/vanish/block2,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"cL" = (/obj/machinery/light{tag = "icon-tube1 (NORTH)"; icon_state = "tube1"; dir = 1},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"cM" = (/turf/stalker/floor/tropa,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"cN" = (/obj/structure/stalker/blocks/vanish/block2,/obj/machinery/light{tag = "icon-tube1 (NORTH)"; icon_state = "tube1"; dir = 1},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"cO" = (/obj/structure/stalker/pen,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"cP" = (/obj/structure/stalker/blocks/block2,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"cQ" = (/obj/structure/stalker/blocks/vanish/block1,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"cR" = (/obj/structure/stalker/yashik/yaskik_a/big,/obj/machinery/light{tag = "icon-tube1 (EAST)"; icon_state = "tube1"; dir = 4},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"cS" = (/obj/structure/stalker/blocks/vanish/block1,/obj/machinery/light{tag = "icon-tube1 (WEST)"; icon_state = "tube1"; dir = 8},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"cT" = (/obj/effect/decal/warning_stripes{tag = "icon-border2"; icon_state = "border2"},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"cU" = (/obj/structure/stalker/yashik,/obj/machinery/light{tag = "icon-tube1 (NORTH)"; icon_state = "tube1"; dir = 1},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"cV" = (/obj/effect/spawner/lootdrop/stalker/mobspawner/dog_spawner{radius = 0},/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
-"cW" = (/obj/machinery/door/window/westleft,/obj/effect/step_trigger/teleporter{teleport_x = 39; teleport_y = 11; teleport_z = 1},/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
-"cX" = (/obj/structure/stalker/porog/porog2{tag = "icon-porog2 (EAST)"; icon_state = "porog2"; dir = 4},/obj/effect/step_trigger/teleporter{teleport_x = 37; teleport_y = 11; teleport_z = 1},/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
-"cY" = (/obj/structure/stalker/porog/porog2{tag = "icon-porog2 (WEST)"; icon_state = "porog2"; dir = 8},/obj/effect/step_trigger/teleporter{teleport_x = 45; teleport_y = 11; teleport_z = 1},/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
-"cZ" = (/obj/machinery/door/window/eastright,/obj/effect/step_trigger/teleporter{teleport_x = 43; teleport_y = 11; teleport_z = 1},/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
-"da" = (/obj/effect/spawner/lootdrop/stalker/mobspawner/flesh_spawner{radius = 0},/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
-"db" = (/obj/structure/stalker/blocks/block1,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"dc" = (/obj/effect/landmark/start,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"dd" = (/obj/structure/stalker/blocks/vanish/block2,/obj/structure/stalker/trees/topol,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"de" = (/obj/structure/stalker/yashik,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"df" = (/obj/machinery/light,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"dg" = (/obj/structure/stalker/yashik/yaskik_a,/obj/machinery/light{tag = "icon-tube1 (EAST)"; icon_state = "tube1"; dir = 4},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"dh" = (/obj/structure/stalker/yashik/yaskik_a/big,/obj/machinery/light{tag = "icon-tube1 (WEST)"; icon_state = "tube1"; dir = 8},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"di" = (/obj/structure/table/stalker/wood,/obj/machinery/light{tag = "icon-tube1 (WEST)"; icon_state = "tube1"; dir = 8},/obj/item/clothing/suit/hooded/kozhanka,/obj/item/clothing/suit/hooded/kozhanka,/obj/item/clothing/suit/hooded/kozhanka,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dj" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/white,/obj/item/clothing/suit/hooded/kozhanka/white,/obj/item/clothing/suit/hooded/kozhanka/white,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dk" = (/obj/structure/table/stalker/wood,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dl" = (/obj/structure/table/stalker/wood,/obj/machinery/stalker/sidormat{pixel_y = 8},/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dm" = (/obj/structure/table/stalker/wood,/obj/item/stack/spacecash/c5000{amount = 50},/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dn" = (/obj/effect/landmark/latejoin/bandit,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"do" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/unique,/obj/item/clothing/suit/hooded/kozhanka/unique,/obj/item/clothing/suit/hooded/kozhanka/unique,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dp" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/army/skat,/obj/item/clothing/suit/army/skat,/obj/item/clothing/suit/army/skat,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dq" = (/obj/structure/table/stalker/wood,/obj/item/stack/spacecash/c5000{amount = 50},/obj/machinery/light{tag = "icon-tube1 (EAST)"; icon_state = "tube1"; dir = 4},/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dr" = (/obj/structure/stalker/water/bochka,/obj/structure/stalker/trees/topol,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"ds" = (/obj/structure/table/stalker/wood,/obj/machinery/light{tag = "icon-tube1 (NORTH)"; icon_state = "tube1"; dir = 1},/obj/item/clothing/suit/hooded/kozhanka/white/monolith,/obj/item/clothing/suit/hooded/kozhanka/white/monolith,/obj/item/clothing/suit/hooded/kozhanka/white/monolith,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dt" = (/turf/stalker/floor/wood/oldvert,/area/stalker)
-"du" = (/obj/machinery/light{tag = "icon-tube1 (NORTH)"; icon_state = "tube1"; dir = 1},/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dv" = (/obj/structure/table/stalker/wood,/obj/machinery/light{tag = "icon-tube1 (NORTH)"; icon_state = "tube1"; dir = 1},/obj/item/clothing/head/spherahelmet,/obj/item/clothing/head/spherahelmet,/obj/item/clothing/head/spherahelmet,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dw" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/banditka/coat,/obj/item/clothing/suit/hooded/kozhanka/banditka/coat,/obj/item/clothing/suit/hooded/kozhanka/banditka/coat,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dx" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/army,/obj/item/clothing/suit/army,/obj/item/clothing/suit/army,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dy" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/army/army2,/obj/item/clothing/suit/army/army2,/obj/item/clothing/suit/army/army2,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dz" = (/obj/item/clothing/head/skathelmet,/obj/item/clothing/head/skathelmet,/obj/item/clothing/head/skathelmet,/obj/structure/table/stalker/wood,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dA" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/army/berill,/obj/item/clothing/suit/army/berill,/obj/item/clothing/suit/army/berill,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dB" = (/obj/structure/table/stalker/wood,/obj/item/clothing/mask/gas/stalker,/obj/item/clothing/mask/gas/stalker,/obj/item/clothing/mask/gas/stalker,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dC" = (/obj/structure/table/stalker/wood,/obj/machinery/light,/obj/item/clothing/suit/hooded/kozhanka/banditka/coat/brown,/obj/item/clothing/suit/hooded/kozhanka/banditka/coat/brown,/obj/item/clothing/suit/hooded/kozhanka/banditka/coat/brown,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dD" = (/obj/machinery/light,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dE" = (/obj/structure/table/stalker/wood,/obj/machinery/light,/obj/item/clothing/mask/gas/stalker/mercenary,/obj/item/clothing/mask/gas/stalker/mercenary,/obj/item/clothing/mask/gas/stalker/mercenary,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dF" = (/obj/structure/stalker/blocks/vanish/block2,/obj/machinery/light,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
-"dG" = (/obj/structure/table/stalker/wood,/obj/machinery/light{tag = "icon-tube1 (WEST)"; icon_state = "tube1"; dir = 8},/obj/item/clothing/suit/hooded/kozhanka/banditka/unique,/obj/item/clothing/suit/hooded/kozhanka/banditka/unique,/obj/item/clothing/suit/hooded/kozhanka/banditka/unique,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dH" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/banditka,/obj/item/clothing/suit/hooded/kozhanka/banditka,/obj/item/clothing/suit/hooded/kozhanka/banditka,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dI" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/combez_bandit,/obj/item/clothing/suit/hooded/kozhanka/combez_bandit,/obj/item/clothing/suit/hooded/kozhanka/combez_bandit,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dJ" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/monolit,/obj/item/clothing/suit/hooded/kozhanka/monolit,/obj/item/clothing/suit/hooded/kozhanka/monolit,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dK" = (/obj/structure/table/stalker/wood,/obj/machinery/light{tag = "icon-tube1 (EAST)"; icon_state = "tube1"; dir = 4},/obj/item/clothing/suit/hooded/kozhanka/mercenary,/obj/item/clothing/suit/hooded/kozhanka/mercenary,/obj/item/clothing/suit/hooded/kozhanka/mercenary,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dL" = (/obj/machinery/light{tag = "icon-tube1 (WEST)"; icon_state = "tube1"; dir = 8},/obj/effect/landmark/latejoin,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dM" = (/obj/effect/landmark/latejoin,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dN" = (/obj/machinery/light{tag = "icon-tube1 (EAST)"; icon_state = "tube1"; dir = 4},/obj/effect/landmark/latejoin,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dO" = (/obj/structure/table/stalker/wood,/obj/machinery/light{tag = "icon-tube1 (WEST)"; icon_state = "tube1"; dir = 8},/obj/item/clothing/suit/hooded/kozhanka/kombez,/obj/item/clothing/suit/hooded/kozhanka/kombez,/obj/item/clothing/suit/hooded/kozhanka/kombez,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dP" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/strazh,/obj/item/clothing/suit/hooded/kozhanka/strazh,/obj/item/clothing/suit/hooded/kozhanka/strazh,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dQ" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/strazh/atelerd,/obj/item/clothing/suit/hooded/kozhanka/strazh/atelerd,/obj/item/clothing/suit/hooded/kozhanka/strazh/atelerd,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dR" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/psz9d,/obj/item/clothing/suit/hooded/kozhanka/psz9d,/obj/item/clothing/suit/hooded/kozhanka/psz9d,/turf/stalker/floor/wood/oldvert,/area/stalker)
-"dS" = (/obj/structure/table/stalker/wood,/obj/machinery/light{tag = "icon-tube1 (EAST)"; icon_state = "tube1"; dir = 4},/obj/item/clothing/suit/hooded/kozhanka/exoskelet,/obj/item/clothing/suit/hooded/kozhanka/exoskelet,/obj/item/clothing/suit/hooded/kozhanka/exoskelet,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"cx" = (/obj/effect/landmark/latejoin/army/petrovich,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
+"cy" = (/obj/effect/spawner/lootdrop/stalker/mobspawner/snork_spawner,/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
+"cz" = (/obj/machinery/door/window/westleft,/obj/effect/step_trigger/teleporter{teleport_x = 39; teleport_y = 19; teleport_z = 1},/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
+"cA" = (/obj/structure/stalker/porog/porog2{tag = "icon-porog2 (EAST)"; icon_state = "porog2"; dir = 4},/obj/effect/step_trigger/teleporter{teleport_x = 37; teleport_y = 19; teleport_z = 1},/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
+"cB" = (/obj/structure/stalker/porog/porog2{tag = "icon-porog2 (WEST)"; icon_state = "porog2"; dir = 8},/obj/effect/step_trigger/teleporter{teleport_x = 45; teleport_y = 19; teleport_z = 1},/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
+"cC" = (/obj/machinery/door/window/eastright,/obj/effect/step_trigger/teleporter{teleport_x = 43; teleport_y = 19; teleport_z = 1},/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
+"cD" = (/obj/effect/spawner/lootdrop/stalker/mobspawner/kaban_spawner{radius = 0},/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
+"cE" = (/obj/structure/stalker/oscillograph,/obj/structure/table/stalker/wood,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
+"cF" = (/obj/structure/stalker/radio{dir = 8; icon_state = "radio"; pixel_x = 6; pixel_y = 6; tag = "icon-radio (WEST)"},/obj/structure/table/stalker/wood,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
+"cG" = (/obj/structure/stalker/musor_yashik/green,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
+"cH" = (/obj/structure/stalker/musor_yashik/green/full,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
+"cI" = (/obj/structure/stalker/musor_yashik/red,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
+"cJ" = (/obj/structure/stalker/musor_yashik/red/full,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
+"cK" = (/obj/structure/stalker/radiation/stop,/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
+"cL" = (/obj/structure/stalker/blocks/vanish/block2,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"cM" = (/obj/machinery/light{tag = "icon-tube1 (NORTH)"; icon_state = "tube1"; dir = 1},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"cN" = (/turf/stalker/floor/tropa,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"cO" = (/obj/structure/stalker/blocks/vanish/block2,/obj/machinery/light{tag = "icon-tube1 (NORTH)"; icon_state = "tube1"; dir = 1},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"cP" = (/obj/structure/stalker/pen,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"cQ" = (/obj/structure/stalker/blocks/block2,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"cR" = (/obj/structure/stalker/blocks/vanish/block1,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"cS" = (/obj/structure/stalker/yashik/yaskik_a/big,/obj/machinery/light{tag = "icon-tube1 (EAST)"; icon_state = "tube1"; dir = 4},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"cT" = (/obj/structure/stalker/blocks/vanish/block1,/obj/machinery/light{tag = "icon-tube1 (WEST)"; icon_state = "tube1"; dir = 8},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"cU" = (/obj/effect/decal/warning_stripes{tag = "icon-border2"; icon_state = "border2"},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"cV" = (/obj/structure/stalker/yashik,/obj/machinery/light{tag = "icon-tube1 (NORTH)"; icon_state = "tube1"; dir = 1},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"cW" = (/obj/effect/spawner/lootdrop/stalker/mobspawner/dog_spawner{radius = 0},/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
+"cX" = (/obj/machinery/door/window/westleft,/obj/effect/step_trigger/teleporter{teleport_x = 39; teleport_y = 11; teleport_z = 1},/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
+"cY" = (/obj/structure/stalker/porog/porog2{tag = "icon-porog2 (EAST)"; icon_state = "porog2"; dir = 4},/obj/effect/step_trigger/teleporter{teleport_x = 37; teleport_y = 11; teleport_z = 1},/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
+"cZ" = (/obj/structure/stalker/porog/porog2{tag = "icon-porog2 (WEST)"; icon_state = "porog2"; dir = 8},/obj/effect/step_trigger/teleporter{teleport_x = 45; teleport_y = 11; teleport_z = 1},/turf/stalker/floor/wood/oldvert,/area/stalker/blowout/outdoor)
+"da" = (/obj/machinery/door/window/eastright,/obj/effect/step_trigger/teleporter{teleport_x = 43; teleport_y = 11; teleport_z = 1},/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
+"db" = (/obj/effect/spawner/lootdrop/stalker/mobspawner/flesh_spawner{radius = 0},/turf/stalker/floor/gryaz/gryaz2,/area/stalker/blowout/outdoor)
+"dc" = (/obj/structure/stalker/blocks/block1,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"dd" = (/obj/effect/landmark/start,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"de" = (/obj/structure/stalker/blocks/vanish/block2,/obj/structure/stalker/trees/topol,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"df" = (/obj/structure/stalker/yashik,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"dg" = (/obj/machinery/light,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"dh" = (/obj/structure/stalker/yashik/yaskik_a,/obj/machinery/light{tag = "icon-tube1 (EAST)"; icon_state = "tube1"; dir = 4},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"di" = (/obj/structure/stalker/yashik/yaskik_a/big,/obj/machinery/light{tag = "icon-tube1 (WEST)"; icon_state = "tube1"; dir = 8},/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"dj" = (/obj/structure/table/stalker/wood,/obj/machinery/light{tag = "icon-tube1 (WEST)"; icon_state = "tube1"; dir = 8},/obj/item/clothing/suit/hooded/kozhanka,/obj/item/clothing/suit/hooded/kozhanka,/obj/item/clothing/suit/hooded/kozhanka,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dk" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/white,/obj/item/clothing/suit/hooded/kozhanka/white,/obj/item/clothing/suit/hooded/kozhanka/white,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dl" = (/obj/structure/table/stalker/wood,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dm" = (/obj/structure/table/stalker/wood,/obj/machinery/stalker/sidormat{pixel_y = 8},/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dn" = (/obj/structure/table/stalker/wood,/obj/item/stack/spacecash/c5000{amount = 50},/turf/stalker/floor/wood/oldvert,/area/stalker)
+"do" = (/obj/effect/landmark/latejoin/bandit,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dp" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/unique,/obj/item/clothing/suit/hooded/kozhanka/unique,/obj/item/clothing/suit/hooded/kozhanka/unique,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dq" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/army/skat,/obj/item/clothing/suit/army/skat,/obj/item/clothing/suit/army/skat,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dr" = (/obj/structure/table/stalker/wood,/obj/item/stack/spacecash/c5000{amount = 50},/obj/machinery/light{tag = "icon-tube1 (EAST)"; icon_state = "tube1"; dir = 4},/turf/stalker/floor/wood/oldvert,/area/stalker)
+"ds" = (/obj/structure/stalker/water/bochka,/obj/structure/stalker/trees/topol,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"dt" = (/obj/structure/table/stalker/wood,/obj/machinery/light{tag = "icon-tube1 (NORTH)"; icon_state = "tube1"; dir = 1},/obj/item/clothing/suit/hooded/kozhanka/white/monolith,/obj/item/clothing/suit/hooded/kozhanka/white/monolith,/obj/item/clothing/suit/hooded/kozhanka/white/monolith,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"du" = (/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dv" = (/obj/machinery/light{tag = "icon-tube1 (NORTH)"; icon_state = "tube1"; dir = 1},/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dw" = (/obj/structure/table/stalker/wood,/obj/machinery/light{tag = "icon-tube1 (NORTH)"; icon_state = "tube1"; dir = 1},/obj/item/clothing/head/spherahelmet,/obj/item/clothing/head/spherahelmet,/obj/item/clothing/head/spherahelmet,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dx" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/banditka/coat,/obj/item/clothing/suit/hooded/kozhanka/banditka/coat,/obj/item/clothing/suit/hooded/kozhanka/banditka/coat,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dy" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/army,/obj/item/clothing/suit/army,/obj/item/clothing/suit/army,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dz" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/army/army2,/obj/item/clothing/suit/army/army2,/obj/item/clothing/suit/army/army2,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dA" = (/obj/item/clothing/head/skathelmet,/obj/item/clothing/head/skathelmet,/obj/item/clothing/head/skathelmet,/obj/structure/table/stalker/wood,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dB" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/army/berill,/obj/item/clothing/suit/army/berill,/obj/item/clothing/suit/army/berill,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dC" = (/obj/structure/table/stalker/wood,/obj/item/clothing/mask/gas/stalker,/obj/item/clothing/mask/gas/stalker,/obj/item/clothing/mask/gas/stalker,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dD" = (/obj/structure/table/stalker/wood,/obj/machinery/light,/obj/item/clothing/suit/hooded/kozhanka/banditka/coat/brown,/obj/item/clothing/suit/hooded/kozhanka/banditka/coat/brown,/obj/item/clothing/suit/hooded/kozhanka/banditka/coat/brown,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dE" = (/obj/machinery/light,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dF" = (/obj/structure/table/stalker/wood,/obj/machinery/light,/obj/item/clothing/mask/gas/stalker/mercenary,/obj/item/clothing/mask/gas/stalker/mercenary,/obj/item/clothing/mask/gas/stalker/mercenary,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dG" = (/obj/structure/stalker/blocks/vanish/block2,/obj/machinery/light,/turf/stalker/floor/digable/grass,/area/stalker/blowout/outdoor)
+"dH" = (/obj/structure/table/stalker/wood,/obj/machinery/light{tag = "icon-tube1 (WEST)"; icon_state = "tube1"; dir = 8},/obj/item/clothing/suit/hooded/kozhanka/banditka/unique,/obj/item/clothing/suit/hooded/kozhanka/banditka/unique,/obj/item/clothing/suit/hooded/kozhanka/banditka/unique,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dI" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/banditka,/obj/item/clothing/suit/hooded/kozhanka/banditka,/obj/item/clothing/suit/hooded/kozhanka/banditka,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dJ" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/combez_bandit,/obj/item/clothing/suit/hooded/kozhanka/combez_bandit,/obj/item/clothing/suit/hooded/kozhanka/combez_bandit,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dK" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/monolit,/obj/item/clothing/suit/hooded/kozhanka/monolit,/obj/item/clothing/suit/hooded/kozhanka/monolit,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dL" = (/obj/structure/table/stalker/wood,/obj/machinery/light{tag = "icon-tube1 (EAST)"; icon_state = "tube1"; dir = 4},/obj/item/clothing/suit/hooded/kozhanka/mercenary,/obj/item/clothing/suit/hooded/kozhanka/mercenary,/obj/item/clothing/suit/hooded/kozhanka/mercenary,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dM" = (/obj/machinery/light{tag = "icon-tube1 (WEST)"; icon_state = "tube1"; dir = 8},/obj/effect/landmark/latejoin,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dN" = (/obj/effect/landmark/latejoin,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dO" = (/obj/machinery/light{tag = "icon-tube1 (EAST)"; icon_state = "tube1"; dir = 4},/obj/effect/landmark/latejoin,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dP" = (/obj/structure/table/stalker/wood,/obj/machinery/light{tag = "icon-tube1 (WEST)"; icon_state = "tube1"; dir = 8},/obj/item/clothing/suit/hooded/kozhanka/kombez,/obj/item/clothing/suit/hooded/kozhanka/kombez,/obj/item/clothing/suit/hooded/kozhanka/kombez,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dQ" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/strazh,/obj/item/clothing/suit/hooded/kozhanka/strazh,/obj/item/clothing/suit/hooded/kozhanka/strazh,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dR" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/strazh/atelerd,/obj/item/clothing/suit/hooded/kozhanka/strazh/atelerd,/obj/item/clothing/suit/hooded/kozhanka/strazh/atelerd,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dS" = (/obj/structure/table/stalker/wood,/obj/item/clothing/suit/hooded/kozhanka/psz9d,/obj/item/clothing/suit/hooded/kozhanka/psz9d,/obj/item/clothing/suit/hooded/kozhanka/psz9d,/turf/stalker/floor/wood/oldvert,/area/stalker)
+"dT" = (/obj/structure/table/stalker/wood,/obj/machinery/light{tag = "icon-tube1 (EAST)"; icon_state = "tube1"; dir = 4},/obj/item/clothing/suit/hooded/kozhanka/exoskelet,/obj/item/clothing/suit/hooded/kozhanka/exoskelet,/obj/item/clothing/suit/hooded/kozhanka/exoskelet,/turf/stalker/floor/wood/oldvert,/area/stalker)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaabababababababababacacacacacacacacacacacacacacacacacacacacacacacacacacacacacac
@@ -227,28 +228,28 @@ aaadadadadadadadadadadabaNaNaNaNaNaNaNaNaEaEaEaNaNaNaNaNaNaNaNacauauauauacacacan
 aaadadadadadadadadadadabababababababaXabaEaEaEabaXababababababacauauauaubGacbHanananbIacbJauauauauac
 aaadadadadadadadadadadabbKbLbMabbNbOababaEaEaEbPababbQbRabbSbTacauauauauacacacanananacacacauauauauac
 aaadadadadadadadadadadacbUbVbWbXbYbZcacbanancccdcecfcgchcicjckacbDauauauaubCanananananaHauauauaubFac
-aaadadadadadadadadadadacclanananananananananancmcmcmanananancnacauauauauaubEcoananancoaRauauauauauac
+aaadadadadadadadadadadacclananaPananananananancmcmcmananbbancnacauauauauaubEcoananancoaRauauauauauac
 aaadadadadadadadadadadacaOanananananananancpanananananananancqacacacacacacacacaOancqacacacacacacacac
 aaadadadadadadadadadadaccrcscscscscsctancucvcwancrcscscscscsctacauauauauaubCamanananamaHauauauauauac
 aaadadadadadadadadadadacanananananananananananananananananananacbDauauauaubEanananananaRauauauaubFac
-aaadadadadadadadadadadacaOananananananananananananananananancqacauauauauacacacanananacacacauauauauac
-aaadadadadadadadadadadacclananananananananananananananananancnaccxauauaucyacczananancAaccBauauaucCac
-aaadadadadadadadadadadaccDcEcFcGcHcIanananananananananananananacauauauauacacacanananacacacauauauauac
-aaadadadadadadadadadadacacacacacacacacacancJanacacacacacacacacacbDauauauaubCanananananaHauauauaubFac
-aaadadadadadadadadadadacbfbfbfbfbfcKbfcLcMbfbfcNbfbfbfbfbfbfbfacauauauauaubEcoananancoaRauauauauauac
-aaadadadadadadadadadadacbfbfbfbfbfbfbfbfcMcObfbfbfbibfbfbfbfbfacacacacacacacacaOancqacacacacacacacac
-aaadadadadadadadadadadacbqbfbfbfbfcMbfbfcMbfbfcPbfbfbfbfbfbfbfacauauauauaubCamanananamaHauauauauauac
-aaadadadadadadadadadadacbfbfbfbfbfcMbfaccMbfbfacbfbfbfbtcQcQbfacbDauauauaubEanananananaRauauauaubFac
-aaadadadadadadadadadadacbfbfbfbfbfbfcRacacbnacaccScQbfbfcTcTbfacauauauauacacacanananacacacauauauauac
-aaadadadadadadadadadadacbfbfbibfbfbfbfaccLbfcUaccTcTbfbfbfbfbfaccVauauaucWaccXananancYaccZauauaudaac
-aaadadadadadadadadadadacbfbfbfbfbfbmbfbfbfbfbfcKbfbfbfbfbfbmbfacauauauauacacacanananacacacauauauauac
-aaadadadadadadadadadadacbfbfdbdbbfbfbfcKbfdcbfddbfbfbfbfbfbfbfacbDauauauaubCanananananaHauauauaubFac
-aaadadadadadadadadadadacbfbfcTcTcPbfbfcKbfbfbfbfbfbfbnbfbfbfbfacauauauauaubEcoananancoaRauauauauauac
-aaadadadadadadadadadadacbtbfbfbfbfbfdeacdfbqdfacbfbfbfbfbfbibfacacacacacacacacaOancqacacacacacacacac
-aaadadadadadadadadadadacbfbfbfbibfbfdgacacbfacacdhbfbfbfbfbfbfacaadidjdkdldmaadndndnaadodpdkdldqaaaa
-aaadadadadadadadadadadacbfbfbfbfbfbfbfacdrbfbfacdbdbbfbfbfcQcQacdsdtdtdtdtdtdudtdtdtdudtdtdtdtdtdvaa
-aaadadadadadadadadadadacbfbfbfbfbfbfbfbfbfbfbfcKcTcTbfbfbfcTcTacdwdtdtdxdydtdtdtdtdtdtdtdzdAdtdtdBaa
-aaadadadadadadadadadadacbfbmbfbfbfbnbfcKbfbfbfbfbfbqbfbfbfbfbfacdCdtdtdtdtdtdDdtdtdtdDdtdtdtdtdtdEaa
-aaadadadadadadadadadadacbfbfbfbfbfbfbfdfbfbfbfdFbfbfbfbfbtbfbfacaadGdHdIdJdKaadLdMdNaadOdPdQdRdSaaaa
+aaadadadadadadadadadadacaOanbaananananananananananananancxancqacauauauauacacacanananacacacauauauauac
+aaadadadadadadadadadadacclananananananananananananananananancnaccyauauauczaccAananancBaccCauauaucDac
+aaadadadadadadadadadadaccEcFcGcHcIcJanananananananananananananacauauauauacacacanananacacacauauauauac
+aaadadadadadadadadadadacacacacacacacacacancKanacacacacacacacacacbDauauauaubCanananananaHauauauaubFac
+aaadadadadadadadadadadacbfbfbfbfbfcLbfcMcNbfbfcObfbfbfbfbfbfbfacauauauauaubEcoananancoaRauauauauauac
+aaadadadadadadadadadadacbfbfbfbfbfbfbfbfcNcPbfbfbfbibfbfbfbfbfacacacacacacacacaOancqacacacacacacacac
+aaadadadadadadadadadadacbqbfbfbfbfcNbfbfcNbfbfcQbfbfbfbfbfbfbfacauauauauaubCamanananamaHauauauauauac
+aaadadadadadadadadadadacbfbfbfbfbfcNbfaccNbfbfacbfbfbfbtcRcRbfacbDauauauaubEanananananaRauauauaubFac
+aaadadadadadadadadadadacbfbfbfbfbfbfcSacacbnacaccTcRbfbfcUcUbfacauauauauacacacanananacacacauauauauac
+aaadadadadadadadadadadacbfbfbibfbfbfbfaccMbfcVaccUcUbfbfbfbfbfaccWauauaucXaccYananancZacdaauauaudbac
+aaadadadadadadadadadadacbfbfbfbfbfbmbfbfbfbfbfcLbfbfbfbfbfbmbfacauauauauacacacanananacacacauauauauac
+aaadadadadadadadadadadacbfbfdcdcbfbfbfcLbfddbfdebfbfbfbfbfbfbfacbDauauauaubCanananananaHauauauaubFac
+aaadadadadadadadadadadacbfbfcUcUcQbfbfcLbfbfbfbfbfbfbnbfbfbfbfacauauauauaubEcoananancoaRauauauauauac
+aaadadadadadadadadadadacbtbfbfbfbfbfdfacdgbqdgacbfbfbfbfbfbibfacacacacacacacacaOancqacacacacacacacac
+aaadadadadadadadadadadacbfbfbfbibfbfdhacacbfacacdibfbfbfbfbfbfacaadjdkdldmdnaadododoaadpdqdldmdraaaa
+aaadadadadadadadadadadacbfbfbfbfbfbfbfacdsbfbfacdcdcbfbfbfcRcRacdtdudududududvdudududvdudududududwaa
+aaadadadadadadadadadadacbfbfbfbfbfbfbfbfbfbfbfcLcUcUbfbfbfcUcUacdxdududydzdudududududududAdBdududCaa
+aaadadadadadadadadadadacbfbmbfbfbfbnbfcLbfbfbfbfbfbqbfbfbfbfbfacdDdudududududEdudududEdudududududFaa
+aaadadadadadadadadadadacbfbfbfbfbfbfbfdgbfbfbfdGbfbfbfbfbtbfbfacaadHdIdJdKdLaadMdNdOaadPdQdRdSdTaaaa
 aaaaaaaaaaaaaaaaaaaaaaacacacacacacacacacacacacacacacacacacacacacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}

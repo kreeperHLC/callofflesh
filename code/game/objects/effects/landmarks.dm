@@ -272,7 +272,7 @@
 /obj/effect/landmark/latejoin/bandit
 	name = "JoinLateBandit"
 
-/obj/effect/landmark/latejoin/bandit/banditbarman
+/obj/effect/landmark/latejoin/bandit/barman
 	name = "JoinLateBanditBarman"
 
 /obj/effect/landmark/latejoin/bandit/pahan
