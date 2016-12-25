@@ -266,6 +266,9 @@
 /obj/effect/landmark/start/depsec/science
 	name = "science_sec"
 
+
+
+
 /obj/effect/landmark/latejoin
 	name = "JoinLate"
 
@@ -273,7 +276,7 @@
 	name = "JoinLateBandit"
 
 /obj/effect/landmark/latejoin/bandit_barman
-	name = "JoinLatebandit_barman"
+	name = "JoinLateBandit Barman"
 
 /obj/effect/landmark/latejoin/bandit_pahan
 	name = "JoinLatePahan"
@@ -291,4 +294,4 @@
 	name = "JoinLateSidorovich"
 
 /obj/effect/landmark/latejoin/oldstalker
-	name = "JoinLateOldStalker"
+	name = "JoinLateOld Stalker"
