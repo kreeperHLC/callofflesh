@@ -65,14 +65,15 @@ var/onelive = 1
 
 	var/mob/DEADONE = dead_character
 	var/mob/new_player/NP = new()
+	if (onelive == 0)
+		qdel(DEADONE)
 	if (onelive != 0)
 		onelive = 0
 		spawn(9000)
 			NP.ckey = dead_character.ckey
 			qdel(DEADONE)
 			onelive = 1
-	if (onelive == 0)
-		qdel(DEADONE)
+
 //
 
 	tod = worldtime2text()		//weasellos time of death patch
