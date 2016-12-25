@@ -71,6 +71,8 @@ var/onelive = 1
 			NP.ckey = dead_character.ckey
 			qdel(DEADONE)
 			onelive = 1
+	if (onelive == 0)
+		qdel(DEADONE)
 //
 
 	tod = worldtime2text()		//weasellos time of death patch
