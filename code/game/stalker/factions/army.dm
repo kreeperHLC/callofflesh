@@ -58,23 +58,23 @@ Assistant
 	l_pocket = pick(/obj/item/weapon/reagent_containers/food/snacks/stalker/kolbasa,/obj/item/weapon/reagent_containers/food/snacks/stalker/baton)
 
 
-/datum/job/army_petrovich
+/datum/job/petrovich
 	title = "Petrovich"
-	outfit = /datum/outfit/job/army_petrovich
+	outfit = /datum/outfit/job/_petrovich
 	faction = "Station"
 	total_positions = -1
 	spawn_positions = -1
-	supervisors = "Army Commander"
+	supervisors = ""
 	selection_color = "#2E8B57"
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
 	whitelist_only = 1
-	outfit = /datum/outfit/job/army
+	outfit = /datum/outfit/job/petrovich
 
-/datum/outfit/job/army_petrovich
+/datum/outfit/job/petrovich
 	name = "Petrovich"
 
-/datum/outfit/job/army_petrovich/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/petrovich/pre_equip(mob/living/carbon/human/H)
 	..()
 	backpack_contents = list(/obj/item/ammo_box/stalker/b545ap = 1,
 							/obj/item/ammo_box/magazine/stalker/m545 = 2,

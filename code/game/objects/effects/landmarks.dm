@@ -273,10 +273,10 @@
 	name = "JoinLateBandit"
 
 /obj/effect/landmark/latejoin/bandit_barman
-	name = "JoinLateBandit Barman"
+	name = "JoinLatebandit_barman"
 
 /obj/effect/landmark/latejoin/bandit_pahan
-	name = "JoinLateBandit Pahan"
+	name = "JoinLatebandit_pahan"
 
 /obj/effect/landmark/latejoin/army
 	name = "JoinLateArmy"
@@ -284,7 +284,7 @@
 /obj/effect/landmark/latejoin/army_eliteagro
 	name = "JoinLateEliteAgro"
 
-/obj/effect/landmark/latejoin/army_petrovich
+/obj/effect/landmark/latejoin/petrovich
 	name = "JoinLatePetrovich"
 
 /obj/effect/landmark/latejoin/sidorovich
