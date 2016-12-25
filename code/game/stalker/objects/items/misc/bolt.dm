@@ -13,7 +13,7 @@
 	w_class = 1
 
 /obj/item/weapon/stalker/bolt/New()
-	spawn(900)
+	spawn(150)
 		qdel(src)
 
 /obj/item/weapon/stalker/bolts/MouseDrop(atom/over_object)

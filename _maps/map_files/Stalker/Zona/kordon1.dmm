@@ -815,7 +815,7 @@
 "pI" = (/obj/machinery/button/door{id = 668; pixel_x = 26; pixel_y = 26},/turf/stalker/floor/wood/oldgor,/area/stalker/kordon/cellar)
 "pJ" = (/obj/machinery/door/poddoor/sidor{id = 668},/turf/stalker/floor/wood/oldgor,/area/stalker/kordon/cellar)
 "pK" = (/obj/machinery/button/door{id = 668; pixel_x = -26; pixel_y = 26},/turf/stalker/floor/wood/oldgor,/area/stalker/kordon/cellar)
-"pL" = (/obj/effect/landmark/latejoin/army/petrovich,/turf/stalker/floor/wood/oldgor,/area/stalker/kordon/cellar)
+"pL" = (/obj/effect/landmark/latejoin/petrovich,/turf/stalker/floor/wood/oldgor,/area/stalker/kordon/cellar)
 "pM" = (/obj/machinery/button/door{id = 667; pixel_x = 24},/obj/structure/filingcabinet/chestdrawer,/turf/stalker/floor/wood/oldgor,/area/stalker/kordon/cellar)
 "pN" = (/obj/effect/landmark/start,/turf/simulated/floor/plating,/area/start)
 "pO" = (/obj/structure/stalker/bochka{pixel_x = 4},/turf/stalker/floor/gryaz,/area/stalker/kordon/tunnel)
