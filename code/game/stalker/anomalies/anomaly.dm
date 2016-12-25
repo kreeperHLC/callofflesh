@@ -67,8 +67,9 @@
 						var/obj/item/weapon/storage/S = Q
 						S.do_quick_empty()
 					qdel(Q)
-			src.incooldown = 0
-			trapped.Remove(Q)
+				spawn(src.delay * 10)
+					src.incooldown = 0
+					trapped.Remove(Q)
 
 /obj/anomaly/Uncrossed(atom/A)
 	..()
