@@ -32,7 +32,7 @@
 
 	outfit = /datum/outfit/job/sidor
 
-/datum/outfit/job/sidor/
+/datum/outfit/job/sidor
 	name = "Sidorovich"
 
 /datum/outfit/job/sidor/pre_equip(mob/living/carbon/human/H)

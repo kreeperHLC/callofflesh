@@ -276,7 +276,7 @@
 	name = "JoinLatebandit_barman"
 
 /obj/effect/landmark/latejoin/bandit_pahan
-	name = "JoinLatebandit_pahan"
+	name = "JoinLatePahan"
 
 /obj/effect/landmark/latejoin/army
 	name = "JoinLateArmy"

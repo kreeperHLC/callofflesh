@@ -75,12 +75,23 @@ Assistant
 	name = "Petrovich"
 
 /datum/outfit/job/petrovich/pre_equip(mob/living/carbon/human/H)
-	..()
+	head = null
+	uniform = pick(/obj/item/clothing/under/color/switer, /obj/item/clothing/under/color/switer/dark)
+	suit = pick(/obj/item/clothing/suit/army, /obj/item/clothing/suit/army/army2)
+	ears = null
+	belt = /obj/item/weapon/stalker/knife
+	gloves = /obj/item/clothing/gloves/fingerless
+	id = /obj/item/weapon/storage/wallet/stalker
+	back = /obj/item/weapon/storage/backpack/stalker
+	back2 = pick(/obj/item/weapon/gun/projectile/automatic/aksu74, /obj/item/weapon/gun/projectile/automatic/aksu74/green)
+	shoes = /obj/item/clothing/shoes/jackboots/warm
 	backpack_contents = list(/obj/item/ammo_box/stalker/b545ap = 1,
 							/obj/item/ammo_box/magazine/stalker/m545 = 2,
 							/obj/item/weapon/storage/firstaid/army = 1,
 							/obj/item/clothing/suit/army/berill = 1,
 							/obj/item/weapon/stalker/bolts = 1)
+	r_pocket = /obj/item/device/radio
+	l_pocket = pick(/obj/item/weapon/reagent_containers/food/snacks/stalker/kolbasa,/obj/item/weapon/reagent_containers/food/snacks/stalker/baton)
 
 /datum/outfit/army  // For select_equipment
 	name = "Army Soldier"
