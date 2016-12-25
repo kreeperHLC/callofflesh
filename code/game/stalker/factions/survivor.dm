@@ -81,7 +81,7 @@ Assistant
 	backpack_contents = list(/obj/item/ammo_box/stalker/b545 = 1, /obj/item/ammo_box/magazine/stalker/m545 = 2, /obj/item/weapon/storage/firstaid/stalker = 1, /obj/item/stack/spacecash/c5000 = 1)
 	back2 = /obj/item/weapon/gun/projectile/automatic/ak74/green
 	back = /obj/item/weapon/storage/backpack/stalker
-	l_pocket = obj/item/weapon/stalker/bolts
+	l_pocket = /obj/item/weapon/stalker/bolts
 	r_pocket = /obj/item/weapon/reagent_containers/food/snacks/stalker/konserva
 
 /datum/outfit/stalkervolk  // For select_equipment
@@ -96,5 +96,5 @@ Assistant
 	backpack_contents = list(/obj/item/ammo_box/stalker/b545 = 1, /obj/item/ammo_box/magazine/stalker/m545 = 2, /obj/item/weapon/storage/firstaid/stalker = 1, /obj/item/stack/spacecash/c5000 = 1)
 	back2 = /obj/item/weapon/gun/projectile/automatic/ak74/green
 	back = /obj/item/weapon/storage/backpack/stalker
-	l_pocket = obj/item/weapon/stalker/bolts
+	l_pocket = /obj/item/weapon/stalker/bolts
 	r_pocket = /obj/item/weapon/reagent_containers/food/snacks/stalker/konserva

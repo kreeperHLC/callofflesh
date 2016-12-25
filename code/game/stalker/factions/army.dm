@@ -70,7 +70,7 @@ Assistant
 	backpack_contents = list(/obj/item/ammo_box/stalker/b545ap = 1,
 							/obj/item/ammo_box/magazine/stalker/m545 = 2,
 							/obj/item/weapon/storage/firstaid/army = 1,
-							/obj/item/clothing/suit/army/berill = 1
+							/obj/item/clothing/suit/army/berill = 1,
 							/obj/item/weapon/stalker/bolts = 1)
 
 /datum/outfit/army  // For select_equipment
