@@ -45,7 +45,7 @@ Assistant
 	ears = null
 	id = /obj/item/weapon/storage/wallet/stalker
 	belt = /obj/item/weapon/stalker/knife
-	gloves = pick(/obj/item/clothing/gloves/fingerless, /obj/item/clothing/gloves/color/black)
+	gloves = /obj/item/clothing/gloves/fingerless
 	shoes = /obj/item/clothing/shoes/jackboots/warm
 	backpack_contents = list(/obj/item/stack/spacecash/c5000 = 1)
 	back = /obj/item/weapon/storage/backpack/stalker
@@ -59,7 +59,7 @@ Assistant
 	ears = null
 	id = /obj/item/weapon/storage/wallet/stalker
 	belt = /obj/item/weapon/stalker/knife
-	gloves = pick(/obj/item/clothing/gloves/fingerless, /obj/item/clothing/gloves/color/black)
+	gloves = /obj/item/clothing/gloves/fingerless
 	shoes = /obj/item/clothing/shoes/jackboots/warm
 	backpack_contents = list(/obj/item/stack/spacecash/c5000 = 1)
 	back = /obj/item/weapon/storage/backpack/stalker
@@ -76,7 +76,7 @@ Assistant
 	ears = null
 	id = /obj/item/weapon/storage/wallet/stalker
 	belt = /obj/item/weapon/stalker/knife
-	gloves = pick(/obj/item/clothing/gloves/fingerless, /obj/item/clothing/gloves/color/black)
+	gloves = /obj/item/clothing/gloves/fingerless
 	shoes = /obj/item/clothing/shoes/jackboots/warm
 	backpack_contents = list(/obj/item/ammo_box/stalker/b545 = 1, /obj/item/ammo_box/magazine/stalker/m545 = 2, /obj/item/weapon/storage/firstaid/stalker = 1, /obj/item/stack/spacecash/c5000 = 1)
 	back2 = /obj/item/weapon/gun/projectile/automatic/ak74/green
@@ -91,7 +91,7 @@ Assistant
 	ears = null
 	id = /obj/item/weapon/storage/wallet/stalker
 	belt = /obj/item/weapon/stalker/knife
-	gloves = pick(/obj/item/clothing/gloves/fingerless, /obj/item/clothing/gloves/color/black)
+	gloves = /obj/item/clothing/gloves/fingerless
 	shoes = /obj/item/clothing/shoes/jackboots/warm
 	backpack_contents = list(/obj/item/ammo_box/stalker/b545 = 1, /obj/item/ammo_box/magazine/stalker/m545 = 2, /obj/item/weapon/storage/firstaid/stalker = 1, /obj/item/stack/spacecash/c5000 = 1)
 	back2 = /obj/item/weapon/gun/projectile/automatic/ak74/green
