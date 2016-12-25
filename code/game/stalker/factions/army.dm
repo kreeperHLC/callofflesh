@@ -61,6 +61,15 @@ Assistant
 /datum/job/army_petrovich
 	title = "Petrovich"
 	outfit = /datum/outfit/job/army_petrovich
+	faction = "Station"
+	total_positions = -1
+	spawn_positions = -1
+	supervisors = "Army Commander"
+	selection_color = "#2E8B57"
+	access = list()			//See /datum/job/assistant/get_access()
+	minimal_access = list()	//See /datum/job/assistant/get_access()
+	whitelist_only = 1
+	outfit = /datum/outfit/job/army
 
 /datum/outfit/job/army_petrovich
 	name = "Petrovich"
