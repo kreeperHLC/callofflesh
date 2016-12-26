@@ -47,15 +47,10 @@
 	return t
 
 /proc/sanitize_russian(var/msg, var/html = 0)
-	var/rep
-	if(html)
-		rep = "&#1103;"
-	else
-		rep = "&#255;"
-	var/index = findtext(msg, "&#255;")
-	while(index)
-		msg = copytext(msg, 1, index) + rep + copytext(msg, index + 1)
-		index = findtext(msg, "&#255;")
+	if (istext(msg))
+		if (html)
+			return replacetext(msg, "ÿ", "&#1103;")
+		return replacetext(msg, "ÿ", "&#255;")
 	return msg
 
 proc/russian_html2text(msg)
@@ -458,7 +453,7 @@ var/list/binary = list("0","1")
 		if(!first)
 			out += rep
 		first = 0
-		out += rhtml_encode(text)
+		out += html_encode(text)
 	return out
 
 /proc/rhtml_decode(var/msg, var/html = 0)
@@ -480,7 +475,7 @@ var/list/binary = list("0","1")
 		if(!first)
 			out += rep
 			first = 0
-		out += rhtml_decode(text)
+		out += html_decode(text)
 	return out
 
 /proc/upperrustext(text as text)
