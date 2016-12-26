@@ -12,7 +12,7 @@
 		return
 
 
-	message = sanitize_russian(trim(rhtml_encode(message)))
+	message = trim(rhtml_encode(message))
 	if(!can_speak(message))
 		return
 
@@ -44,7 +44,7 @@
 		message = Ellipsis(message, 10, 1)
 		whispers = "whispers in their final breath"
 
-	message = sanitize_russian(treat_message(message))
+	message = treat_message(message)
 
 	var/list/listening_dead = list()
 	for(var/mob/M in player_list)
@@ -66,15 +66,15 @@
 		M.show_message(rendered, 2)
 
 	var/spans = list(SPAN_ITALICS)
-	rendered = "<span class='game say'><span class='name'>[GetVoice()]</span>[alt_name] [whispers], <span class='message'>\"[attach_spans(message, spans)]\"</span></span>"
+	rendered = "<span class='game say'><span class='name'>[GetVoice()]</span>[alt_name] [whispers], <span class='message'>\"[attach_spans(sanitize_russian(message, spans))]\"</span></span>"
 
 	for(var/atom/movable/AM in listening)
 		if(istype(AM,/obj/item/device/radio))
 			continue
 		AM.Hear(rendered, src, languages, message, , spans)
 
-	message = sanitize_russian(stars(message))
-	rendered = "<span class='game say'><span class='name'>[GetVoice()]</span>[alt_name] [whispers], <span class='message'>\"[attach_spans(message, spans)]\"</span></span>"
+	message = stars(message)
+	rendered = "<span class='game say'><span class='name'>[GetVoice()]</span>[alt_name] [whispers], <span class='message'>\"[attach_spans(sanitize_russian((message, spans))]\"</span></span>"
 	for(var/atom/movable/AM in eavesdropping)
 		if(istype(AM,/obj/item/device/radio))
 			continue
