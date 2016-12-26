@@ -64,144 +64,84 @@
 	src.verbs |= /client/verb/adminhelp
 	adminhelptimerid = 0
 
-//allows right clicking mobs to send an admin PM to their client, forwards the selected mob's client to cmd_admin_pm
-/client/proc/cmd_admin_pm_context(mob/M in mob_list)
-	set category = null
-	set name = "Admin PM Mob"
-	if(!holder)
-		src << "<font color='red'>Error: Admin-PM-Context: Only administrators may use this command.</font>"
-		return
-	if( !ismob(M) || !M.client )	return
-	cmd_admin_pm(M.client,null)
-	feedback_add_details("admin_verb","APMM") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-
-//shows a list of clients we could send PMs to, then forwards our choice to cmd_admin_pm
-/client/proc/cmd_admin_pm_panel()
+/client/verb/adminhelp(msg as text)
 	set category = "Admin"
-	set name = "Admin PM"
-	if(!holder)
-		src << "<font color='red'>Error: Admin-PM-Panel: Only administrators may use this command.</font>"
-		return
-	var/list/client/targets[0]
-	for(var/client/T)
-		if(T.mob)
-			if(istype(T.mob, /mob/new_player))
-				targets["(New Player) - [T]"] = T
-			else if(istype(T.mob, /mob/dead/observer))
-				targets["[T.mob.name](Ghost) - [T]"] = T
-			else
-				targets["[T.mob.real_name](as [T.mob.name]) - [T]"] = T
-		else
-			targets["(No Mob) - [T]"] = T
-	var/list/sorted = sortList(targets)
-	var/target = input(src,"To whom shall we send a message?","Admin PM",null) in sorted|null
-	cmd_admin_pm(targets[target],null)
-	feedback_add_details("admin_verb","APM") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+	set name = "Adminhelp"
 
-/client/proc/cmd_ahelp_reply(whom)
+	if(say_disabled)	//This is here to try to identify lag problems
+		usr << "<span class='danger'>Speech is currently admin-disabled.</span>"
+		return
+
+	//handle muting and automuting
 	if(prefs.muted & MUTE_ADMINHELP)
-		src << "<font color='red'>Error: Admin-PM: You are unable to use admin PM-s (muted).</font>"
+		src << "<span class='danger'>Error: Admin-PM: You cannot send adminhelps (Muted).</span>"
 		return
-	var/client/C
-	if(istext(whom))
-		if(cmptext(copytext(whom,1,2),"@"))
-			whom = findStealthKey(whom)
-		C = directory[whom]
-	else if(istype(whom,/client))
-		C = whom
-	if(!C)
-		if(holder)	src << "<font color='red'>Error: Admin-PM: Client not found.</font>"
-		return
-	message_admins("[key_name_admin(src)] has started replying to [key_name(C, 0, 0)]'s admin help.")
-	var/msg = input(src,"Message:", "Private message to [key_name(C, 0, 0)]") as text|null
-	if (!msg)
-		message_admins("[key_name_admin(src)] has cancelled their reply to [key_name(C, 0, 0)]'s admin help.")
-		return
-	cmd_admin_pm(whom, msg)
-
-//takes input from cmd_admin_pm_context, cmd_admin_pm_panel or /client/Topic and sends them a PM.
-//Fetching a message if needed. src is the sender and C is the target client
-/client/proc/cmd_admin_pm(whom, msg)
-	if(prefs.muted & MUTE_ADMINHELP)
-		src << "<font color='red'>Error: Admin-PM: You are unable to use admin PM-s (muted).</font>"
+	if(src.handle_spam_prevention(msg,MUTE_ADMINHELP))
 		return
 
-	var/client/C
-	if(istext(whom))
-		if(cmptext(copytext(whom,1,2),"@"))
-			whom = findStealthKey(whom)
-		C = directory[whom]
-	else if(istype(whom,/client))
-		C = whom
-	if(!C)
-		if(holder)	src << "<font color='red'>Error: Admin-PM: Client not found.</font>"
-		else		adminhelp(msg)	//admin we are replying to left. adminhelp instead
-		return
+	//clean the input msg
+	if(!msg)	return
+	msg = sanitize_russian(copytext(msg,1,MAX_MESSAGE_LEN))
+	if(!msg)	return
+	var/original_msg = msg
 
-	//get message text, limit it's length.and clean/escape html
-	if(!msg)
-		msg = sanitize_russian(input(src,"Message:", "Private message to [key_name(C, 0, 0)]") as text|null)
+	//remove our adminhelp verb temporarily to prevent spamming of admins.
+	src.verbs -= /client/verb/adminhelp
+	adminhelptimerid = addtimer(src, "giveadminhelpverb", 1200, FALSE) //2 minute cooldown of admin helps
 
-		if(!msg)	return
-		if(!C)
-			if(holder)	src << "<font color='red'>Error: Admin-PM: Client not found.</font>"
-			else		adminhelp(msg)	//admin we are replying to has vanished, adminhelp instead
-			return
+	msg = keywords_lookup(msg)
 
-	if (src.handle_spam_prevention(msg,MUTE_ADMINHELP))
-		return
+	if(!mob)	return						//this doesn't happen
 
-	//clean the message if it's not sent by a high-rank admin
-	if(!check_rights(R_SERVER|R_DEBUG,0))
-		msg = sanitize(copytext(msg,1,MAX_MESSAGE_LEN))
-		if(!msg)	return
+	var/ref_mob = "\ref[mob]"
+	var/ref_client = "\ref[src]"
+	msg = "<span class='adminnotice'><b><font color=red>HELP: </font><A HREF='?priv_msg=[ckey];ahelp_reply=1'>[key_name(src)]</A> (<A HREF='?_src_=holder;adminmoreinfo=[ref_mob]'>?</A>) (<A HREF='?_src_=holder;adminplayeropts=[ref_mob]'>PP</A>) (<A HREF='?_src_=vars;Vars=[ref_mob]'>VV</A>) (<A HREF='?_src_=holder;subtlemessage=[ref_mob]'>SM</A>) (<A HREF='?_src_=holder;adminplayerobservefollow=[ref_mob]'>FLW</A>) (<A HREF='?_src_=holder;traitor=[ref_mob]'>TP</A>) (<A HREF='?_src_=holder;rejectadminhelp=[ref_client]'>REJT</A>):</b> [msg]</span>"
 
-	msg = emoji_parse(msg)
-	var/keywordparsedmsg = keywords_lookup(msg)
+	//send this msg to all admins
 
-	if(C.holder)
-		if(holder)	//both are admins
-			C << "<font color='red'>Admin PM from-<b>[key_name(src, C, 1)]</b>: [keywordparsedmsg]</font>"
-			src << "<font color='blue'>Admin PM to-<b>[key_name(C, src, 1)]</b>: [keywordparsedmsg]</font>"
-
-		else		//recipient is an admin but sender is not
-			C << "<font color='red'>Reply PM from-<b>[key_name(src, C, 1)]</b>: [keywordparsedmsg]</font>"
-			src << "<font color='blue'>PM to-<b>Admins</b>: [msg]</font>"
-
-		//play the recieving admin the adminhelp sound (if they have them enabled)
-		if(C.prefs.toggles & SOUND_ADMINHELP)
-			C << 'sound/effects/adminhelp.ogg'
-
-	else
-		if(holder)	//sender is an admin but recipient is not. Do BIG RED TEXT
-			C << "<font color='red' size='4'><b>-- Administrator private message --</b></font>"
-			C << "<font color='red'>Admin PM from-<b>[key_name(src, C, 0)]</b>: [msg]</font>"
-			C << "<font color='red'><i>Click on the administrator's name to reply.</i></font>"
-			src << "<font color='blue'>Admin PM to-<b>[key_name(C, src, 1)]</b>: [msg]</font>"
-
-			//always play non-admin recipients the adminhelp sound
-			C << 'sound/effects/adminhelp.ogg'
-
-			//AdminPM popup for ApocStation and anybody else who wants to use it. Set it with POPUP_ADMIN_PM in config.txt ~Carn
-			if(config.popup_admin_pm)
-				spawn()	//so we don't hold the caller proc up
-					var/sender = src
-					var/sendername = key
-					var/reply = input(C, msg,"Admin PM from-[sendername]", "") as text|null		//show message and await a reply
-					if(C && reply)
-						if(sender)
-							C.cmd_admin_pm(sender,reply)										//sender is still about, let's reply to them
-						else
-							adminhelp(reply)													//sender has left, adminhelp instead
-					return
-
-		else		//neither are admins
-			src << "<font color='red'>Error: Admin-PM: Non-admin to non-admin PM communication is forbidden.</font>"
-			return
-
-	log_admin("PM: [key_name(src)]->[key_name(C)]: [msg]")
-
-	//we don't use message_admins here because the sender/receiver might get it too
 	for(var/client/X in admins)
-		if(X.key!=key && X.key!=C.key)	//check client/X is an admin and isn't the sender or recipient
-			X << "<B><font color='blue'>PM: [key_name(src, X, 0)]-&gt;[key_name(C, X, 0)]:</B> \blue [keywordparsedmsg]</font>" //inform X
+		if(X.prefs.toggles & SOUND_ADMINHELP)
+			X << 'sound/effects/adminhelp.ogg'
+		X << sanitize_russian(msg)
+
+
+	//show it to the person adminhelping too
+	src << "<span class='adminnotice'>PM to-<b>Admins</b>: [original_msg]</span>"
+
+	//send it to irc if nobody is on and tell us how many were on
+	var/admin_number_present = send2irc_adminless_only(ckey,original_msg)
+	log_admin("HELP: [key_name(src)]: [original_msg] - heard by [admin_number_present] non-AFK admins who have +BAN.")
+	feedback_add_details("admin_verb","AH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+	return
+
+/proc/send2irc_adminless_only(source, msg, requiredflags = R_BAN)
+	var/admin_number_total = 0		//Total number of admins
+	var/admin_number_afk = 0		//Holds the number of admins who are afk
+	var/admin_number_ignored = 0	//Holds the number of admins without +BAN (so admins who are not really admins)
+	var/admin_number_decrease = 0	//Holds the number of admins with are afk, ignored or both
+	for(var/client/X in admins)
+		admin_number_total++;
+		var/invalid = 0
+		if(requiredflags != 0 && !check_rights_for(X, requiredflags))
+			admin_number_ignored++
+			invalid = 1
+		if(X.is_afk())
+			admin_number_afk++
+			invalid = 1
+		if(X.holder.fakekey)
+			admin_number_ignored++
+			invalid = 1
+		if(invalid)
+			admin_number_decrease++
+	var/admin_number_present = admin_number_total - admin_number_decrease	//Number of admins who are neither afk nor invalid
+	if(admin_number_present <= 0)
+		if(!admin_number_afk && !admin_number_ignored)
+			send2irc(source, "[msg] - No admins online")
+		else
+			send2irc(source, "[msg] - All admins AFK ([admin_number_afk]/[admin_number_total]) or skipped ([admin_number_ignored]/[admin_number_total])")
+	return admin_number_present
+
+/proc/send2irc(msg,msg2)
+	if(config.useircbot)
+		shell("python nudge.py [msg] [msg2]")
+	return
