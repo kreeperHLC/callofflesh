@@ -44,7 +44,7 @@
 		message = Ellipsis(message, 10, 1)
 		whispers = "whispers in their final breath"
 
-	message = treat_message(message)
+	message = sanitize_russian(treat_message(message))
 
 	var/list/listening_dead = list()
 	for(var/mob/M in player_list)
@@ -73,7 +73,7 @@
 			continue
 		AM.Hear(rendered, src, languages, message, , spans)
 
-	message = stars(message)
+	message = sanitize_russian(stars(message))
 	rendered = "<span class='game say'><span class='name'>[GetVoice()]</span>[alt_name] [whispers], <span class='message'>\"[attach_spans(message, spans)]\"</span></span>"
 	for(var/atom/movable/AM in eavesdropping)
 		if(istype(AM,/obj/item/device/radio))
