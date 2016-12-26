@@ -81,7 +81,7 @@
 
 	//clean the input msg
 	if(!msg)	return
-	msg = russian_html2text(sanitize_russian(copytext(msg,1,MAX_MESSAGE_LEN)))
+	msg = sanitize_russian(copytext(msg,1,MAX_MESSAGE_LEN))
 	if(!msg)	return
 	var/original_msg = msg
 
