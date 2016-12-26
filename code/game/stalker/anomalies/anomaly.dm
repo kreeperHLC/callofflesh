@@ -44,7 +44,7 @@
 		spawn(10)
 			icon_state = inactive_icon_state
 
-		if (istype(A,/mob/living))
+		if (!incooldown && istype(A,/mob/living))
 			playsound(src.loc, src.sound, 50, 1, channel = 0)
 			var/mob/living/carbon/M = A
 			src.trapped.Add(M)
@@ -67,9 +67,11 @@
 						var/obj/item/weapon/storage/S = Q
 						S.do_quick_empty()
 					qdel(Q)
+					trapped.Remove(Q)
+					spawn(src.delay * 10 - 10)
+						qdel(I)
 				spawn(src.delay * 10)
 					src.incooldown = 0
-					trapped.Remove(Q)
 
 /obj/anomaly/Uncrossed(atom/A)
 	..()
