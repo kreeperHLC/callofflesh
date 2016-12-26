@@ -53,7 +53,7 @@
 
 		else if(!incooldown && istype(A,/obj/item))
 			playsound(src.loc, src.sound, 50, 1, channel = 0)
-			src.incooldown = 1
+			incooldown = 1
 			var/obj/item/Q = A
 			if(Q.unacidable == 0)
 				spawn(5)
@@ -70,7 +70,7 @@
 					spawn(src.delay * 10 - 5)
 						qdel(I)
 			spawn(src.delay * 10)
-				src.incooldown = 0
+				incooldown = 0
 
 /obj/anomaly/Uncrossed(atom/A)
 	..()
