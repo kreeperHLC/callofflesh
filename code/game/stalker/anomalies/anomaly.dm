@@ -67,9 +67,9 @@
 						S.do_quick_empty()
 					qdel(Q)
 					//trapped.Remove(Q)
-					spawn(src.delay * 10 - 5)
+					spawn(src.cooldown * 10 - 5)
 						qdel(I)
-			spawn(src.delay * 10)
+			spawn(src.cooldown * 10)
 				src.incooldown = 0
 
 /obj/anomaly/Uncrossed(atom/A)
