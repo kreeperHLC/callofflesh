@@ -70,8 +70,8 @@
 					trapped.Remove(Q)
 					spawn(src.delay * 10 - 10)
 						qdel(I)
-				spawn(src.delay * 10)
-					src.incooldown = 0
+			spawn(src.delay * 10)
+				src.incooldown = 0
 
 /obj/anomaly/Uncrossed(atom/A)
 	..()
