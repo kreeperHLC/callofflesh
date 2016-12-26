@@ -74,7 +74,7 @@
 		AM.Hear(rendered, src, languages, message, , spans)
 
 	message = stars(message)
-	rendered = "<span class='game say'><span class='name'>[GetVoice()]</span>[alt_name] [whispers], <span class='message'>\"[attach_spans(sanitize_russian((message, spans))]\"</span></span>"
+	rendered = "<span class='game say'><span class='name'>[GetVoice()]</span>[alt_name] [whispers], <span class='message'>\"[attach_spans(message, spans)]\"</span></span>"
 	for(var/atom/movable/AM in eavesdropping)
 		if(istype(AM,/obj/item/device/radio))
 			continue
