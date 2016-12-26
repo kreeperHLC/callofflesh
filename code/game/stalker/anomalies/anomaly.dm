@@ -55,9 +55,8 @@
 			playsound(src.loc, src.sound, 50, 1, channel = 0)
 			src.incooldown = 1
 			var/obj/item/Q = A
-			src.trapped.Add(Q)
-			if(src.trapped.len == 1 && Q.unacidable == 0)
-				spawn(10)
+			if(Q.unacidable == 0)
+				spawn(5)
 					var/turf/T = get_turf(Q)
 					var/obj/effect/decal/cleanable/molten_item/I = new (T)
 					I.pixel_x = rand(-16,16)
@@ -68,12 +67,10 @@
 						S.do_quick_empty()
 					qdel(Q)
 					//trapped.Remove(Q)
-					spawn(src.delay * 10 - 10)
+					spawn(src.delay * 10 - 5)
 						qdel(I)
-						trapped.Remove(Q)
-			if(src.trapped.len == 1 && !incooldown)
-				spawn(src.delay * 10)
-					src.incooldown = 0
+			spawn(src.delay * 10)
+				src.incooldown = 0
 
 /obj/anomaly/Uncrossed(atom/A)
 	..()
