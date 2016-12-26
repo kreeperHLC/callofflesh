@@ -39,7 +39,7 @@
 
 /obj/anomaly/Crossed(atom/A)
 	..()
-	if(!incooldown && !istype(A,/obj/item/projectile))
+	if(!incooldown && !istype(A,/obj/item/projectile) && !istype(A,/obj/item/weapon/artefact))
 		icon_state = active_icon_state
 		spawn(10)
 			icon_state = inactive_icon_state
