@@ -67,17 +67,22 @@
 						var/obj/item/weapon/storage/S = Q
 						S.do_quick_empty()
 					qdel(Q)
-					trapped.Remove(Q)
+					//trapped.Remove(Q)
 					spawn(src.delay * 10 - 10)
 						qdel(I)
-			spawn(src.delay * 10)
-				src.incooldown = 0
+						trapped.Remove(Q)
+			if(src.trapped.len == 1 && !incooldown)
+				spawn(src.delay * 10)
+					src.incooldown = 0
 
 /obj/anomaly/Uncrossed(atom/A)
 	..()
 	if (istype(A,/mob/living/carbon))
 		var/mob/living/carbon/M = A
 		src.trapped.Remove(M)
+//	if (istype(A,/obj/item) && !istype(A,/obj/item/projectile) && !istype(A,/obj/item/weapon/artefact))
+//		var/obj/item/O = A
+//		src.trapped.Remove(O)
 
 /obj/anomaly/proc/Think()
 	playsound(src.loc, src.sound, 50, 1, channel = 0)
