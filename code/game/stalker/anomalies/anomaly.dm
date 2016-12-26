@@ -51,7 +51,7 @@
 			if(src.trapped.len == 1 && !incooldown)
 				src.Think()
 
-		else if(istype(A,/obj/item))
+		else if(!incooldown && istype(A,/obj/item))
 			playsound(src.loc, src.sound, 50, 1, channel = 0)
 			src.incooldown = 1
 			var/obj/item/Q = A

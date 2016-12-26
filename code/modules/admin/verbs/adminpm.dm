@@ -95,12 +95,12 @@
 
 	if(C.holder)
 		if(holder)	//both are admins
-			C << sanitize_russian("<font color='red'>Admin PM from-<b>[key_name(src, C, 1)]</b>: [keywordparsedmsg]</font>")
-			src << sanitize_russian("<font color='blue'>Admin PM to-<b>[key_name(C, src, 1)]</b>: [keywordparsedmsg]</font>")
+			C << russian_html2text("<font color='red'>Admin PM from-<b>[key_name(src, C, 1)]</b>: [keywordparsedmsg]</font>")
+			src << russian_html2text("<font color='blue'>Admin PM to-<b>[key_name(C, src, 1)]</b>: [keywordparsedmsg]</font>")
 
 		else		//recipient is an admin but sender is not
-			C << sanitize_russian("<font color='red'>Reply PM from-<b>[key_name(src, C, 1)]</b>: [keywordparsedmsg]</font>")
-			src << sanitize_russian("<font color='blue'>PM to-<b>Admins</b>: [msg]</font>")
+			C << russian_html2text("<font color='red'>Reply PM from-<b>[key_name(src, C, 1)]</b>: [keywordparsedmsg]</font>")
+			src << russian_html2text("<font color='blue'>PM to-<b>Admins</b>: [msg]</font>")
 
 		//play the recieving admin the adminhelp sound (if they have them enabled)
 		if(C.prefs.toggles & SOUND_ADMINHELP)
