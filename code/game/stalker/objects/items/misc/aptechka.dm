@@ -1,6 +1,6 @@
 /obj/item/weapon/reagent_containers/pill/stalker
 	name = "kit"
-	desc = "Старая советска&#255; аптечка."
+	desc = "Стара&#255; советска&#255; аптечка."
 	icon = 'icons/stalker/items.dmi'
 	w_class = 2
 	possible_transfer_amounts = list()
