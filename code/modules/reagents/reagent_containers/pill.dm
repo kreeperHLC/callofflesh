@@ -27,7 +27,12 @@
 		return 0
 
 	if(M == user)
-		M << "<span class='notice'>You [apply_method] [src].</span>"
+		M.visible_message("<span class='notice'>[user] starts to apply [src] on himself...</span>", "<span class='notice'>You begin applying [src] on yourself...</span>")
+
+		if(!do_mob(user, mM)) return
+
+		user.visible_message("<span class='green'>[user] applies [src] on himself.</span>", "<span class='green'>You apply [src] on yourself.</span>")
+
 
 	else
 		M.visible_message("<span class='danger'>[user] attempts to force [M] to [apply_method] [src].</span>", \

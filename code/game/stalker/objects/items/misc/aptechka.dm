@@ -30,6 +30,6 @@ obj/item/weapon/reagent_containers/pill/stalker/canconsume(mob/eater, mob/user)
 
 /obj/item/weapon/reagent_containers/pill/stalker/aptechka_y
 	name = "science kit"
-	icon_state = "aptechkau"
+	icon_state = "aptechkay"
 	//item_state = "bandaid"
-	list_reagents = list("adminordrazine" = 1)
+	list_reagents = list("adminordrazine" = 3)
