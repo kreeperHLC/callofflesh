@@ -29,7 +29,7 @@
 	if(M == user)
 		M.visible_message("<span class='notice'>[user] starts to apply [src] on himself...</span>", "<span class='notice'>You begin applying [src] on yourself...</span>")
 
-		if(!do_mob(user, mM)) return
+		if(!do_mob(user, M)) return
 
 		user.visible_message("<span class='green'>[user] applies [src] on himself.</span>", "<span class='green'>You apply [src] on yourself.</span>")
 
