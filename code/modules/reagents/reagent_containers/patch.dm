@@ -30,24 +30,3 @@
 	name = "burn patch"
 	desc = "Helps with burn injuries."
 	list_reagents = list("silver_sulfadiazine" = 50)
-
-/obj/item/weapon/reagent_containers/pill/patch/stalker
-	name = "kit"
-	desc = "Старая советска&#255; аптечка."
-	icon = 'icons/stalker/items.dmi'
-	w_class = 2
-
-/obj/item/weapon/reagent_containers/pill/patch/stalker/aptechka_r
-	name = "first aid kit"
-	icon_state = "apteka_red"
-	list_reagents = list("cryoxadone" = 30)
-
-/obj/item/weapon/reagent_containers/pill/patch/stalker/aptechka_b
-	name = "army kit"
-	icon_state = "apteka_blue"
-	list_reagents = list("cryoxadone" = 60)
-
-/obj/item/weapon/reagent_containers/pill/patch/stalker/aptechka_y
-	name = "science kit"
-	icon_state = "apteka_yellow"
-	list_reagents = list("adminordrazine" = 1)
