@@ -44,16 +44,18 @@
 		spawn(10)
 			icon_state = inactive_icon_state
 
-		if (!incooldown && istype(A,/mob/living))
+		if (istype(A,/mob/living))
 			playsound(src.loc, src.sound, 50, 1, channel = 0)
 			var/mob/living/carbon/M = A
 			src.trapped.Add(M)
 			if(src.trapped.len == 1 && !incooldown)
 				src.Think()
 
-		else if(!incooldown && istype(A,/obj/item))
-			playsound(src.loc, src.sound, 50, 1, channel = 0)
+		else if(istype(A,/obj/item))
 			src.incooldown = 1
+			spawn(src.cooldown * 10)
+				src.incooldown = 0
+			playsound(src.loc, src.sound, 50, 1, channel = 0)
 			var/obj/item/Q = A
 			if(Q.unacidable == 0)
 				spawn(5)
@@ -69,8 +71,6 @@
 					//trapped.Remove(Q)
 					spawn(src.cooldown * 10 - 5)
 						qdel(I)
-			spawn(src.cooldown * 10)
-				src.incooldown = 0
 
 /obj/anomaly/Uncrossed(atom/A)
 	..()
@@ -138,7 +138,7 @@
 
 /obj/anomaly/jarka
 	name = "anomaly"
-	cooldown = 20
+	cooldown = 2
 	sound = 'sound/stalker/anomalies/zharka1.ogg'
 	luminosity = 2
 	idle_luminosity = 3
