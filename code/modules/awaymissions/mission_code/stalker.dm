@@ -154,7 +154,7 @@
 	name = "Merceary"
 	icon_state = "mercenary"
 
-/area/stalker/blowout/byadt/outdoor
+/area/stalker/blowout/outdoor/bar
 	name = "Bar Outdoor"
 	icon_state = "bar_outdoor"
 	requires_power = 1

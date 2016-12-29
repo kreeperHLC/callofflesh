@@ -183,7 +183,7 @@
 				if (prob(1))
 					l_sound = pick(l_sounds_ugrnd)
 					A << sound(l_sound, repeat = 0, wait = 1,volume = 65, channel = 8)
-			if (istype(get_area(src.loc), /area/stalker/blowout/byadt/outdoor))
+			if (istype(get_area(src.loc), /area/stalker/blowout/outdoor/bar))
 				if (prob(1))
 					l_sound = pick(l_sounds_bar)
 					A << sound(l_sound, repeat = 0, wait = 1,volume = 65, channel = 8)
