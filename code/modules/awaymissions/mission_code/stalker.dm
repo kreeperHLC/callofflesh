@@ -106,12 +106,12 @@
 	requires_power = 1
 
 /area/stalker/agroprom/buildings
-	name = "Buildings"
+	name = "Buildings_blowout"
 	icon_state = "buildings"
 
 /area/stalker/blowout/agroprom/buildings
 	name = "Buildings"
-	icon_state = "buildings"
+	icon_state = "buildings_blowout"
 
 /area/stalker/agroprom/cellar
 	name = "Cellar"
@@ -131,4 +131,26 @@
 	requires_power = 1
 
 
+
+	///¡¿–, ﬂÕ“¿–‹, ƒ» ¿ﬂ “≈––»“Œ–»ﬂ///
+
+
+/area/stalker/byadt
+	requires_power = 1
+
+/area/stalker/byadt/bar
+	name = "Bar"
+	icon_state = "realbar"
+
+/area/stalker/byadt/buildings
+	name = "Buildings"
+	icon_state = "buildings"
+
+/area/stalker/blowout/byadt/buildings
+	name = "Buildings_blowout"
+	icon_state = "buildings_blowout"
+
+/area/stalker/byadt/buildings/mercenary
+	name = "Merceary"
+	icon_state = "mercenary"
 

@@ -30,7 +30,7 @@ Assistant
 	back2 = pick(/obj/item/weapon/gun/projectile/automatic/ak74, /obj/item/weapon/gun/projectile/automatic/ak74/green)
 	backpack_contents = list(/obj/item/ammo_box/stalker/b545ap = 1,
 							/obj/item/ammo_box/magazine/stalker/m545 = 2,
-							/obj/item/weapon/storage/firstaid/army = 1,
+							/obj/item/weapon/reagent_containers/pill/stalker/aptechka_b = 1,
 							/obj/item/clothing/glasses/eyepatch = 1)
 	var/datum/martial_art/plasma_fist/plasma_fist = new(null)
 	plasma_fist.teach(H)
@@ -52,7 +52,7 @@ Assistant
 	shoes = /obj/item/clothing/shoes/jackboots/warm
 	backpack_contents = list(/obj/item/ammo_box/stalker/b545 = 1,
 							/obj/item/ammo_box/magazine/stalker/m545 = 2,
-							/obj/item/weapon/storage/firstaid/army = 1,
+							/obj/item/weapon/reagent_containers/pill/stalker/aptechka_b = 1,
 							/obj/item/weapon/stalker/bolts = 1)
 	r_pocket = /obj/item/device/radio
 	l_pocket = pick(/obj/item/weapon/reagent_containers/food/snacks/stalker/kolbasa,/obj/item/weapon/reagent_containers/food/snacks/stalker/baton)
@@ -86,7 +86,7 @@ Assistant
 	shoes = /obj/item/clothing/shoes/jackboots/warm
 	backpack_contents = list(/obj/item/ammo_box/stalker/b545ap = 1,
 							/obj/item/ammo_box/magazine/stalker/m545 = 2,
-							/obj/item/weapon/storage/firstaid/army = 1,
+							/obj/item/weapon/reagent_containers/pill/stalker/aptechka_b = 1,
 							/obj/item/clothing/suit/army/berill = 1,
 							/obj/item/weapon/stalker/bolts = 1)
 	r_pocket = /obj/item/device/radio
@@ -105,7 +105,7 @@ Assistant
 	shoes = /obj/item/clothing/shoes/jackboots/warm
 	backpack_contents = list(/obj/item/ammo_box/stalker/b545 = 1,
 							/obj/item/ammo_box/magazine/stalker/m545 = 2,
-							/obj/item/weapon/storage/firstaid/army = 1)
+							/obj/item/weapon/reagent_containers/pill/stalker/aptechka_b = 1)
 	l_pocket = /obj/item/weapon/stalker/bolts
 	r_pocket = /obj/item/device/radio
 
@@ -131,7 +131,7 @@ Assistant
 	shoes = /obj/item/clothing/shoes/jackboots/warm
 	backpack_contents = list(/obj/item/ammo_box/stalker/b545ap = 1,
 							/obj/item/ammo_box/magazine/stalker/m545 = 2,
-							/obj/item/weapon/storage/firstaid/army = 1,
+							/obj/item/weapon/reagent_containers/pill/stalker/aptechka_b = 1,
 							/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka/kazaki = 1,
 							/obj/item/weapon/stalker/bolts = 1)
 	r_pocket = /obj/item/device/radio

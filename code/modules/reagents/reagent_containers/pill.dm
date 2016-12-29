@@ -12,10 +12,10 @@
 
 /obj/item/weapon/reagent_containers/pill/New()
 	..()
-	if(!icon_state)
-		icon_state = "pill[rand(1,20)]"
-	if(reagents.total_volume && roundstart)
-		name += " ([reagents.total_volume]u)"
+//	if(!icon_state)
+//		icon_state = "pill[rand(1,20)]"
+//	if(reagents.total_volume && roundstart)
+//		name += " ([reagents.total_volume]u)"
 
 
 /obj/item/weapon/reagent_containers/pill/attack_self(mob/user)
@@ -27,7 +27,12 @@
 		return 0
 
 	if(M == user)
-		M << "<span class='notice'>You [apply_method] [src].</span>"
+		M.visible_message("<span class='notice'>[user] starts to apply [src] on himself...</span>", "<span class='notice'>You begin applying [src] on yourself...</span>")
+
+		if(!do_mob(user, M)) return
+
+		user.visible_message("<span class='green'>[user] applies [src] on himself.</span>", "<span class='green'>You apply [src] on yourself.</span>")
+
 
 	else
 		M.visible_message("<span class='danger'>[user] attempts to force [M] to [apply_method] [src].</span>", \

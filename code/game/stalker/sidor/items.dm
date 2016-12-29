@@ -238,19 +238,19 @@
 
 /sidoritem/firstaid/stalker
 	name = "Firstaid"
-	itemtype = /obj/item/weapon/storage/firstaid/stalker
+	itemtype = /obj/item/weapon/reagent_containers/pill/stalker/aptechka_r
 	cost = 500
 	words = list("Аптечку" = 5, "аптечку" = 5, "Атпечка" = 5, "аптечка" = 5)
 
 /sidoritem/firstaid/army
 	name = "Army firstaid"
-	itemtype = /obj/item/weapon/storage/firstaid/army
+	itemtype = /obj/item/weapon/reagent_containers/pill/stalker/aptechka_b
 	cost = 1000
 	words = list("Аптечку" = 5, "аптечку" = 5, "Армейскую" = 5, "армейскую" = 5, "Военную" = 5, "военную" = 5, "Военна&#255;" = 5, "военна&#255;" = 5, "Атпечка" = 5, "аптечка" = 5)
 
 /sidoritem/firstaid/science
 	name = "Science firstaid"
-	itemtype = /obj/item/weapon/storage/firstaid/science
+	itemtype = /obj/item/weapon/reagent_containers/pill/stalker/aptechka_y
 	cost = 2000
 	words = list("Аптечку" = 5, "аптечку" = 5, "Научную" = 5, "научную" = 5, "Научна&#255;" = 5, "научна&#255;" = 5, "Атпечка" = 5, "аптечка" = 5)
 
@@ -271,17 +271,17 @@
 /sidoritem/dogtail
 	name = "Dog tail"
 	itemtype = /obj/item/weapon/stalker/loot/dog_tail
-	cost = 500
+	cost = 1000
 
 /sidoritem/flesheye
 	name = "Flesh Eye"
 	itemtype = /obj/item/weapon/stalker/loot/flesh_eye
-	cost = 500
+	cost = 2000
 
 /sidoritem/boarleg
 	name = "Boar Leg"
 	itemtype = /obj/item/weapon/stalker/loot/boar_leg
-	cost = 500
+	cost = 4000
 
 /sidoritem/konserva
 	name = "Canned"
@@ -455,57 +455,57 @@
 /sidoritem/meduza
 	name = "Meduza"
 	itemtype = /obj/item/weapon/artefact/meduza
-	cost = 2000
+	cost = 3000
 
 /sidoritem/stoneflower
 	name = "Stoneflower"
 	itemtype = /obj/item/weapon/artefact/stoneflower
-	cost = 6000
+	cost = 7000
 
 /sidoritem/nighstar
 	name = "Nightstar"
 	itemtype = /obj/item/weapon/artefact/nightstar
-	cost = 9000
+	cost = 10000
 
 /sidoritem/maminibusi
 	name = "Mamini busi"
 	itemtype = /obj/item/weapon/artefact/maminibusi
-	cost = 46000
+	cost = 100000
 
 /sidoritem/flash
 	name = "Flash"
 	itemtype = /obj/item/weapon/artefact/flash
-	cost = 3000
+	cost = 4000
 
 /sidoritem/moonlight
 	name = "Moonlight"
 	itemtype = /obj/item/weapon/artefact/moonlight
-	cost = 7000
+	cost = 90000
 
 /sidoritem/pushtishka
 	name = "Pushtishka"
 	itemtype = /obj/item/weapon/artefact/pustishka
-	cost = 30000
+	cost = 60000
 
 /sidoritem/battery
 	name = "Battery"
 	itemtype = /obj/item/weapon/artefact/battery
-	cost = 30000
+	cost = 60000
 
 /sidoritem/droplet
 	name = "Droplet"
 	itemtype = /obj/item/weapon/artefact/droplet
-	cost = 4000
+	cost = 5000
 
 /sidoritem/fireball
 	name = "Fireball"
 	itemtype = /obj/item/weapon/artefact/fireball
-	cost = 8000
+	cost = 12000
 
 /sidoritem/crystal
 	name = "Crystal"
 	itemtype = /obj/item/weapon/artefact/crystal
-	cost = 20000
+	cost = 40000
 
 //Разное
 

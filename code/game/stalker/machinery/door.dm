@@ -1,6 +1,7 @@
 /obj/machinery/door/airlock/stalker
 	icon = 'icons/obj/doors/door_sidor.dmi'
 	overlays_file = 'icons/obj/doors/door_sidor.dmi'
+	autoclose = 0
 
 /obj/machinery/door/airlock/stalker/New()
 	..()

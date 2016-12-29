@@ -52,9 +52,9 @@
 	/*//Все предметы, которые могут быть на полке и их обозначение
 	var/obj/item/ammo_box/stalker/b545/PETERKA = null
 	var/obj/item/ammo_box/stalker/b545ap/PETERKAAP = null
-	var/obj/item/weapon/storage/firstaid/stalker/CMED = null
-	var/obj/item/weapon/storage/firstaid/army/AMED = null
-	var/obj/item/weapon/storage/firstaid/science/SMED = null
+	var/obj/item/weapon/reagent_containers/pill/stalker/aptechka_r/CMED = null
+	var/obj/item/weapon/reagent_containers/pill/stalker/aptechka_b/AMED = null
+	var/obj/item/weapon/reagent_containers/pill/stalker/aptechka_y/SMED = null
 	var/obj/item/stack/medical/bruise_pack/bint/MED1 = null
 	var/obj/item/stack/medical/ointment/MED2 = null
 	var/obj/item/weapon/reagent_containers/hypospray/medipen/stalker/antirad/MED3 = null
@@ -85,13 +85,13 @@
 			new /obj/item/stack/medical/bruise_pack/bint(src)
 			new /obj/item/stack/medical/ointment(src)
 		if ("common_med")
-			new /obj/item/weapon/storage/firstaid/stalker(src)
+			new /obj/item/weapon/reagent_containers/pill/stalker/aptechka_r(src)
 
 		if ("army_med")
-			new /obj/item/weapon/storage/firstaid/army(src)
+			new /obj/item/weapon/reagent_containers/pill/stalker/aptechka_b(src)
 
 		if ("science_med")
-			new /obj/item/weapon/storage/firstaid/science(src)
+			new /obj/item/weapon/reagent_containers/pill/stalker/aptechka_y(src)
 
 		if ("9x18")
 			new /obj/item/ammo_box/stalker/b9x18(src)

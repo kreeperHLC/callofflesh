@@ -75,17 +75,22 @@
 
 /obj/effect/spawner/lootdrop/stalker/weapon/pistols
 	name = "stalker pistols"
-	loot = list(/obj/item/weapon/gun/projectile/automatic/pistol/pm = 35,
-				/obj/item/weapon/gun/projectile/automatic/pistol/pb1s = 10,
-				/obj/item/weapon/gun/projectile/automatic/pistol/fort12 = 15,
-				/obj/nothing = 60)
+	loot = list(/obj/item/weapon/gun/projectile/automatic/pistol/pm = 25,
+				/obj/item/weapon/gun/projectile/automatic/pistol/pb1s = 15,
+				/obj/item/weapon/gun/projectile/automatic/pistol/fort12 = 10,
+				/obj/item/weapon/gun/projectile/automatic/pistol/usp_match = 5,
+				/obj/item/weapon/gun/projectile/automatic/pistol/sip = 5,
+				/obj/item/weapon/gun/projectile/automatic/pistol/cora = 5,
+				/obj/item/weapon/gun/projectile/automatic/pistol/marta = 5,
+				/obj/nothing = 30)
 
 /obj/effect/spawner/lootdrop/stalker/weapon/rifles_and_shotguns
 	name = "stalker rifles_and_shotguns"
 	loot = list(/obj/item/weapon/gun/projectile/revolver/bm16 = 25,
 				/obj/item/weapon/gun/projectile/automatic/ak74 = 25,
 				/obj/item/weapon/gun/projectile/automatic/aksu74 = 35,
-				/obj/nothing = 60)
+				/obj/item/weapon/gun/projectile/automatic/tpc301 = 10,
+				/obj/nothing = 50)
 
 /obj/effect/spawner/lootdrop/stalker/weapon/smgs
 	name = "stalker smgs"
@@ -96,9 +101,9 @@
 /obj/effect/spawner/lootdrop/stalker/medicine
 	name = "stalker medicine"
 	lootcount = 1
-	loot = list(/obj/item/weapon/storage/firstaid/stalker = 30,
-				/obj/item/weapon/storage/firstaid/army = 15,
-				/obj/item/weapon/storage/firstaid/science = 5,
+	loot = list(/obj/item/weapon/reagent_containers/pill/stalker/aptechka_r = 30,
+				/obj/item/weapon/reagent_containers/pill/stalker/aptechka_b = 15,
+				/obj/item/weapon/reagent_containers/pill/stalker/aptechka_y = 5,
 				/obj/nothing = 60)
 
 /obj/effect/spawner/lootdrop/stalker/food
