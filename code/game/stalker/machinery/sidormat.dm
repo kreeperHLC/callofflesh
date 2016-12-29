@@ -64,8 +64,8 @@
 
 	var/list/med_list = list(
 		///////////////////////////////  Медикаменты  /////////////////////////////////////////
-		new /datum/data/stalker_equipment("Аптечка",				/obj/item/weapon/storage/firstaid/stalker,								1500),
-		new /datum/data/stalker_equipment("Армейска&#255; аптечка",	/obj/item/weapon/storage/firstaid/army,									3000),
+		new /datum/data/stalker_equipment("Аптечка",				/obj/item/weapon/reagent_containers/pill/stalker/aptechka_r,								1500),
+		new /datum/data/stalker_equipment("Армейска&#255; аптечка",	/obj/item/weapon/reagent_containers/pill/stalker/aptechka_b,									3000),
 		new /datum/data/stalker_equipment("Бинт",					/obj/item/stack/medical/bruise_pack/bint,								500),
 		new /datum/data/stalker_equipment("Мазь",					/obj/item/stack/medical/ointment,										500),
 		new /datum/data/stalker_equipment("Антирад. препараты",		/obj/item/weapon/reagent_containers/hypospray/medipen/stalker/antirad,	1500)

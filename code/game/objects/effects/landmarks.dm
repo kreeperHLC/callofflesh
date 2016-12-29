@@ -295,3 +295,6 @@
 
 /obj/effect/landmark/latejoin/oldstalker
 	name = "JoinLateOld Stalker"
+
+/obj/effect/landmark/latejoin/mercenary
+	name = "JoinLateMercenary"

@@ -80,6 +80,30 @@
 	density = 1
 	pass_flags = LETPASSTHROW
 
+/obj/structure/stalker/shina
+	name = "shina"
+	desc = "Тяжела&#255; стара&#255; пробита&#255; шина."
+	icon_state = "shina"
+	density = 1
+
+/obj/structure/stalker/shina2
+	name = "two shina"
+	desc = "Тяжелые старые пробитые шины."
+	icon_state = "shina2"
+	density = 1
+
+/obj/structure/stalker/shina3
+	name = "three shina"
+	desc = "Тяжелые старые пробитые шины."
+	icon_state = "shina3"
+	density = 1
+
+/obj/structure/stalker/shina3
+	name = "three shina"
+	desc = "Тяжелые старые пробитые шины."
+	icon_state = "shina3a"
+	density = 1
+
 /obj/structure/stalker/switcher
 	name = "switcher"
 	desc = "Неисправный выключатель.\n<span class='notice'>Вы начинаете щелкать его и обретаете на некоторое врем&#255; покой.</span>"

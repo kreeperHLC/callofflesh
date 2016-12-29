@@ -54,6 +54,7 @@
 	icon = 'icons/stalker/decor.dmi'
 	icon_state = "gazovaya_plita"
 	density = 1
+	anchored= 1
 
 /obj/item/weapon/storage/stalker/plita/attack_hand(mob/user)
 	return attack_self(user)
@@ -63,6 +64,7 @@
 	desc = "Стара&#255; печь."
 	icon = 'icons/stalker/decor.dmi'
 	icon_state = "pech"
+	anchored= 1
 
 /obj/item/weapon/storage/stalker/pech/attack_hand(mob/user)
 	return attack_self(user)
@@ -114,3 +116,7 @@
 
 /obj/structure/stalker/okno/redbrick/double2
 	icon_state = "redbrickdbl2"
+
+/obj/structure/stalker/okno/yellowbrick/yellowbrick1
+	icon_state = "yellowbrick1"
+	opacity = 1

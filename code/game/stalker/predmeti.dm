@@ -26,9 +26,9 @@
 /obj/item/clothing/suit/hooded/kozhanka/psz9md									//80000 рублей	ПС3-9Мд Универсальная защита
 
 //Медикаменты
-/obj/item/weapon/storage/firstaid/stalker										//500 рублей	Аптечка
-/obj/item/weapon/storage/firstaid/army											//1000 рублей	Армейска аптечка
-/obj/item/weapon/storage/firstaid/science										//2000 рублей	Научная аптечка
+/obj/item/weapon/reagent_containers/pill/stalker/aptechka_r										//500 рублей	Аптечка
+/obj/item/weapon/reagent_containers/pill/stalker/aptechka_b											//1000 рублей	Армейска аптечка
+/obj/item/weapon/reagent_containers/pill/stalker/aptechka_y										//2000 рублей	Научная аптечка
 /obj/item/stack/medical/bruise_pack/bint										//100 рублей	Бинт
 /obj/item/weapon/reagent_containers/hypospray/medipen/stalker/antirad			//700 рублей	Антирадиационные препараты
 

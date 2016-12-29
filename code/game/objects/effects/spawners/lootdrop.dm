@@ -127,6 +127,6 @@
 	lootdoubles = 0
 
 	loot = list(
-				/obj/structure/closet/crate/secure/loot = 20,
+				/obj/structure/barricade/stalker/box = 20,
 				"" = 80
 				)
