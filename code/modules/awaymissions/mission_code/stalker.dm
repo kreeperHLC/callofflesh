@@ -154,3 +154,10 @@
 	name = "Merceary"
 	icon_state = "mercenary"
 
+/area/stalker/blowout/byadt/outdoor
+	name = "Bar Outdoor"
+	icon_state = "bar_outdoor"
+	requires_power = 1
+	luminosity = 1
+	lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
+

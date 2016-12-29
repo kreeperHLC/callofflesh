@@ -130,10 +130,12 @@
 									'sound/stalker/ambience/rnd_outdoor/rnd_crow_9.ogg','sound/stalker/ambience/rnd_outdoor/rnd_crow_10.ogg',
 									'sound/stalker/ambience/rnd_outdoor/rnd_crow_11.ogg','sound/stalker/ambience/rnd_outdoor/rnd_crow_12.ogg')
 
-
-
-
-
+	var/list/l_sounds_bar = list('sound/stalker/megafon/bar_start_megafon_1.ogg','sound/stalker/megafon/bar_start_megafon_2.ogg',
+								'sound/stalker/megafon/bar_start_megafon_3.ogg','sound/stalker/megafon/bar_start_megafon_4.ogg',
+								'sound/stalker/megafon/mega_duty_propaganda_1.ogg','sound/stalker/megafon/mega_duty_propaganda_2.ogg',
+								'sound/stalker/megafon/mega_duty_propaganda_3.ogg','sound/stalker/megafon/mega_duty_propaganda_4.ogg',
+								'sound/stalker/megafon/mega_duty_propaganda_5.ogg','sound/stalker/megafon/mega_duty_propaganda_6.ogg',
+								'sound/stalker/megafon/mega_duty_propaganda_7.ogg')
 
 
 /turf/stalker/Entered(atom/A, atom/OL)
@@ -176,12 +178,15 @@
 			if (istype(get_area(src.loc), /area/stalker/blowout/outdoor))
 				if (prob(1))
 					l_sound = pick(l_sounds_outdoor)
-					A << sound(l_sound, repeat = 0, wait = 1,volume = 65, channel = 2)
+					A << sound(l_sound, repeat = 0, wait = 1,volume = 65, channel = 8)
 			if (istype(get_area(src.loc), /area/stalker/agroprom/caves))
 				if (prob(1))
 					l_sound = pick(l_sounds_ugrnd)
-					A << sound(l_sound, repeat = 0, wait = 1,volume = 65, channel = 2)
-
+					A << sound(l_sound, repeat = 0, wait = 1,volume = 65, channel = 8)
+			if (istype(get_area(src.loc), /area/stalker/blowout/byadt/outdoor))
+				if (prob(1))
+					l_sound = pick(l_sounds_bar)
+					A << sound(l_sound, repeat = 0, wait = 1,volume = 65, channel = 8)
 
 
 			if(istype(H.shoes, /obj/item/clothing/shoes))
