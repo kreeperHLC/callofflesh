@@ -144,13 +144,20 @@
 
 /area/stalker/byadt/buildings
 	name = "Buildings"
-	icon_state = "buildings"
+	icon_state = "buildings_no_blowout"
 
 /area/stalker/blowout/byadt/buildings
-	name = "Buildings_blowout"
-	icon_state = "buildings_blowout"
+	name = "Buildings Blowout"
+	icon_state = "buildings"
 
 /area/stalker/byadt/buildings/mercenary
 	name = "Merceary"
 	icon_state = "mercenary"
+
+/area/stalker/blowout/outdoor/bar
+	name = "Bar Outdoor"
+	icon_state = "bar_outdoor"
+	requires_power = 1
+	luminosity = 1
+	lighting_use_dynamic = DYNAMIC_LIGHTING_ENABLED
 

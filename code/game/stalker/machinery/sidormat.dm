@@ -17,11 +17,19 @@
 		new /datum/data/stalker_equipment("ПМм",					/obj/item/weapon/gun/projectile/automatic/pistol/pm,		3000),
 		new /datum/data/stalker_equipment("Фора 12",				/obj/item/weapon/gun/projectile/automatic/pistol/fort12,	6500),
 		new /datum/data/stalker_equipment("ПБ1с",					/obj/item/weapon/gun/projectile/automatic/pistol/pb1s,		4500),
+		new /datum/data/stalker_equipment("Сип-Т М200",				/obj/item/weapon/gun/projectile/automatic/pistol/sip,		7500),
+		new /datum/data/stalker_equipment("Кора-919",				/obj/item/weapon/gun/projectile/automatic/pistol/cora,		8000),
+		new /datum/data/stalker_equipment("Марта",					/obj/item/weapon/gun/projectile/automatic/pistol/marta,		10000),
+		new /datum/data/stalker_equipment("USP-match",				/obj/item/weapon/gun/projectile/automatic/pistol/usp_match, 9000),
 
 		///////////////////////////// **Автоматы, ПП** /////////////////////////////////////
 		new /datum/data/stalker_equipment("Гадюка 5",				/obj/item/weapon/gun/projectile/automatic/mp5,				18000),
-		new /datum/data/stalker_equipment("АК 74/2 У",				/obj/item/weapon/gun/projectile/automatic/aksu74 ,			28000),
-		new /datum/data/stalker_equipment("АК 74/2 У (Зеленый)",	/obj/item/weapon/gun/projectile/automatic/aksu74/green,		28000),
+		new /datum/data/stalker_equipment("АК 74/2 У",				/obj/item/weapon/gun/projectile/automatic/aksu74 ,			20000),
+		new /datum/data/stalker_equipment("АК 74/2 У (Зеленый)",	/obj/item/weapon/gun/projectile/automatic/aksu74/green,		20000),
+		new /datum/data/stalker_equipment("АК 74/2",				/obj/item/weapon/gun/projectile/automatic/ak74,				25000),
+		new /datum/data/stalker_equipment("АК 74/2 (Зеленый)",		/obj/item/weapon/gun/projectile/automatic/ak74/green,		25000),
+		new /datum/data/stalker_equipment("ТПС-301",				/obj/item/weapon/gun/projectile/automatic/tpc301,			30000),
+		new /datum/data/stalker_equipment("ИЛ86",					/obj/item/weapon/gun/projectile/automatic/il86,				30000),
 
 		/////////////////////////////// **Дробовики** /////////////////////////////////////
 		new /datum/data/stalker_equipment("БМ-16",					/obj/item/weapon/gun/projectile/revolver/bm16,				12000),
@@ -34,15 +42,20 @@
 
 	var/list/ammo_list = list(
 		////////////////////////////////  Патроны  /////////////////////////////////////////
-		new /datum/data/stalker_equipment("Пачка 9x18",				/obj/item/ammo_box/stalker/b9x18,							3750),
-		new /datum/data/stalker_equipment("Пачка 9x18 Бронебойные",	/obj/item/ammo_box/stalker/b9x18P,							7500),
+		new /datum/data/stalker_equipment("Коробка 9x18",				/obj/item/ammo_box/stalker/b9x18,						3750),
+		new /datum/data/stalker_equipment("Коробка 9x18 Бронебойные",	/obj/item/ammo_box/stalker/b9x18P,						7500),
 		new /datum/data/stalker_equipment("Магазин к ПМм/ПБ1с",		/obj/item/ammo_box/magazine/stalker/m9x18pm,				750),
 		new /datum/data/stalker_equipment("Магазин к Форе 12",		/obj/item/ammo_box/magazine/stalker/m9x18fort,				1000),
-		new /datum/data/stalker_equipment("Пачка 9x19",				/obj/item/ammo_box/stalker/b9x19,							4000),
+		new /datum/data/stalker_equipment("Коробка 9x19",				/obj/item/ammo_box/stalker/b9x19,						4000),
 		new /datum/data/stalker_equipment("Магазин к Гадюке",		/obj/item/ammo_box/magazine/stalker/m9x19mp5,				2000),
-		new /datum/data/stalker_equipment("Пачка дроби 12x70",		/obj/item/ammo_box/stalker/b12x70,							3000),
-		new /datum/data/stalker_equipment("Пачка 5.45x39",			/obj/item/ammo_box/stalker/b545,							5750),
-		new /datum/data/stalker_equipment("Магазин к АК 74/2y;AK74",/obj/item/ammo_box/magazine/stalker/m545,					2250)
+		new /datum/data/stalker_equipment("Коробка дроби 12x70",		/obj/item/ammo_box/stalker/b12x70,						3000),
+		new /datum/data/stalker_equipment("Коробка 5.45x39",			/obj/item/ammo_box/stalker/b545,						5750),
+		new /datum/data/stalker_equipment("Магазин к АК 74/2y;AK74",/obj/item/ammo_box/magazine/stalker/m545,					2250),
+		new /datum/data/stalker_equipment("Магазин к ИЛ-86 и ТПС-301",/obj/item/ammo_box/magazine/stalker/m556x45,				2500),
+		new /datum/data/stalker_equipment("Коробка 5.56x45",			/obj/item/ammo_box/stalker/b55645,						6000),
+		new /datum/data/stalker_equipment("Магазин коре-919 и сип-т",/obj/item/ammo_box/magazine/stalker/sc45,					1400),
+		new /datum/data/stalker_equipment("Магазин к марте"			,/obj/item/ammo_box/magazine/stalker/m9x19marta,			1500),
+		new /datum/data/stalker_equipment("Магазин к юсп-матч"		,/obj/item/ammo_box/magazine/stalker/usp45,					1500),
 		)
 
 	var/list/armor_list = list(
@@ -56,10 +69,13 @@
 		new /datum/data/stalker_equipment("Комбинезон бандита",		/obj/item/clothing/suit/hooded/kozhanka/combez_bandit,		25000),
 		new /datum/data/stalker_equipment("Темный плащ",			/obj/item/clothing/suit/hooded/kozhanka/banditka/coat,		12500),
 		new /datum/data/stalker_equipment("Коричневый плащ",		/obj/item/clothing/suit/hooded/kozhanka/banditka/coat/brown,12500),
+		new /datum/data/stalker_equipment("Берилл",					/obj/item/clothing/suit/army/berill,						70000),
+		new	/datum/data/stalker_equipment("Сева",					/obj/item/clothing/suit/hooded/kozhanka/seva,				90000),
 
 		//////////////////////////// **Маски, Шлемы** /////////////////////////////////////
 		new /datum/data/stalker_equipment("Противогаз",				/obj/item/clothing/mask/gas/stalker,						7500,
-		new /datum/data/stalker_equipment("Противогаз наемника",	/obj/item/clothing/mask/gas/stalker/mercenary,				7500)																														)
+		new /datum/data/stalker_equipment("Противогаз наемника",	/obj/item/clothing/mask/gas/stalker/mercenary,				7500),
+		new /datum/data/stalker_equipment("Тактический шлем",		/obj/item/clothing/head/hardhat/tacticalhelmet,				20000),																														)
 		)
 
 	var/list/med_list = list(

@@ -244,6 +244,7 @@ var/obj/sidor_enter/sidorEnter = null
 
 /obj/sidor_enter/Crossed(atom/movable/A)
 	SendToEmptyRoom(A)
+	sidorEnter = src
 
 /obj/sidor_enter/proc/SendToEmptyRoom(atom/movable/A)
 	var/obj/sidor_exit/Room = GetEmptyRoom(roomtype)
