@@ -138,7 +138,11 @@ obj/structure/grille/stalker/beton/CanPass(atom/movable/mover, turf/target, heig
 	icon_state = "gryaz1"
 	layer = 2.2
 
-/turf/stalker/floor/gryaz/border
+/turf/stalker/floor/gryaz_border
+	name = "dirt"
+	icon = 'icons/stalker/zemlya.dmi'
+	icon_state = "gryaz1"
+	layer = 2.2
 
 /turf/stalker/floor/gryaz/New()
 	icon_state = "gryaz[rand(1, 3)]"

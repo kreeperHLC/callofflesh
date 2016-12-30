@@ -4,6 +4,7 @@
 		#include "map_files\Stalker\Zona\kordon2.dmm"
 		#include "map_files\Stalker\Zona\svalka.dmm"
 		#include "map_files\Stalker\Zona\agroprom.dmm"
+		#include "map_files\Stalker\Zona\bar.dmm"
 
 		#define MAP_FILE "kordon1.dmm"
 		#define MAP_NAME "Zona"

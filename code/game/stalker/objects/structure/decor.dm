@@ -416,6 +416,7 @@
 	name = "tile"
 	icon = 'icons/stalker/floor.dmi'
 	icon_state = "bar_plate1"
+	layer = 2.3
 
 /obj/structure/stalker/bar_plitka/New()
 	..()

@@ -144,11 +144,11 @@
 
 /area/stalker/byadt/buildings
 	name = "Buildings"
-	icon_state = "buildings"
+	icon_state = "buildings_no_blowout"
 
 /area/stalker/blowout/byadt/buildings
-	name = "Buildings_blowout"
-	icon_state = "buildings_blowout"
+	name = "Buildings Blowout"
+	icon_state = "buildings"
 
 /area/stalker/byadt/buildings/mercenary
 	name = "Merceary"
