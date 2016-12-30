@@ -10,6 +10,51 @@
 /obj/machinery/button/door/keypad/New(loc, ndir = 0, built = 0)
 	..()
 
+/obj/machinery/button/door/keypad/proc/AddButtons()
+	if(correctcode == keycode)
+		keypadhtml += "<p><a href='byond://?src=\ref[src];choice=setup'>\[ Change \]</a>	\
+		<a href='byond://?src=\ref[src];choice=pulse'>\[ Use \]</a></p>"
+		playsound(loc, 'sound/machines/defib_success.ogg', 30, 1)
+
+	playsound(loc, 'sound/items/megaphone.ogg', 30, 1)
+	return
+
+/obj/machinery/button/door/keypad/proc/ShowKeypad(var/mob/living/U)
+	keypadhtml = "<html>\
+	<body><br>"
+	if(keycode == "")
+		keypadhtml += "<div align=center><table border=0><tr><td>\[ <b>¬ведите пароль</b> \]</td></tr></table><hr color=FF9900>"
+	else
+		keypadhtml += "<div align=center><table border=0><tr><td>[keycode]</td></tr></table><hr color=FF9900>\
+	<form>"
+
+	AddButtons()
+
+	keypadhtml += "<p><a href='byond://?src=\ref[src];choice=1'>1</a>	\
+	<a href='byond://?src=\ref[src];choice=2'>2</a>	\
+	<a href='byond://?src=\ref[src];choice=3'>3</a></p>	\
+	<p><a href='byond://?src=\ref[src];choice=4'>4</a>	\
+	<a href='byond://?src=\ref[src];choice=5'>5</a>	\
+	<a href='byond://?src=\ref[src];choice=6'>6</a></p>	\
+	<p><a href='byond://?src=\ref[src];choice=7'>7</a>	\
+	<a href='byond://?src=\ref[src];choice=8'>8</<a href>	\
+	<a href='byond://?src=\ref[src];choice=9'>9</a></p>	\
+	<p><a href='byond://?src=\ref[src];choice=C'>C</a>	\
+	<a href='byond://?src=\ref[src];choice=0'>0</a>	\
+	<a href='byond://?src=\ref[src];choice=R'>R</a></p>	\
+	</form>\
+	</div>\
+	</body>\
+	\
+	</html>"
+
+//	user << browse(keypadhtml, "window=keypadhtml;size=118x200;border=1;can_resize=1;can_close=1;can_minimize=1;titlebar=1")
+	var/datum/browser/keypad = new(U, "keypadhtml", "Keypad v0.34", 180, 305)
+	keypad.set_content(keypadhtml)
+	keypad.set_title_image(U.browse_rsc_icon(src.icon, src.icon_state))
+	keypad.open()
+	return
+
 /obj/machinery/button/door/keypad/attack_hand(mob/user)
 	if(!initialized)
 		setup_device()
@@ -28,29 +73,23 @@
 
 	icon_state = "[skin]1"
 
-	keypadhtml = "\
-	<html>\
-	\
-	<body>\
-	  <form>\
-	   <p><a href='byond://?src=\ref[src];choice=1'>1</a>	\
-	   <a href='byond://?src=\ref[src];choice=2'>2</a>	\
-	   <a href='byond://?src=\ref[src];choice=3'>3</a></p>	\
-	   <p><a href='byond://?src=\ref[src];choice=4'>4</a>	\
-	   <a href='byond://?src=\ref[src];choice=5'>5</a>	\
-	   <a href='byond://?src=\ref[src];choice=6'>6</a></p>	\
-	   <p><a href='byond://?src=\ref[src];choice=7'>7</a>	\
-	   <a href='byond://?src=\ref[src];choice=8'>8</<a href>	\
-	   <a href='byond://?src=\ref[src];choice=9'>9</a></p>	\
-	   <p><a href='byond://?src=\ref[src];choice=C'>C</a>	\
-	   <a href='byond://?src=\ref[src];choice=0'>0</a>	\
-	   <a href='byond://?src=\ref[src];choice=R'>R</a></p>	\
-	  </form>\
-	</body>\
-	\
-	</html>"
+	ShowKeypad(user)
+	return
 
-	user << browse(keypadhtml, "window=keypadhtml;size=118x200;border=1;can_resize=1;can_close=1;can_minimize=1;titlebar=1")
+/obj/machinery/button/door/keypad/proc/UpdateKeypad(var/mob/living/U)
+//	U << browse(null, "window=keypadhtml")
+	ShowKeypad(U)
+	return
+
+
+/obj/machinery/button/door/keypad/proc/ChangeCode(var/tempCode as num)
+	do
+		tempCode = text2num(input("Choose a new code-number for keypad.", "New Keypad Code", tempCode))
+	while(!isnum(tempCode))
+
+	if(isnum(tempCode) && tempCode != null)
+		correctcode = num2text(tempCode)
+	return
 
 /obj/machinery/button/door/keypad/Topic(href, href_list)
 	var/mob/living/U = usr
@@ -58,63 +97,50 @@
 	switch(href_list["choice"])
 		if("1")
 			keycode = "[keycode]" + "1"
-			U << browse(keypadhtml, "window=keypadhtml")
-			U << "Current code: [keycode]"
 
 		if("2")
 			keycode = "[keycode]" + "2"
-			U << browse(keypadhtml, "window=keypadhtml")
-			U << "Current code: [keycode]"
 
 		if("3")
 			keycode = "[keycode]" + "3"
-			U << browse(keypadhtml, "window=keypadhtml")
-			U << "Current code: [keycode]"
 
 		if("4")
 			keycode = "[keycode]" + "4"
-			U << browse(keypadhtml, "window=keypadhtml")
-			U << "Current code: [keycode]"
 
 		if("5")
 			keycode = "[keycode]" + "5"
-			U << browse(keypadhtml, "window=keypadhtml")
-			U << "Current code: [keycode]"
 
 		if("6")
 			keycode = "[keycode]" + "6"
-			U << browse(keypadhtml, "window=keypadhtml")
-			U << "Current code: [keycode]"
 
 		if("7")
 			keycode = "[keycode]" + "7"
-			U << browse(keypadhtml, "window=keypadhtml")
-			U << "Current code: [keycode]"
 
 		if("8")
 			keycode = "[keycode]" + "8"
-			U << browse(keypadhtml, "window=keypadhtml")
-			U << "Current code: [keycode]"
 
 		if("9")
 			keycode = "[keycode]" + "9"
-			U << browse(keypadhtml, "window=keypadhtml")
-			U << "Current code: [keycode]"
 
 		if("C")
-			U << "Nothing happens."
+			U << "<b>	Nothing happens.</b>"
 
 		if("0")
 			keycode = "[keycode]" + "0"
-			U << browse(keypadhtml, "window=keypadhtml")
-			U << "Current code: [keycode]"
 
 		if("R")
 			keycode = ""
-			U << browse(keypadhtml, "window=keypadhtml")
-			U << "Current code: [keycode]"
 
-	if(keycode == correctcode)
-		if(device)
-			device.pulsed()
+		if("setup")
+			if(keycode == correctcode)
+				if(device)
+					ChangeCode()
+
+		if("pulse")
+			if(keycode == correctcode)
+				if(device)
+					device.pulsed()
+
+	UpdateKeypad(usr)
+
 	return
