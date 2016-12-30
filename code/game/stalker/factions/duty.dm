@@ -19,7 +19,6 @@ Assistant
 	name = "Duty"
 
 /datum/outfit/job/army/pre_equip(mob/living/carbon/human/H)
-	..()
 	head = null
 	uniform = pick(/obj/item/clothing/under/color/switer, /obj/item/clothing/under/color/switer/dark)
 	suit = /obj/item/clothing/suit/hooded/kozhanka/psz9d
@@ -35,7 +34,7 @@ Assistant
 	r_pocket = /obj/item/weapon/stalker/bolts
 	l_pocket = pick(/obj/item/weapon/reagent_containers/food/snacks/stalker/kolbasa,/obj/item/weapon/reagent_containers/food/snacks/stalker/baton)
 
-/datum/outfit/army  // For select_equipment
+/datum/outfit/duty  // For select_equipment
 	name = "Duty Soldier"
 
 	head = null
@@ -50,7 +49,7 @@ Assistant
 							/obj/item/ammo_box/magazine/stalker/m545 = 2,)
 	r_pocket = /obj/item/weapon/stalker/bolts
 
-/datum/outfit/army/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/duty/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = pick(/obj/item/clothing/under/color/switer, /obj/item/clothing/under/color/switer/dark)
 	suit = /obj/item/clothing/suit/hooded/kozhanka/psz9d
@@ -71,13 +70,12 @@ Assistant
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
 	whitelist_only = 1
-	outfit = /datum/outfit/job/duty
+	outfit = /datum/outfit/job/barman2
 
-/datum/outfit/job/barman
+/datum/outfit/job/barman2
 	name = "Barman"
 
-/datum/outfit/job/army/pre_equip(mob/living/carbon/human/H)
-	..()
+/datum/outfit/job/barman2/pre_equip(mob/living/carbon/human/H)
 	head = null
 	uniform = /obj/item/clothing/under/color/switer/dark
 	suit = /obj/item/clothing/suit/jacket/sidor
