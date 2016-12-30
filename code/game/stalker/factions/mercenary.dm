@@ -26,7 +26,7 @@
 	gloves = /obj/item/clothing/gloves/fingerless
 	id = /obj/item/weapon/storage/wallet/stalker
 	back = /obj/item/weapon/storage/backpack/stalker
-	//back2 = pick(/obj/item/weapon/gun/projectile/automatic/mp5, /obj/item/weapon/gun/projectile/automatic/aksu74/green)
+	back2 = pick(/obj/item/weapon/gun/projectile/automatic/mp5, /obj/item/weapon/gun/projectile/shotgun/chaser)
 	shoes = /obj/item/clothing/shoes/jackboots/warm
 	backpack_contents = list(/obj/item/ammo_box/magazine/stalker/sc45 = 2,
 							/obj/item/weapon/reagent_containers/pill/stalker/aptechka_b = 1,
@@ -47,7 +47,6 @@
 	gloves = /obj/item/clothing/gloves/fingerless
 	id = /obj/item/weapon/storage/wallet/stalker
 	back = /obj/item/weapon/storage/backpack/stalker
-	//back2 = pick(/obj/item/weapon/gun/projectile/automatic/mp5, /obj/item/weapon/gun/projectile/automatic/aksu74/green)
 	shoes = /obj/item/clothing/shoes/jackboots/warm
 	backpack_contents = list(/obj/item/ammo_box/magazine/stalker/sc45 = 2,
 							/obj/item/weapon/reagent_containers/pill/stalker/aptechka_b = 1,
@@ -60,5 +59,6 @@
 	..()
 	uniform = pick(/obj/item/clothing/under/color/switer, /obj/item/clothing/under/color/switer/dark)
 	suit = /obj/item/clothing/suit/hooded/kozhanka/mercenary
+	back2 = pick(/obj/item/weapon/gun/projectile/automatic/mp5, /obj/item/weapon/gun/projectile/shotgun/chaser)
 	r_pocket = /obj/item/weapon/stalker/bolts
 	l_pocket = pick(/obj/item/weapon/reagent_containers/food/snacks/stalker/kolbasa,/obj/item/weapon/reagent_containers/food/snacks/stalker/baton)

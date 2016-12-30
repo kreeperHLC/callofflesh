@@ -41,37 +41,36 @@ var/onelive = 1
 	dna.species.spec_death(gibbed,src)
 
 //Загробная жизнь
-	var/mob/living/carbon/human/dead_character = new(loc)
-	client.prefs.copy_to(dead_character)
-	dead_character.dna.update_dna_identity()
-	if(mind)
-		mind.active = 0					//we wish to transfer the key manually
-		mind.transfer_to(dead_character)					//won't transfer key since the mind is not active
+//	var/mob/living/carbon/human/dead_character = new(loc)
+//	client.prefs.copy_to(dead_character)
+//	dead_character.dna.update_dna_identity()
+//	if(mind)
+//		mind.active = 0					//we wish to transfer the key manually
+//		mind.transfer_to(dead_character)					//won't transfer key since the mind is not active
 
 	//dead_character.name = real_name
 
-	dead_character.key = last_ckey
-	dead_character.loc = hell.loc
-	dead_character.equipOutfit(/datum/outfit/phantom)
+//	dead_character.key = last_ckey
+//	dead_character.loc = hell.loc
+//	dead_character.equipOutfit(/datum/outfit/phantom)
 
-	if (GetKarma(dead_character.key) <= 800)
+//	if (GetKarma(dead_character.key) <= 800)
 	//	if(TR_HASHNAME)
-		dead_character.real_name = "bad phantom ([dead_character.name])"
-		dead_character.name = dead_character.real_name			//[copytext(md5(real_name), 2, 6)
+//		dead_character.real_name = "bad phantom ([dead_character.name])"
+//		dead_character.name = dead_character.real_name			//[copytext(md5(real_name), 2, 6)
+//
+//	else //if (GetKarma(dead_character.key) <= 1100)
+//		dead_character.real_name = "phantom ([dead_character.name])"
+//		dead_character.name = dead_character.real_name
 
-	else //if (GetKarma(dead_character.key) <= 1100)
-		dead_character.real_name = "phantom ([dead_character.name])"
-		dead_character.name = dead_character.real_name
-
-	var/mob/DEADONE = dead_character
+//	var/mob/DEADONE = dead_character
 	var/mob/new_player/NP = new()
-	if (onelive == 0)
-		qdel(DEADONE)
+//	if (onelive == 0)
+//		qdel(DEADONE)
 	if (onelive != 0)
 		onelive = 0
 		spawn(9000)
-			NP.ckey = dead_character.ckey
-			qdel(DEADONE)
+			NP.ckey = client.ckey
 			onelive = 1
 
 //
