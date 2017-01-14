@@ -44,7 +44,7 @@ var/global/list/rockTurfEdgeCache
 		if(1)
 			src.gets_drilled(null, 1)
 	return
-
+/*
 /turf/simulated/mineral/New()
 	if(!rockTurfEdgeCache || !rockTurfEdgeCache.len)
 		rockTurfEdgeCache = list()
@@ -82,7 +82,7 @@ var/global/list/rockTurfEdgeCache
 
 	HideRock()
 	return
-
+*/
 /turf/simulated/mineral/proc/HideRock()
 	if(hidden)
 		name = "rock"

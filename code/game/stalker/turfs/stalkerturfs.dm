@@ -137,6 +137,16 @@ obj/structure/grille/stalker/beton/CanPass(atom/movable/mover, turf/target, heig
 	icon_state = "road2"
 	layer = 2.1
 
+/turf/stalker/floor/road/New()
+	if(prob(50))
+		icon_state = "road1"
+	else if(prob(50))
+		icon_state = "road3"
+	else if (prob(50))
+		icon_state = "road4"
+	else if (prob(50))
+		icon_state = "road5"
+
 /turf/stalker/floor/gryaz
 	name = "dirt"
 	icon = 'icons/stalker/zemlya.dmi'
