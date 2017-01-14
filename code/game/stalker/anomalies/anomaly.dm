@@ -173,10 +173,10 @@
 	icon = 'icons/stalker/anomalies.dmi'
 	inactive_icon_state = "puh2"
 	active_icon_state = "puh2"
-
+/*
 /obj/anomaly/fake
 	name = "anomaly"
-
+*/
 /obj/rad 	//Не наносит урона
 	name = "Anomaly"
 	var/damage_amount = 0 				//Сколько дамажит
@@ -198,15 +198,15 @@
 	pass_flags = PASSTABLE | PASSGRILLE
 
 /obj/rad/rad_low
-	damage_amount = 1
+	damage_amount = 0.5
 	sound = 'sound/stalker/pda/geiger_1.ogg'
 
 /obj/rad/rad_medium
-	damage_amount = 5
+	damage_amount = 1
 	sound = 'sound/stalker/pda/geiger_4.ogg'
 
 /obj/rad/rad_high
-	damage_amount = 20
+	damage_amount = 2
 	sound = 'sound/stalker/pda/geiger_6.ogg'
 
 

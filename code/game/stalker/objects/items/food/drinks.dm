@@ -3,7 +3,7 @@
 	desc = "Водка производства компании GSC. Хорошо пьётс&#255;, заметно снижает воздействие радиации, однако злоупотребл&#255;ть ей не стоит."
 	icon = 'icons/stalker/food.dmi'
 	icon_state = "gsc_vodka"
-	list_reagents = list("vodka" = 50, potass_iodide = 50)
+	list_reagents = list("vodka" = 85, "potass_iodide" = 15)
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/vodka/pidorka //и снова нехороший человек добавил это сюда
 	name = "Vodka Pidora"

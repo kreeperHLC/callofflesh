@@ -119,6 +119,14 @@
 
 
 /obj/item/weapon/gun/proc/shoot_live_shot(mob/living/user as mob|obj, pointblank = 0, mob/pbtarget = null, message = 1)
+	var/list/l_sounds_shots = list('sound/stalker/weapons/fading/rnd_shooting_1.ogg','sound/stalker/weapons/fading/rnd_shooting_2.ogg',
+									'sound/stalker/weapons/fading/rnd_shooting_4.ogg','sound/stalker/weapons/fading/rnd_shooting_5.ogg',
+									'sound/stalker/weapons/fading/rnd_shooting_6.ogg','sound/stalker/weapons/fading/rnd_shooting_7.ogg',
+									'sound/stalker/weapons/fading/rnd_shooting_9.ogg','sound/stalker/weapons/fading/rnd_shooting_10.ogg',
+									'sound/stalker/weapons/fading/rnd_shooting_11.ogg')
+	var/shot_sound = pick(l_sounds_shots)
+	var/delay_sound = 0
+	var/turf/epicenter = get_turf(user)
 	if(recoil)
 		shake_camera(user, recoil + 1, recoil)
 
@@ -132,6 +140,20 @@
 			user.visible_message("<span class='danger'>[user] fires [src] point blank at [pbtarget]!</span>", "<span class='danger'>You fire [src] point blank at [pbtarget]!</span>", "<span class='italics'>You hear a [istype(src, /obj/item/weapon/gun/energy) ? "laser blast" : "gunshot"]!</span>")
 		else
 			user.visible_message("<span class='danger'>[user] fires [src]!</span>", "<span class='danger'>You fire [src]!</span>", "You hear a [istype(src, /obj/item/weapon/gun/energy) ? "laser blast" : "gunshot"]!")
+			var/frequency = get_rand_frequency()
+			for(var/mob/M in player_list)
+				// Double check for client
+				if(M && M.client)
+					var/turf/M_turf = get_turf(M)
+					if(M_turf && M_turf.z == epicenter.z)
+						var/dist = get_dist(M_turf, epicenter)
+						if(dist <= 40 && dist >= 8 && delay_sound == 0)
+							var/far_volume = Clamp(40, 30, 50) // Volume is based on explosion size and dist
+							far_volume += (dist <= 40 * 0.5 ? 50 : 0) // add 50 volume if the mob is pretty close to the explosion
+							M.playsound_local(epicenter, shot_sound, far_volume, 1, frequency, falloff = 5)
+							delay_sound = 1
+							spawn(50)
+								delay_sound = 0
 
 	if(weapon_weight >= WEAPON_MEDIUM)
 		if(user.get_inactive_hand())

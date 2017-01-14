@@ -14,11 +14,11 @@
 			src << "<span class='userdanger'>[absorb_text]</span>"
 		else
 			src << "<span class='userdanger'>Your armor absorbs the blow!</span>"
-	else if(armor > 0)
-		if(soften_text)
-			src << "<span class='userdanger'>[soften_text]</span>"
-		else
-			src << "<span class='userdanger'>Your armor softens the blow!</span>"
+	//else if(armor > 0)
+	//	if(soften_text)
+	//		src << "<span class='userdanger'>[soften_text]</span>"
+	//	else
+	//		src << "<span class='userdanger'>Your armor softens the blow!</span>"
 	return armor
 
 

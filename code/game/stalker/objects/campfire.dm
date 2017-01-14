@@ -1,6 +1,6 @@
 /obj/machinery/campfire
 	name = "Campfire"
-	desc = "От костра исходит тёпло и м&#255;гкий свет."
+	desc = "От костра исходит тепло и м&#255;гкий свет."
 	icon = 'icons/stalker/stalker.dmi'
 	icon_state = "campfire0"
 	anchored = 1
@@ -25,6 +25,7 @@ obj/machinery/campfire/barrel
 		user.visible_message("<span class='notice'>[user] начал тушить костёр...</span>", "<span class='notice'>Вы начали тушить костёр...</span>")
 		if(!do_after(user, 10, 1, src))	return
 		user.visible_message("<span class='green'>[user] потушил костёр.</span>", "<span class='green'>Вы потушили костёр.</span>")
+		desc = "Бочка с парой сухих дровишек внутри. Можно зажечь спичками или зажигалкой."
 		on = !on
 		update_icon()
 		set_light(0)
@@ -106,6 +107,7 @@ obj/machinery/campfire/proc/Think()
 			if(!on)
 				on = !on
 				usr.visible_message("[usr] разжигает костёр.", "<span class='notice'>Вы разожгли костёр.</span>")
+				desc = "От костра исходит тёпло и м&#255;гкий свет."
 				update_icon()
 		else
 			if(istype(I, /obj/item/weapon/match))
@@ -114,6 +116,7 @@ obj/machinery/campfire/proc/Think()
 					on = !on
 					usr.visible_message("[usr] разжигает костёр.", "<span class='notice'>Вы разожгли костёр.</span>")
 					update_icon()
+					desc = "От костра исходит тёпло и м&#255;гкий свет."
 				else
 					if(M.lit == 0 && on)
 						M.fire_act()
@@ -124,6 +127,7 @@ obj/machinery/campfire/proc/Think()
 						on = !on
 						usr.visible_message("[usr] разжигает костёр.", "<span class='notice'>Вы разожгли костёр.</span>")
 						update_icon()
+						desc = "От костра исходит тёпло и м&#255;гкий свет."
 
 				else
 					if(on)

@@ -1,4 +1,4 @@
-#define TURNTABLE_CHANNEL 10
+#define TURNTABLE_CHANNEL 9
 
 /*
 /mob/var/datum/hear_music/hear_music

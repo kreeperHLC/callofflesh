@@ -80,11 +80,11 @@
 
 	var/list/med_list = list(
 		///////////////////////////////  Медикаменты  /////////////////////////////////////////
-		new /datum/data/stalker_equipment("Аптечка",				/obj/item/weapon/reagent_containers/pill/stalker/aptechka_r,								1500),
-		new /datum/data/stalker_equipment("Армейска&#255; аптечка",	/obj/item/weapon/reagent_containers/pill/stalker/aptechka_b,									3000),
-		new /datum/data/stalker_equipment("Бинт",					/obj/item/stack/medical/bruise_pack/bint,								500),
-		new /datum/data/stalker_equipment("Мазь",					/obj/item/stack/medical/ointment,										500),
-		new /datum/data/stalker_equipment("Антирад. препараты",		/obj/item/weapon/reagent_containers/hypospray/medipen/stalker/antirad,	1500)
+		new /datum/data/stalker_equipment("Аптечка",				/obj/item/weapon/reagent_containers/pill/stalker/aptechka_r,								1000),
+		new /datum/data/stalker_equipment("Армейска&#255; аптечка",	/obj/item/weapon/reagent_containers/pill/stalker/aptechka_b,									2000),
+		//new /datum/data/stalker_equipment("Бинт",					/obj/item/stack/medical/bruise_pack/bint,								500),
+		//new /datum/data/stalker_equipment("Мазь",					/obj/item/stack/medical/ointment,										500),
+		new /datum/data/stalker_equipment("Антирад. препараты",		/obj/item/weapon/reagent_containers/hypospray/medipen/stalker/antirad,	3000)
 		)
 
 	var/list/food_list = list(
@@ -95,7 +95,7 @@
 		new /datum/data/stalker_equipment("Консерв. бобы",			/obj/item/weapon/reagent_containers/food/snacks/stalker/konserva/bobi,			800),
 		new /datum/data/stalker_equipment("Консерв. гов&#255;дина",	/obj/item/weapon/reagent_containers/food/snacks/stalker/konserva/govyadina2,	900),
 		new /datum/data/stalker_equipment("Консерв. рыба",			/obj/item/weapon/reagent_containers/food/snacks/stalker/konserva/fish,			800),
-		new /datum/data/stalker_equipment("Водка 'Казаки'",			/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka/kazaki,			700),
+		new /datum/data/stalker_equipment("Водка 'Казаки'",			/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka/kazaki,			1000),
 		new /datum/data/stalker_equipment("Энергетик NonStop",		/obj/item/weapon/reagent_containers/food/drinks/soda_cans/energetic,			500),
 		new /datum/data/stalker_equipment("Сникерс",				/obj/item/weapon/reagent_containers/food/snacks/stalker/konserva/snack/snikers,	300),
 		new /datum/data/stalker_equipment("Колбаса",				/obj/item/weapon/reagent_containers/food/snacks/stalker/kolbasa,				400),

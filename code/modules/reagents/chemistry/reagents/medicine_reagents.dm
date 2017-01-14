@@ -107,13 +107,28 @@
 	color = "#0000C8"
 
 /datum/reagent/medicine/cryoxadone/on_mob_life(mob/living/M)
-	if(M.stat != DEAD && M.bodytemperature < 123456)
-		M.adjustCloneLoss(-4)
-		M.adjustOxyLoss(-10)
-		M.adjustBruteLoss(-2)
-		M.adjustFireLoss(-2)
-		M.adjustToxLoss(-3)
-		M.status_flags &= ~DISFIGURED
+	M.adjustCloneLoss(-4)
+	M.adjustOxyLoss(-10)
+	M.adjustBruteLoss(-2)
+	M.adjustFireLoss(-2)
+	M.adjustToxLoss(-3)
+	M.status_flags &= ~DISFIGURED
+	..()
+	return
+
+/datum/reagent/medicine/cryoxadone
+	name = "CryoxadoneBlue"
+	id = "cryoxadoneb"
+	description = "A chemical mixture with almost magical healing powers. Its main limitation is that the patient's body temperature must be under 270K for it to metabolise correctly."
+	color = "#0000C8"
+
+/datum/reagent/medicine/cryoxadone/on_mob_life(mob/living/M)
+	M.adjustCloneLoss(-4)
+	M.adjustOxyLoss(-10)
+	M.adjustBruteLoss(-4)
+	M.adjustFireLoss(-4)
+	M.adjustToxLoss(-3)
+	M.status_flags &= ~DISFIGURED
 	..()
 	return
 
@@ -357,7 +372,7 @@
 	description = "Efficiently restores low radiation damage."
 	reagent_state = LIQUID
 	color = "#C8A5DC"
-	metabolization_rate = 2 * REAGENTS_METABOLISM
+	metabolization_rate = 0.2
 
 /datum/reagent/medicine/potass_iodide/on_mob_life(mob/living/M)
 	if(M.radiation > 0)
@@ -373,7 +388,7 @@
 	description = "Reduces massive amounts of radiation and toxin damage while purging other chemicals from the body. Has a chance of dealing brute damage."
 	reagent_state = LIQUID
 	color = "#C8A5DC"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	metabolization_rate = 0.4
 
 /datum/reagent/medicine/pen_acid/on_mob_life(mob/living/M)
 	if(M.radiation > 0)

@@ -455,52 +455,52 @@
 /sidoritem/meduza
 	name = "Meduza"
 	itemtype = /obj/item/weapon/artefact/meduza
-	cost = 3000
+	cost = 2000
 
 /sidoritem/stoneflower
 	name = "Stoneflower"
 	itemtype = /obj/item/weapon/artefact/stoneflower
-	cost = 7000
+	cost = 5000
 
 /sidoritem/nighstar
 	name = "Nightstar"
 	itemtype = /obj/item/weapon/artefact/nightstar
-	cost = 10000
+	cost = 8000
 
 /sidoritem/maminibusi
 	name = "Mamini busi"
 	itemtype = /obj/item/weapon/artefact/maminibusi
-	cost = 100000
+	cost = 30000
 
 /sidoritem/flash
 	name = "Flash"
 	itemtype = /obj/item/weapon/artefact/flash
-	cost = 4000
+	cost = 3000
 
 /sidoritem/moonlight
 	name = "Moonlight"
 	itemtype = /obj/item/weapon/artefact/moonlight
-	cost = 90000
+	cost = 5000
 
 /sidoritem/pushtishka
 	name = "Pushtishka"
 	itemtype = /obj/item/weapon/artefact/pustishka
-	cost = 60000
+	cost = 30000
 
 /sidoritem/battery
 	name = "Battery"
 	itemtype = /obj/item/weapon/artefact/battery
-	cost = 60000
+	cost = 30000
 
 /sidoritem/droplet
 	name = "Droplet"
 	itemtype = /obj/item/weapon/artefact/droplet
-	cost = 5000
+	cost = 2500
 
 /sidoritem/fireball
 	name = "Fireball"
 	itemtype = /obj/item/weapon/artefact/fireball
-	cost = 12000
+	cost = 6000
 
 /sidoritem/crystal
 	name = "Crystal"

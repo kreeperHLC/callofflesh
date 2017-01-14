@@ -26,7 +26,7 @@ obj/item/weapon/reagent_containers/pill/stalker/canconsume(mob/eater, mob/user)
 	name = "army kit"
 	icon_state = "aptechkab"
 	//item_state = "bandaid"
-	list_reagents = list("cryoxadone" = 24)
+	list_reagents = list("cryoxadoneb" = 12)
 
 /obj/item/weapon/reagent_containers/pill/stalker/aptechka_y
 	name = "science kit"

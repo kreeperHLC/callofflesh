@@ -18,7 +18,7 @@ Assistant
 /datum/outfit/job/duty
 	name = "Duty"
 
-/datum/outfit/job/army/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/duty/pre_equip(mob/living/carbon/human/H)
 	head = null
 	uniform = pick(/obj/item/clothing/under/color/switer, /obj/item/clothing/under/color/switer/dark)
 	suit = /obj/item/clothing/suit/hooded/kozhanka/psz9d

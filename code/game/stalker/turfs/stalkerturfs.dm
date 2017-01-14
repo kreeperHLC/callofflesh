@@ -1,3 +1,8 @@
+#define NORTH_EDGING	"north"
+#define SOUTH_EDGING	"south"
+#define EAST_EDGING		"east"
+#define WEST_EDGING		"west"
+
 /turf/simulated/floor/plating/asteroid/snow/lite
 	name = "snow"
 	desc = "Выгл&#255;дит холодным."
@@ -138,14 +143,47 @@ obj/structure/grille/stalker/beton/CanPass(atom/movable/mover, turf/target, heig
 	icon_state = "gryaz1"
 	layer = 2.2
 
+/turf/stalker/floor/gryaz/New()
+	icon_state = "gryaz[rand(1, 3)]"
+	if(!rockTurfEdgeCache || !rockTurfEdgeCache.len)
+		rockTurfEdgeCache = list()
+		rockTurfEdgeCache.len = 4
+		rockTurfEdgeCache[NORTH_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_n", layer = 2.2)
+		rockTurfEdgeCache[SOUTH_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_s", layer = 2.2)
+		rockTurfEdgeCache[EAST_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_e", layer = 2.2)
+		rockTurfEdgeCache[WEST_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_w", layer = 2.2)
+
+	spawn(1)
+		var/turf/T
+		if((!istype(get_step(src, NORTH), /turf/stalker/floor/gryaz))  && (!istype(get_step(src, NORTH), /turf/simulated)))
+			T = get_step(src, NORTH)
+			if (T)
+				T.overlays += rockTurfEdgeCache[SOUTH_EDGING]
+		if((!istype(get_step(src, SOUTH), /turf/stalker/floor/gryaz)) && (!istype(get_step(src, SOUTH), /turf/simulated)))
+			T = get_step(src, SOUTH)
+			if (T)
+				T.overlays += rockTurfEdgeCache[NORTH_EDGING]
+		if((!istype(get_step(src, EAST), /turf/stalker/floor/gryaz)) && (!istype(get_step(src, EAST), /turf/simulated)))
+			T = get_step(src, EAST)
+			if (T)
+				T.overlays += rockTurfEdgeCache[WEST_EDGING]
+		if((!istype(get_step(src, WEST), /turf/stalker/floor/gryaz)) && (!istype(get_step(src, WEST), /turf/simulated)))
+			T = get_step(src, WEST)
+			if (T)
+				T.overlays += rockTurfEdgeCache[EAST_EDGING]
+	return
+
+/*
 /turf/stalker/floor/gryaz_border
 	name = "dirt"
 	icon = 'icons/stalker/zemlya.dmi'
 	icon_state = "gryaz1"
 	layer = 2.2
 
+
 /turf/stalker/floor/gryaz/New()
 	icon_state = "gryaz[rand(1, 3)]"
+*/
 
 /turf/stalker/floor/gryaz/gryaz2
 	icon_state = "gryaz2"

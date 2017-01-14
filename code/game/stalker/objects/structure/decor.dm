@@ -422,3 +422,9 @@
 	..()
 	pixel_x = rand(-2, 2)
 	pixel_y = rand(-2, 2)
+
+/obj/structure/stalker/bunker
+	name = "bunker"
+	icon = 'icons/stalker/bunker.dmi'
+	density = 1
+	opacity = 1

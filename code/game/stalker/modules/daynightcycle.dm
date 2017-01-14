@@ -1,7 +1,7 @@
 
 var/list/DNClist = list("#DEDF64", "#999999", "#777777", "#521C07", "#050505","#303030")
 
-var/currentDncStage = 0
+var/global/currentDncStage = 0
 
 var/dncColor = "#DEDF64"
 

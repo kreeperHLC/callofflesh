@@ -9,6 +9,8 @@
 	mag_type = /obj/item/ammo_box/magazine/stalker/m9x18pm
 	can_suppress = 0
 	durability = 50
+	spread = 5
+	randomspread = 1
 
 /obj/item/weapon/gun/projectile/automatic/pistol/pm/update_icon()
 	..()
@@ -139,7 +141,8 @@
 	pin = /obj/item/device/firing_pin
 	durability = 90
 	w_class = 4
-	spread = 1
+	spread = 2
+	randomspread = 1
 
 /obj/item/weapon/gun/projectile/automatic/ak74/update_icon()
 	..()
@@ -173,7 +176,7 @@
 	pin = /obj/item/device/firing_pin
 	durability = 80
 	w_class = 4
-	spread = 1
+	spread = 20
 
 /obj/item/weapon/gun/projectile/automatic/aksu74/update_icon()
 	..()

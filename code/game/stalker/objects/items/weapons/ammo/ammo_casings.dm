@@ -20,21 +20,21 @@
 	desc = "A 12x70mm bullet casing."
 	icon_state = "gshell"
 	pellets = 6
-	variance = 75
+	variance = 35
 	projectile_type = /obj/item/projectile/bullet/bullet12x70
 
 /obj/item/ammo_casing/shotgun/c12x70P
 	desc = "A 12x70mm AP bullet casing."
 	icon_state = "blshell"
 	pellets = 6
-	variance = 75
+	variance = 35
 	projectile_type = /obj/item/projectile/bullet/bullet12x70p
 
 /obj/item/ammo_casing/shotgun/c12x70D
 	desc = "A 12x70mm dart bullet casing."
 	icon_state = "stunshell"
 	pellets = 1
-	variance = 20
+	variance = 0.9
 	projectile_type = /obj/item/projectile/bullet/bullet12x70d
 
 /obj/item/ammo_casing/c9x19

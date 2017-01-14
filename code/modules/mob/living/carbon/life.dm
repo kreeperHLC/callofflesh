@@ -240,22 +240,24 @@
 	if(radiation)
 
 		switch(radiation)
-			if(0 to 50)
-				radiation--
+			if(10 to 20)
+				//radiation--
 				if(prob(25))
 					adjustFireLoss(1)
 					updatehealth()
 
-			if(50 to 75)
-				radiation -= 2
-				adjustFireLoss(1)
-				if(prob(5))
-					radiation -= 5
+			if(20 to 50)
+				adjustFireLoss(2)
 				updatehealth()
 
-			if(75 to 100)
-				radiation -= 3
-				adjustFireLoss(3)
+			if(50 to 75)
+				//radiation -= 3
+				if(prob(50))
+					adjustFireLoss(5)
+				updatehealth()
+
+			if(75 to 200)
+				adjustFireLoss(5)
 				updatehealth()
 
 		radiation = Clamp(radiation, 0, 100)

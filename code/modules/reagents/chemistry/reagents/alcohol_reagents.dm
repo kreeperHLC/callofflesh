@@ -116,11 +116,12 @@
 	description = "Number one drink AND fueling choice for Russians worldwide."
 	color = "#0064C8" // rgb: 0, 100, 200
 	boozepwr = 35
-
+/*
 /datum/reagent/consumable/ethanol/vodka/on_mob_life(mob/living/M)
 	M.radiation = max(M.radiation-2,0)
 	..()
 	return
+*/
 
 /datum/reagent/consumable/ethanol/bilk
 	name = "Bilk"

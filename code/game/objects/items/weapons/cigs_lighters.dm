@@ -22,9 +22,11 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	icon_state = "match_unlit"
 	var/lit = 0
 	var/smoketime = 5
+	//var/lightolor = "#FFAA33"
 	w_class = 1
 	origin_tech = "materials=1"
 	heat = 1000
+	light_color = "#FFAA33"
 
 /obj/item/weapon/match/process()
 	var/turf/location = get_turf(src)
@@ -41,10 +43,12 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/weapon/match/proc/matchignite()
 	if(lit == 0)
+		var/mob/M = src.loc
+		M.add_light_range(2)
+		//M.set_light(2, 1, lightolor)
 		lit = 1
 		icon_state = "match_lit"
 		damtype = "fire"
-		luminosity = 1
 		force = 3
 		hitsound = 'sound/items/welder.ogg'
 		item_state = "cigon"
@@ -57,6 +61,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/weapon/match/proc/matchburnout()
 	if(lit == 1)
+		var/mob/M = src.loc
+		M.add_light_range(-2)
 		lit = -1
 		damtype = "brute"
 		force = initial(force)
@@ -68,7 +74,17 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		SSobj.processing.Remove(src)
 
 /obj/item/weapon/match/dropped(mob/user)
-	matchburnout()
+	if(lit == 1)
+		user.add_light_range(-2)
+		lit = -1
+		damtype = "brute"
+		force = initial(force)
+		icon_state = "match_burnt"
+		item_state = "cigoff"
+		name = "burnt match"
+		desc = "—горевша&#255; спичка."
+		attack_verb = null
+		SSobj.processing.Remove(src)
 	return ..()
 
 /obj/item/weapon/match/attack(mob/living/carbon/M, mob/living/carbon/user)

@@ -574,6 +574,7 @@
 /obj/item/weapon/storage/box/matches/attackby(obj/item/weapon/match/W as obj, mob/user as mob, params)
 	if(istype(W, /obj/item/weapon/match))
 		W.matchignite()
+		//user.add_light_range(1)
 	return
 
 /obj/item/weapon/storage/box/lights

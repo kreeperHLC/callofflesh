@@ -141,12 +141,12 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_SUIT_MAX_TEMP_PROTECT
 	flags_inv = HIDEJUMPSUIT
 	flags = STOPSPRESSUREDMAGE | THICKMATERIAL
-	armor = list(melee = 50, bullet = 20, laser = 90,burn = 90, bomb = 40, bio = 90, rad = 90, electro = 90)
+	armor = list(melee = 50, bullet = 20, laser = 90,burn = 90, bomb = 40, bio = 90, rad = 100, electro = 90)
 	hoodtype = /obj/item/clothing/head/winterhood/stalker/ecolog
 	burn_state = FIRE_PROOF
 
 /obj/item/clothing/head/winterhood/stalker/ecolog
-	armor = list(melee = 50, bullet = 20, laser = 90,burn = 90, bomb = 40, bio = 90, rad = 90, electro = 90)
+	armor = list(melee = 50, bullet = 20, laser = 90,burn = 90, bomb = 40, bio = 90, rad = 100, electro = 90)
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
 	icon_state = "ecolog_helmet"
@@ -164,12 +164,12 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_SUIT_MAX_TEMP_PROTECT
 	flags_inv = HIDEJUMPSUIT
 	flags = STOPSPRESSUREDMAGE | THICKMATERIAL
-	armor = list(melee = 60, bullet = 40, laser = 90,burn = 90, bomb = 60, bio = 90, rad = 90, electro = 90)
+	armor = list(melee = 60, bullet = 40, laser = 90,burn = 90, bomb = 60, bio = 90, rad = 99, electro = 90)
 	hoodtype = /obj/item/clothing/head/winterhood/stalker/ecologg
 	burn_state = FIRE_PROOF
 
 /obj/item/clothing/head/winterhood/stalker/ecologg
-	armor = list(melee = 60, bullet = 40, laser = 90,burn = 90, bomb = 60, bio = 90, rad = 90, electro = 90)
+	armor = list(melee = 60, bullet = 40, laser = 90,burn = 90, bomb = 60, bio = 90, rad = 99, electro = 90)
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
 	icon_state = "ecologg_helmet"
@@ -187,12 +187,12 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_SUIT_MAX_TEMP_PROTECT
 	flags_inv = HIDEJUMPSUIT
 	flags = STOPSPRESSUREDMAGE | THICKMATERIAL
-	armor = list(melee = 50, bullet = 40, laser = 80,burn = 80, bomb = 50, bio = 70, rad = 90, electro = 90)
+	armor = list(melee = 50, bullet = 40, laser = 80,burn = 80, bomb = 50, bio = 70, rad = 98, electro = 90)
 	hoodtype = /obj/item/clothing/head/winterhood/stalker/seva
 	burn_state = FIRE_PROOF
 
 /obj/item/clothing/head/winterhood/stalker/seva
-	armor = list(melee = 50, bullet = 40, laser = 80,burn = 80, bomb = 50, bio = 70, rad = 90, electro = 90)
+	armor = list(melee = 50, bullet = 40, laser = 80,burn = 80, bomb = 50, bio = 70, rad = 98, electro = 90)
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
 	icon_state = "seva_helmet"
@@ -219,12 +219,12 @@
 	put_on_delay = 60
 	flags_inv = HIDEJUMPSUIT
 	flags = STOPSPRESSUREDMAGE | THICKMATERIAL
-	armor = list(melee = 50, bullet = 40, laser = 80,burn = 80, bomb = 50, bio = 70, rad = 90, electro = 90)
+	armor = list(melee = 50, bullet = 40, laser = 80,burn = 80, bomb = 50, bio = 70, rad = 95, electro = 90)
 	hoodtype = /obj/item/clothing/head/winterhood/stalker/psz9md
 	burn_state = FIRE_PROOF
 
 /obj/item/clothing/head/winterhood/stalker/psz9md
-	armor = list(melee = 50, bullet = 40, laser = 80,burn = 80, bomb = 50, bio = 70, rad = 90, electro = 90)
+	armor = list(melee = 50, bullet = 40, laser = 80,burn = 80, bomb = 50, bio = 70, rad = 95, electro = 90)
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
 	icon_state = "psz9md_helmet"
