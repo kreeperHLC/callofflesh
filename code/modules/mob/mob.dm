@@ -497,16 +497,20 @@ mob/proc/let_justice_be_done()
 	set name = "Respawn"
 	set category = "OOC"
 
+	if (!( abandon_allowed ))
+		return
+
 	if ((stat != 2 || !( ticker )))
 		usr << "<span class='boldnotice'>You must be dead to use this!</span>"
 		return
 
-	if(!can_spawn)
+	if (!can_spawn)
+		usr << "<span class='boldnotice'>После смерти необходимо подождать 5 минут. Да, респавн наконец-то действительно работает.</span>"
 		return
 
 	log_game("[usr.name]/[usr.key] used abandon mob.")
 
-	usr << "<span class='boldnotice'>НЕ ЗАБУДЬ СМЕНИТЬ ИМЯ!</span>"
+	usr << "<span class='boldnotice'>Please roleplay correctly!</span>"
 
 	if(!client)
 		log_game("[usr.key] AM failed due to disconnect.")

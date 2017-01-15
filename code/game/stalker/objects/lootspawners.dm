@@ -118,7 +118,7 @@
 	name = "stalker gravity"
 	radius = 3
 	lootcount = 1
-	cooldown = 3000
+	cooldown = 4500
 	loot = list(/obj/item/weapon/artefact/meduza = 12,
 				/obj/item/weapon/artefact/stoneflower = 6,
 				/obj/item/weapon/artefact/nightstar = 3,
@@ -129,7 +129,7 @@
 	name = "stalker electra"
 	radius = 3
 	lootcount = 1
-	cooldown = 3000
+	cooldown =4500
 	loot = list(/obj/item/weapon/artefact/flash = 12,
 				/obj/item/weapon/artefact/moonlight = 6,
 				/obj/item/weapon/artefact/battery = 1,
@@ -139,7 +139,7 @@
 	name = "stalker fire"
 	radius = 3
 	lootcount = 1
-	cooldown = 3000
+	cooldown = 4500
 	loot = list(/obj/item/weapon/artefact/droplet = 13,
 				/obj/item/weapon/artefact/fireball = 6,
 				/obj/item/weapon/artefact/crystal = 3,

@@ -51,9 +51,9 @@ datum/subsystem/blowout/proc/StartBlowout()
 	world << 'sound/stalker/pda/sms.ogg'
 	world << 'sound/stalker/blowout/blowout_begin_02.ogg'
 	world << 'sound/stalker/blowout/blowout_siren.ogg'
-	spawn(581)
+	spawn(980)
 		world << 'sound/stalker/blowout/blowout_particle_wave.ogg'
-	spawn(600)
+	spawn(1200)
 		StopBlowout()
 
 datum/subsystem/blowout/proc/StopBlowout()
@@ -92,7 +92,7 @@ area/proc/ProcessBlowout()
 	if(blowout)
 		for(var/mob/living/carbon/human/H in src.contents)
 			shake_camera(H, 1, 1)
-			spawn(581)
+			spawn(980)
 			shake_camera(H, 10, 1)
 		spawn(10)
 			ProcessBlowout()

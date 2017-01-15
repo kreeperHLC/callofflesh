@@ -65,6 +65,9 @@ var/list/image/ghost_darkness_images = list() //this is a list of images for thi
 
 	animate(src, pixel_y = 2, time = 10, loop = -1)
 	..()
+	can_spawn = 0
+	spawn(100)
+		can_spawn = 1
 
 /mob/dead/observer/Destroy()
 	if (ghostimage)

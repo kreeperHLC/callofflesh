@@ -13,6 +13,7 @@
 	var/verb_yell = "yells"
 	var/inertia_dir = 0
 	var/pass_flags = 0
+	var/previous_teleport_dest = null
 	glide_size = 8
 
 

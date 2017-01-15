@@ -153,34 +153,36 @@ obj/structure/grille/stalker/beton/CanPass(atom/movable/mover, turf/target, heig
 	icon_state = "gryaz1"
 	layer = 2.2
 
+var/global/list/GryazEdgeCache
+
 /turf/stalker/floor/gryaz/New()
 	icon_state = "gryaz[rand(1, 3)]"
-	if(!rockTurfEdgeCache || !rockTurfEdgeCache.len)
-		rockTurfEdgeCache = list()
-		rockTurfEdgeCache.len = 4
-		rockTurfEdgeCache[NORTH_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_n", layer = 2.2)
-		rockTurfEdgeCache[SOUTH_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_s", layer = 2.2)
-		rockTurfEdgeCache[EAST_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_e", layer = 2.2)
-		rockTurfEdgeCache[WEST_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_w", layer = 2.2)
+	if(!GryazEdgeCache || !GryazEdgeCache.len)
+		GryazEdgeCache = list()
+		GryazEdgeCache.len = 4
+		GryazEdgeCache[NORTH_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_n", layer = 2.2)
+		GryazEdgeCache[SOUTH_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_s", layer = 2.2)
+		GryazEdgeCache[EAST_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_e", layer = 2.2)
+		GryazEdgeCache[WEST_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_w", layer = 2.2)
 
 	spawn(1)
 		var/turf/T
 		if((!istype(get_step(src, NORTH), /turf/stalker/floor/gryaz))  && (!istype(get_step(src, NORTH), /turf/simulated)))
 			T = get_step(src, NORTH)
 			if (T)
-				T.overlays += rockTurfEdgeCache[SOUTH_EDGING]
+				T.overlays += GryazEdgeCache[SOUTH_EDGING]
 		if((!istype(get_step(src, SOUTH), /turf/stalker/floor/gryaz)) && (!istype(get_step(src, SOUTH), /turf/simulated)))
 			T = get_step(src, SOUTH)
 			if (T)
-				T.overlays += rockTurfEdgeCache[NORTH_EDGING]
+				T.overlays += GryazEdgeCache[NORTH_EDGING]
 		if((!istype(get_step(src, EAST), /turf/stalker/floor/gryaz)) && (!istype(get_step(src, EAST), /turf/simulated)))
 			T = get_step(src, EAST)
 			if (T)
-				T.overlays += rockTurfEdgeCache[WEST_EDGING]
+				T.overlays += GryazEdgeCache[WEST_EDGING]
 		if((!istype(get_step(src, WEST), /turf/stalker/floor/gryaz)) && (!istype(get_step(src, WEST), /turf/simulated)))
 			T = get_step(src, WEST)
 			if (T)
-				T.overlays += rockTurfEdgeCache[EAST_EDGING]
+				T.overlays += GryazEdgeCache[EAST_EDGING]
 	return
 
 /*

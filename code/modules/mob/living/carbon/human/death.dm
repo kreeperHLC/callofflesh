@@ -66,14 +66,20 @@ var/onelive = 1
 //	var/mob/DEADONE = dead_character
 	var/mob/dead/observer/dead_character = new(loc)
 	dead_character.ckey = client.ckey
+	dead_character.real_name = "phantom ([dead_character.name])"
+	dead_character.name = dead_character.real_name
+	dead_character.can_spawn = 0
+//	spawn(60)
+//		dead_character.can_spawn = 1
+//	return
 //	if (onelive == 0)
 //		qdel(DEADONE)
-	if (onelive != 0)
-		onelive = 0
-		spawn(9000)
-			var/mob/new_player/NP = new()
-			NP.ckey = dead_character.ckey
-			onelive = 1
+//	if (onelive != 0)
+//		onelive = 0
+//		spawn(9000)
+//			var/mob/new_player/NP = new()
+//			NP.ckey = dead_character.ckey
+//			onelive = 1
 
 //
 

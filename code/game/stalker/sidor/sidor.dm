@@ -233,18 +233,15 @@
 	return 0
 
 var/list/sidorRooms = list()
-var/obj/sidor_enter/sidorEnter = null
+//var/obj/sidor_enter/sidorEnter = null
 
 /obj/sidor_enter
 	var/roomtype = "sidor"
 	invisibility = 101
 
-/obj/sidor_enter/New()
-	sidorEnter = src
-
 /obj/sidor_enter/Crossed(atom/movable/A)
 	SendToEmptyRoom(A)
-	sidorEnter = src
+	A.previous_teleport_dest = src.loc
 
 /obj/sidor_enter/proc/SendToEmptyRoom(atom/movable/A)
 	var/obj/sidor_exit/Room = GetEmptyRoom(roomtype)
@@ -271,7 +268,7 @@ var/obj/sidor_enter/sidorEnter = null
 	sidorRooms.Add(src)
 
 /obj/sidor_exit/Crossed(atom/movable/A)
-	A.loc = sidorEnter.loc
+	A.loc = A.previous_teleport_dest
 	occupant = null
 
 var/global/sidoritems = list(

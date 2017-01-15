@@ -152,7 +152,7 @@
 							far_volume += (dist <= 40 * 0.5 ? 50 : 0) // add 50 volume if the mob is pretty close to the explosion
 							M.playsound_local(epicenter, shot_sound, far_volume, 1, frequency, falloff = 5)
 							delay_sound = 1
-							spawn(50)
+							spawn(100)
 								delay_sound = 0
 
 	if(weapon_weight >= WEAPON_MEDIUM)
