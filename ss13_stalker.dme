@@ -15,7 +15,6 @@
 // BEGIN_INCLUDE
 #include "_maps\__MAP_DEFINES.dm"
 #include "_maps\Zona.dm"
-#include "_maps\map_files\Stalker\testmap.dmm"
 #include "_maps\map_files\Stalker\Zona\agroprom.dmm"
 #include "_maps\map_files\Stalker\Zona\bar.dmm"
 #include "_maps\map_files\Stalker\Zona\kordon1.dmm"
