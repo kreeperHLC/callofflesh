@@ -240,7 +240,8 @@ var/list/sidorRooms = list()
 	invisibility = 101
 
 /obj/sidor_enter/Crossed(atom/movable/A)
-	SendToEmptyRoom(A)
+	if(istype(A, /mob/living/carbon/human))
+		SendToEmptyRoom(A)
 	A.previous_teleport_dest = src.loc
 
 /obj/sidor_enter/proc/SendToEmptyRoom(atom/movable/A)
@@ -268,7 +269,8 @@ var/list/sidorRooms = list()
 	sidorRooms.Add(src)
 
 /obj/sidor_exit/Crossed(atom/movable/A)
-	A.loc = A.previous_teleport_dest
+	if(istype(A, /mob/living/carbon/human))
+		A.loc = A.previous_teleport_dest
 	occupant = null
 
 var/global/sidoritems = list(

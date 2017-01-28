@@ -27,6 +27,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	origin_tech = "materials=1"
 	heat = 1000
 	light_color = "#FFAA33"
+	light_power = 2
+	light_range = 3
 
 /obj/item/weapon/match/process()
 	var/turf/location = get_turf(src)
@@ -43,8 +45,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/weapon/match/proc/matchignite()
 	if(lit == 0)
-		var/mob/M = src.loc
-		M.add_light_range(2)
+		//var/mob/M = src.loc
+		set_light()
 		//M.set_light(2, 1, lightolor)
 		lit = 1
 		icon_state = "match_lit"
@@ -61,8 +63,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/weapon/match/proc/matchburnout()
 	if(lit == 1)
-		var/mob/M = src.loc
-		M.add_light_range(-2)
+		//var/mob/M = src.loc
+		kill_light()
 		lit = -1
 		damtype = "brute"
 		force = initial(force)
@@ -75,7 +77,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/weapon/match/dropped(mob/user)
 	if(lit == 1)
-		user.add_light_range(-2)
+		kill_light()
 		lit = -1
 		damtype = "brute"
 		force = initial(force)
@@ -481,6 +483,9 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	slot_flags = SLOT_BELT
 	var/lit = 0
 	heat = 1500
+	light_power = 3
+	light_range = 5
+	light_color = "#FFAA33"
 
 /obj/item/weapon/lighter/greyscale
 	name = "cheap lighter"
@@ -514,7 +519,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 					user.apply_damage(5, BURN, hitzone)
 					user.visible_message("<span class='warning'>After a few attempts, [user] manages to light [src] - they however burn their finger in the process.</span>", "<span class='warning'>You burn yourself while lighting the lighter!</span>")
 
-			user.add_light_range(1)
+			//user.add_light_range(1)
 			SSobj.processing |= src
 		else
 			lit = 0
@@ -526,7 +531,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 				user.visible_message("You hear a quiet click, as [user] shuts off [src] without even looking at what they're doing. Wow.", "<span class='notice'>You quietly shut off [src] without even looking at what you're doing. Wow.</span>")
 			else
 				user.visible_message("[user] quietly shuts off [src].", "<span class='notice'>You quietly shut off [src].")
-			user.add_light_range(-1)
+			//user.add_light_range(-1)
 			SSobj.processing.Remove(src)
 	else
 		return ..()
@@ -559,16 +564,16 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/weapon/lighter/pickup(mob/user)
 	if(lit)
-		set_light(0)
-		user.add_light_range(1)
+		kill_light()
+		user.set_light()
 	return
 
 
 /obj/item/weapon/lighter/dropped(mob/user)
 	if(lit)
 		if(user)
-			user.add_light_range(-1)
-		set_light(1)
+			user.kill_light()
+		set_light()
 	return
 
 /obj/item/weapon/lighter/is_hot()

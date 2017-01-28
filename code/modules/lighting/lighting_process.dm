@@ -1,3 +1,4 @@
+/*
 /datum/controller/process/lighting
 	var/last_light_count = 0
 	var/last_overlay_count = 0
@@ -38,3 +39,4 @@
 		O.needs_update = 0
 
 		//SCHECK
+*/

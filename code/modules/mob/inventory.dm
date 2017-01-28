@@ -128,6 +128,22 @@
 	if((I.flags & NODROP) && !force)
 		return 0
 
+	var/ahand = get_active_hand()
+	var/IH = get_item_by_slot(ahand)
+
+	if(I && istype(I, /obj/item/weapon/gun) && !istype(I, IH) && !force && I != r_hand && I != l_hand && !istype(I, /obj/item/weapon/gun/projectile/automatic/pistol))
+		visible_message("<span class='warning'>[src] начинает доставать [I] из-за спины!</span>", "<span class='notice'>¬ы достаете [I] из-за спины...</span>")
+		if(do_after_INVENTORY(src, 20, 1, I))
+			visible_message("<span class='danger'>[src] берет в руки [I]!</span>", "<span class='notice'>¬ы достали [I] из-за спины.</span>")
+			if(client)
+				client.screen -= I
+			I.loc = loc
+			I.dropped(src)
+			if(I)
+				I.layer = initial(I.layer)
+		else
+			return 0
+
 	if(I == r_hand)
 		r_hand = null
 		update_inv_r_hand()
@@ -135,7 +151,7 @@
 		l_hand = null
 		update_inv_l_hand()
 
-	if(I)
+	if(I)//&& !istype(I, /obj/item/weapon/gun))
 		if(client)
 			client.screen -= I
 		I.loc = loc

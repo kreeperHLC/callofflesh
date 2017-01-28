@@ -206,10 +206,10 @@
 		if(istype(target, /obj/structure/window))
 			if(uses)
 				target.color = paint_color
-				if(color_hex2num(paint_color) < 255)
-					target.SetOpacity(255)
-				else
-					target.SetOpacity(initial(target.opacity))
+				//if(color_hex2num(paint_color) < 255)
+					//target.SetOpacity(255)
+				//else
+					//target.SetOpacity(initial(target.opacity))
 				uses = max(0, uses-2)
 				playsound(user.loc, 'sound/effects/spray.ogg', 5, 1, 5)
 				return

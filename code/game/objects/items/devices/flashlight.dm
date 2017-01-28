@@ -11,13 +11,16 @@
 	action_button_name = "Toggle Light"
 	var/on = 0
 	var/brightness_on = 4 //luminosity when on
+	light_color = "#FFAA33"
+	light_power = 4
+	light_range = 7
 
 /obj/item/device/flashlight/pda
 	icon = 'icons/stalker/device.dmi'
 	icon_state = "pda"
 	item_state = "electronic"
 	brightness_on = 2
-
+/*
 /obj/item/device/flashlight/initialize()
 	..()
 	if(on)
@@ -40,19 +43,31 @@
 			user.add_light_range(-brightness_on)
 		else if(isturf(loc))
 			set_light(0)
+*/
+/obj/item/device/flashlight/initialize()
+	..()
+	update_icon()
 
+/obj/item/device/flashlight/update_icon()
+	if(on)
+		icon_state = "[initial(icon_state)]-on"
+		set_light()
+	else
+		icon_state = "[initial(icon_state)]"
+		kill_light()
+/*
 /obj/item/device/flashlight/on_enter_storage()
 	if (on)
 		on = !on
 		icon_state = initial(icon_state)
-		set_light(0)
-
+		update_icon()
+*/
 /obj/item/device/flashlight/attack_self(mob/user)
 	if(!isturf(user.loc))
 		user << "<span class='warning'>You cannot turn the light on while in this [user.loc]!</span>" //To prevent some lighting anomalities.
 		return 0
 	on = !on
-	update_brightness(user)
+	update_icon()
 	return 1
 
 
@@ -98,18 +113,18 @@
 	else
 		return ..()
 
-
+/*
 /obj/item/device/flashlight/pickup(mob/user)
 	if(on)
-		user.add_light_range(brightness_on)
-		set_light(0)
+		user.set_light()
+		kill_light()
 
 
 /obj/item/device/flashlight/dropped(mob/user)
 	if(on)
-		user.add_light_range(-brightness_on)
-		set_light(brightness_on)
-
+		user.kill_light()
+		set_light()
+*/
 
 /obj/item/device/flashlight/pen
 	name = "penlight"
@@ -202,16 +217,16 @@ obj/item/device/flashlight/lamp/bananalamp
 
 /obj/item/device/flashlight/flare
 	name = "flare"
-	desc = "A red Nanotrasen issued flare. There are instructions on the side, it reads 'pull cord, make light'."
-	w_class = 2
-	brightness_on = 7 // Pretty bright.
+	desc = "A red standard-issue flare. There are instructions on the side reading 'pull cord, make light'."
+	w_class = 1
+	light_range = 5 // Pretty bright.
+	light_color = "#e58775"
 	icon_state = "flare"
 	item_state = "flare"
-	action_button_name = null	//just pull it manually, neckbeard.
+	action_button_name = null //just pull it manually, neckbeard.
 	var/fuel = 0
 	var/on_damage = 7
 	var/produce_heat = 1500
-	heat = 1000
 
 /obj/item/device/flashlight/flare/New()
 	fuel = rand(800, 1000) // Sorry for changing this so much but I keep under-estimating how long X number of ticks last in seconds.
@@ -225,45 +240,32 @@ obj/item/device/flashlight/lamp/bananalamp
 	if(!fuel || !on)
 		turn_off()
 		if(!fuel)
-			icon_state = "[initial(icon_state)]-empty"
-		SSobj.processing -= src
+			src.icon_state = "[initial(icon_state)]-empty"
+		//processing_objects -= src
 
 /obj/item/device/flashlight/flare/proc/turn_off()
 	on = 0
-	force = initial(src.force)
-	damtype = initial(src.damtype)
-	if(ismob(loc))
-		var/mob/U = loc
-		update_brightness(U)
-	else
-		update_brightness(null)
-
-/obj/item/device/flashlight/flare/update_brightness(mob/user = null)
-	..()
-	if(on)
-		item_state = "[initial(item_state)]-on"
-	else
-		item_state = "[initial(item_state)]"
+	src.force = initial(src.force)
+	src.damtype = initial(src.damtype)
+	update_icon()
 
 /obj/item/device/flashlight/flare/attack_self(mob/user)
+	if(turn_on(user))
+		user.visible_message("<span class='notice'>\The [user] activates \the [src].</span>", "<span class='notice'>You pull the cord on the flare, activating it!</span>")
 
-	// Usual checks
-	if(!fuel)
-		user << "<span class='warning'>It's out of fuel!</span>"
-		return
+/obj/item/device/flashlight/flare/proc/turn_on(var/mob/user)
 	if(on)
-		return
-
-	. = ..()
-	// All good, turn it on.
-	if(.)
-		user.visible_message("<span class='notice'>[user] lights \the [src].</span>", "<span class='notice'>You light \the [src]!</span>")
-		force = on_damage
-		damtype = "fire"
-		SSobj.processing += src
-
-/obj/item/device/flashlight/flare/is_hot()
-	return on * heat
+		return FALSE
+	if(!fuel)
+		if(user)
+			user << "<span class='notice'>It's out of fuel.</span>"
+		return FALSE
+	on = TRUE
+	force = on_damage
+	damtype = "fire"
+	//processing_objects += src
+	update_icon()
+	return 1
 
 /obj/item/device/flashlight/flare/torch
 	name = "torch"

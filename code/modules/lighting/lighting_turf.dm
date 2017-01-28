@@ -1,3 +1,4 @@
+/*
 /turf
 	var/list/affecting_lights
 	var/atom/movable/lighting_overlay/lighting_overlay
@@ -37,3 +38,4 @@
 	. = ..()
 	if(obj && obj.opacity)
 		reconsider_lights()
+*/

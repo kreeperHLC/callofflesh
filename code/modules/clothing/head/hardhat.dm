@@ -10,6 +10,9 @@
 	flags_inv = 0
 	action_button_name = "Toggle Helmet Light"
 	burn_state = FIRE_PROOF
+	light_color = "#FFAA33"
+	light_power = 4
+	light_range = 7
 
 /obj/item/clothing/head/hardhat/attack_self(mob/user)
 	if(!isturf(user.loc))
@@ -25,21 +28,27 @@
 	else
 		turn_off(user)
 
+/obj/item/clothing/head/hardhat/on_enter_storage()
+	if (on)
+		on = !on
+		icon_state = initial(icon_state)
+		set_light()
+
 /obj/item/clothing/head/hardhat/pickup(mob/user)
 	if(on)
-		user.add_light_range(brightness_on)
-		set_light(0)
+		user.set_light()
+		kill_light()
 
 /obj/item/clothing/head/hardhat/dropped(mob/user)
 	if(on)
-		user.add_light_range(-brightness_on)
+		user.kill_light()
 		set_light(brightness_on)
 
 /obj/item/clothing/head/hardhat/proc/turn_on(mob/user)
-	user.add_light_range(brightness_on)
+	user.set_light()
 
 /obj/item/clothing/head/hardhat/proc/turn_off(mob/user)
-	user.add_light_range(-brightness_on)
+	user.kill_light()
 
 /obj/item/clothing/head/hardhat/orange
 	icon_state = "hardhat0_orange"

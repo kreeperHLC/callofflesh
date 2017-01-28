@@ -585,14 +585,14 @@
 	item_state = "syringe_kit"
 	foldable = /obj/item/stack/sheet/cardboard //BubbleWrap
 	storage_slots=21
-	can_hold = list(/obj/item/weapon/light/tube, /obj/item/weapon/light/bulb)
+	can_hold = list(/obj/item/light/tube/large)
 	max_combined_w_class = 21
 	use_to_pickup = 1 // for picking up broken bulbs, not that most people will try
 
 /obj/item/weapon/storage/box/lights/bulbs/New()
 	..()
 	for(var/i = 0; i < 21; i++)
-		new /obj/item/weapon/light/bulb(src)
+		new /obj/item/light/tube/large(src)
 
 /obj/item/weapon/storage/box/lights/tubes
 	name = "box of replacement tubes"
@@ -601,7 +601,7 @@
 /obj/item/weapon/storage/box/lights/tubes/New()
 	..()
 	for(var/i = 0; i < 21; i++)
-		new /obj/item/weapon/light/tube(src)
+		new /obj/item/light/tube/large(src)
 
 /obj/item/weapon/storage/box/lights/mixed
 	name = "box of replacement lights"
@@ -610,9 +610,9 @@
 /obj/item/weapon/storage/box/lights/mixed/New()
 	..()
 	for(var/i = 0; i < 14; i++)
-		new /obj/item/weapon/light/tube(src)
+		new /obj/item/light/tube/large(src)
 	for(var/i = 0; i < 7; i++)
-		new /obj/item/weapon/light/bulb(src)
+		new /obj/item/light/tube/large(src)
 
 
 /obj/item/weapon/storage/box/deputy

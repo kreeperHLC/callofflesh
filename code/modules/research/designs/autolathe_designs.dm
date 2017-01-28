@@ -377,7 +377,7 @@
 	materials = list(MAT_METAL = 500, MAT_GLASS = 50)
 	build_path = /obj/item/device/assembly/voice
 	category = list("initial", "Misc")
-
+/*
 /datum/design/light_tube
 	name = "Light tube"
 	id = "light_tube"
@@ -393,7 +393,7 @@
 	materials = list(MAT_METAL = 60, MAT_GLASS = 100)
 	build_path = /obj/item/weapon/light/bulb
 	category = list("initial", "Construction")
-
+*/
 /datum/design/camera_assembly
 	name = "Camera assembly"
 	id = "camera_assembly"

@@ -25,19 +25,19 @@
 	icon_state = "[basestate][on]-[item_color]"
 	user.update_inv_head()	//so our mob-overlays update
 
-	if(on)	user.add_light_range(brightness_on)
-	else	user.add_light_range(-brightness_on)
+//	if(on)	user.add_light_range(brightness_on)
+//	else	user.add_light_range(-brightness_on)
 
 
 /obj/item/clothing/head/helmet/space/hardsuit/pickup(mob/user)
-	if(on)
-		user.add_light_range(brightness_on)
-		set_light(0)
+//	if(on)
+//		user.add_light_range(brightness_on)
+//		set_light(0)
 
 /obj/item/clothing/head/helmet/space/hardsuit/dropped(mob/user)
-	if(on)
-		user.add_light_range(-brightness_on)
-		set_light(brightness_on)
+//	if(on)
+//		user.add_light_range(-brightness_on)
+//		set_light(brightness_on)
 
 /obj/item/clothing/head/helmet/space/hardsuit/proc/display_visor_message(var/msg)
 	var/mob/wearer = loc
@@ -198,7 +198,7 @@
 		user << "<span class='notice'>You switch your hardsuit to travel mode.</span>"
 		name = initial(name)
 		desc = initial(desc)
-		user.add_light_range(brightness_on)
+	//	user.add_light_range(brightness_on)
 		flags |= STOPSPRESSUREDMAGE
 		flags_cover |= HEADCOVERSEYES | HEADCOVERSMOUTH
 		flags_inv |= HIDEMASK|HIDEEYES|HIDEFACE
@@ -207,7 +207,7 @@
 		user << "<span class='notice'>You switch your hardsuit to combat mode.</span>"
 		name += " (combat)"
 		desc = alt_desc
-		user.add_light_range(-brightness_on)
+		//user.add_light_range(-brightness_on)
 		flags &= ~(STOPSPRESSUREDMAGE)
 		flags_cover &= ~(HEADCOVERSEYES | HEADCOVERSMOUTH)
 		flags_inv &= ~(HIDEMASK|HIDEEYES|HIDEFACE)

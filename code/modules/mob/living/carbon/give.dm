@@ -52,6 +52,18 @@
 						src << "<span class='warning'>You can't take [I.name], so [usr.name] gave up!</span>"
 						usr << "<span class='warning'>[src.name] can't take [I.name]!</span>"
 						return
+				if(istype(I, /obj/item/device/flashlight))
+					var/obj/item/device/flashlight/F = I
+					if (F.on)
+						F.on = 0
+						F.icon_state = initial(icon_state)
+						F.set_light(0)
+				if(istype(I, /obj/item/clothing/head/hardhat))
+					var/obj/item/clothing/head/hardhat/H = I
+					if (H.on)
+						H.on = 0
+						H.icon_state = initial(icon_state)
+						H.set_light(0)
 				I.loc = src
 				I.layer = 20
 				I.add_fingerprint(src)

@@ -243,7 +243,7 @@
 	modules += new /obj/item/weapon/soap/nanotrasen(src)
 	modules += new /obj/item/weapon/storage/bag/trash/cyborg(src)
 	modules += new /obj/item/weapon/mop/cyborg(src)
-	modules += new /obj/item/device/lightreplacer/cyborg(src)
+	//modules += new /obj/item/device/lightreplacer/cyborg(src)
 	modules += new /obj/item/weapon/holosign_creator(src)
 	drying_agent = new(src)
 	drying_agent.reagents.add_reagent("drying_agent", 250)
@@ -258,10 +258,10 @@
 
 /obj/item/weapon/robot_module/janitor/respawn_consumable(mob/living/silicon/robot/R, coeff = 1)
 	..()
-	var/obj/item/device/lightreplacer/LR = locate(/obj/item/device/lightreplacer) in get_usable_modules()
-	if(LR)
-		for(var/i = 1, i <= coeff, i++)
-			LR.Charge(R)
+	//var/obj/item/device/lightreplacer/LR = locate(/obj/item/device/lightreplacer) in get_usable_modules()
+	//if(LR)
+	//	for(var/i = 1, i <= coeff, i++)
+			//LR.Charge(R)
 
 	drying_agent.reagents.add_reagent("drying_agent", 5 * coeff)
 

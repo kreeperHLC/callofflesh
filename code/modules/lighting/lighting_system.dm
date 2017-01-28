@@ -1,3 +1,4 @@
+/*
 /var/list/lighting_update_lights = list()
 /var/list/lighting_update_overlays = list()
 
@@ -29,3 +30,4 @@
 					if(A.lighting_use_dynamic)
 						var/atom/movable/lighting_overlay/O = PoolOrNew(/atom/movable/lighting_overlay, T)
 						T.lighting_overlay = O
+*/

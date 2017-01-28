@@ -64,11 +64,11 @@
 		else
 			user << fail_msg
 	else if(istype(I, /obj/item/device/lightreplacer))
-		if(!myreplacer)
-			var/obj/item/device/lightreplacer/l=I
-			l.janicart_insert(user,src)
-		else
-			user << fail_msg
+		//if(!myreplacer)
+			//var/obj/item/device/lightreplacer/l=I
+			//l.janicart_insert(user,src)
+	//	else
+	//		user << fail_msg
 	else if(istype(I, /obj/item/weapon/caution))
 		if(signs < max_signs)
 			put_in_cart(I, user)

@@ -196,7 +196,7 @@ effective or pretty fucking useless.
 		return
 	var/turf/simulated/T = get_turf(src)
 	if(on)
-		var/lumcount = T.get_lumcount()
+		var/lumcount = T//.get_lumcount()
 		if(lumcount > 3)
 			charge = max(0,charge - 25)//Quick decrease in light
 		else

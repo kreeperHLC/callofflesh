@@ -142,15 +142,15 @@
 
 //Photosynthesis/////////////////////////////////////////////////////////
 			// Lack of light hurts non-mushrooms
-			if(isturf(loc))
-				var/turf/currentTurf = loc
-				var/lightAmt = currentTurf.lighting_lumcount
-				if(myseed.plant_type == 2) // Mushroom
-					if(lightAmt < 2)
-						adjustHealth(-1 / rating)
-				else // Non-mushroom
-					if(lightAmt < 4)
-						adjustHealth(-2 / rating)
+	//		if(isturf(loc))
+	//			var/turf/currentTurf = loc
+	//			var/lightAmt = currentTurf.lighting_lumcount
+	//			if(myseed.plant_type == 2) // Mushroom
+	//				if(lightAmt < 2)
+	//					adjustHealth(-1 / rating)
+	//			else // Non-mushroom
+	//				if(lightAmt < 4)
+		//				adjustHealth(-2 / rating)
 
 //Water//////////////////////////////////////////////////////////////////
 			// Drink random amount of water

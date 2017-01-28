@@ -239,7 +239,7 @@
 				F = null
 				S.loc = get_turf(user)
 				update_helmlight(user)
-				S.update_brightness(user)
+				//S.update_brightness(user)
 				update_icon()
 				usr.update_inv_head()
 				verbs -= /obj/item/clothing/head/helmet/proc/toggle_helmlight
@@ -273,32 +273,32 @@
 		action_button_name = "Toggle Helmetlight"
 		if(F.on)
 			if(loc == user)
-				user.add_light_range(F.brightness_on)
+				user.set_light()
 			else if(isturf(loc))
-				set_light(F.brightness_on)
+				set_light()
 		else
 			if(loc == user)
-				user.add_light_range(-F.brightness_on)
+				user.kill_light()
 			else if(isturf(loc))
-				set_light(0)
+				kill_light()
 		update_icon()
 	else
 		action_button_name = null
 		if(loc == user)
-			user.add_light_range(-5)
+			user.kill_light()
 		else if(isturf(loc))
-			set_light(0)
+			kill_light()
 		return
 
 /obj/item/clothing/head/helmet/pickup(mob/user)
 	if(F)
 		if(F.on)
-			user.add_light_range(F.brightness_on)
-			set_light(0)
+			user.set_light()
+			kill_light()
 
 
 /obj/item/clothing/head/helmet/dropped(mob/user)
 	if(F)
 		if(F.on)
-			user.add_light_range(-F.brightness_on)
-			set_light(F.brightness_on)
+			user.kill_light()
+			set_light()

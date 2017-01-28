@@ -11,6 +11,6 @@
 
 /mob/proc/death(gibbed)
 	can_spawn = 0
-	spawn(60)
+	spawn(6000)
 		can_spawn = 1
 	return

@@ -211,20 +211,20 @@ var/global/list/obj/item/device/pda/PDAs = list()
  */
 /obj/item/device/pda/pickup(mob/user)
 	if(fon)
-		set_light(0)
-		user.add_light_range(f_lum)
+		set_light()
+		//user.add_light_range(f_lum)
 
 /obj/item/device/pda/dropped(mob/user)
 	if(fon)
-		user.add_light_range(-f_lum)
-		set_light(f_lum)
+		//user.add_light_range(-f_lum)
+		set_light()
 
 /obj/item/device/pda/New()
 	..()
 	if(fon)
 		if(!isturf(loc))
-			loc.add_light_range(f_lum)
-			set_light(0)
+			//loc.add_light_range(f_lum)
+			set_light()
 		else
 			set_light(f_lum)
 	PDAs += src
@@ -507,12 +507,12 @@ var/global/list/obj/item/device/pda/PDAs = list()
 			if("Light")
 				if(fon)
 					fon = 0
-					if(src in U.contents)	U.add_light_range(-f_lum)
-					else					set_light(0)
+					//if(src in U.contents)	//U.add_light_range(-f_lum)
+					//else					set_light(0)
 				else
 					fon = 1
-					if(src in U.contents)	U.add_light_range(f_lum)
-					else					set_light(f_lum)
+					//if(src in U.contents)	U.add_light_range(f_lum)
+					//else					set_light(f_lum)
 			if("Medical Scan")
 				if(scanmode == 1)
 					scanmode = 0

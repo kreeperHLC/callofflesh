@@ -15,10 +15,10 @@
 /mob/living/simple_animal/drone/verb/toggle_light()
 	set category = "Drone"
 	set name = "Toggle drone light"
-	if(light_on)
-		add_light_range(-4)
-	else
-		add_light_range(4)
+	//if(light_on)
+		//add_light_range(-4)
+	//else
+		//add_light_range(4)
 
 	light_on = !light_on
 

@@ -239,3 +239,49 @@ Proc for attack log creation, because really why not
 				break
 	if (progress)
 		qdel(progbar)
+
+/proc/do_after_INVENTORY(mob/user, delay, needhand = 1, atom/target = null, progress = 1)
+	if(!user)
+		return 0
+	var/atom/Tloc = null
+	if(target)
+		Tloc = target.loc
+
+	var/holding = user.get_active_hand()
+
+	var/holdingnull = 1 //User's hand started out empty, check for an empty hand
+	if(holding)
+		holdingnull = 0 //Users hand started holding something, check to see if it's still holding that
+
+	var/datum/progressbar/progbar
+	if (progress)
+		progbar = new(user, delay, target)
+
+	var/endtime = world.time + delay
+	var/starttime = world.time
+	. = 1
+	while (world.time < endtime)
+		sleep(1)
+		if (progress)
+			progbar.update(world.time - starttime)
+
+		if(!user || user.stat || user.weakened || user.stunned)
+			. = 0
+			break
+
+		if(Tloc && (!target || Tloc != target.loc))
+			. = 0
+			break
+
+		if(needhand)
+			//This might seem like an odd check, but you can still need a hand even when it's empty
+			//i.e the hand is used to pull some item/tool out of the construction
+			if(!holdingnull)
+				if(!holding)
+					. = 0
+					break
+			if(user.get_active_hand() != holding)
+				. = 0
+				break
+	if (progress)
+		qdel(progbar)

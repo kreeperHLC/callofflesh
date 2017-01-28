@@ -1,3 +1,4 @@
+/*
 /atom
 	var/light_power = 1 // intensity of the light
 	var/light_range = 0 // range in tiles of the light
@@ -105,3 +106,4 @@
 	update_light()
 
 
+*/

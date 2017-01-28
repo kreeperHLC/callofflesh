@@ -62,11 +62,11 @@
 /turf/simulated/floor/light/attackby(obj/item/C, mob/user, params)
 	if(..())
 		return
-	if(istype(C,/obj/item/weapon/light/bulb)) //only for light tiles
-		if(state && user.drop_item())
-			qdel(C)
-			state = 0 //fixing it by bashing it with a light bulb, fun eh?
-			update_icon()
-			user << "<span class='notice'>You replace the light bulb.</span>"
-		else
-			user << "<span class='notice'>The lightbulb seems fine, no need to replace it.</span>"
+//	if(istype(C,/obj/item/weapon/light/bulb)) //only for light tiles
+//		if(state && user.drop_item())
+//			qdel(C)
+//			state = 0 //fixing it by bashing it with a light bulb, fun eh?
+//			update_icon()
+//			user << "<span class='notice'>You replace the light bulb.</span>"
+//		else
+//			user << "<span class='notice'>The lightbulb seems fine, no need to replace it.</span>"

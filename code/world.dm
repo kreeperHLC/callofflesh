@@ -52,9 +52,17 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 
 
 	data_core = new /datum/datacore()
+	//processScheduler = new
+	//master_controller = new /datum/controller/game_controller()
 
 	spawn(-1)
 		Master.Setup()
+		//processScheduler.deferSetupFor(/datum/subsystem/ticker)
+		//processScheduler.setup()
+		//processScheduler.start()
+		//master_controller.setup()
+	//spawn(-1)
+
 
 	process_teleport_locs()			//Sets up the wizard teleport locations
 	SortAreas()						//Build the list of all existing areas and sort it alphabetically
