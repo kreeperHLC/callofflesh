@@ -20,12 +20,12 @@
 	return QDEL_HINT_LETMELIVE
 
 /turf/space/proc/update_starlight()
-	//if(config)
-		//if(config.starlight)
-			//for(var/turf/simulated/T in RANGE_TURFS(1,src)) //RANGE_TURFS is in code\__HELPERS\game.dm
-				//set_light(4,1)
-				//return
-			//set_light(0)
+	if(config)
+		if(config.starlight)
+			for(var/turf/simulated/T in RANGE_TURFS(1,src)) //RANGE_TURFS is in code\__HELPERS\game.dm
+				set_light(4,1)
+				return
+			set_light(0)
 
 /turf/space/attack_paw(mob/user)
 	return src.attack_hand(user)

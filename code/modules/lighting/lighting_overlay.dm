@@ -1,4 +1,3 @@
-/*
 /atom/movable/lighting_overlay
 	name = ""
 	mouse_opacity = 0
@@ -101,4 +100,3 @@
 		T.lighting_overlay = null
 
 	..()
-*/

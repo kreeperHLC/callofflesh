@@ -13,7 +13,7 @@
 	if( ((maxHealth - total_burn) < config.health_threshold_dead) && stat == DEAD )
 		ChangeToHusk()
 		if(on_fire)
-			apply_damage(fire_stacks*5, BURN, null, src.getarmor(null, "burn"))
+			apply_damage(fire_stacks*5, BURN)
 			shred_clothing()
 	med_hud_set_health()
 	med_hud_set_status()

@@ -1050,8 +1050,8 @@
 		lamp_recharging = 1
 		spawn(cooldown) //10 seconds by default, if the source of the deactivation does not keep stat that long.
 			lamp_recharging = 0
-	//else
-		//add_light_range(lamp_intensity)
+	else
+		add_light_range(lamp_intensity)
 
 	if(lamp_button)
 		lamp_button.icon_state = "lamp[lamp_intensity]"

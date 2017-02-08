@@ -303,17 +303,17 @@
 	bitesize = 1 + round(reagents.total_volume / 2, 1)
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/berries/glow/Destroy()
-	//if(istype(loc,/mob))
-		//loc.add_light_range(round(-potency / 5,1))
+	if(istype(loc,/mob))
+		loc.add_light_range(round(-potency / 5,1))
 	return ..()
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/berries/glow/pickup(mob/user)
-//	src.set_light(0)
-//	user.add_light_range(round(potency / 5,1))
+	src.set_light(0)
+	user.add_light_range(round(potency / 5,1))
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/berries/glow/dropped(mob/user)
-//	user.add_light_range(round(-potency / 5,1))
-//	src.set_light(round(potency / 5,1))
+	user.add_light_range(round(-potency / 5,1))
+	src.set_light(round(potency / 5,1))
 
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/cocoapod
@@ -1207,17 +1207,17 @@ obj/item/weapon/reagent_containers/food/snacks/grown/shell/eggy/add_juice()
 	qdel(src)
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/mushroom/glowshroom/Destroy()
-//	if(istype(loc,/mob))
-//		loc.add_light_range(round(-potency / 10,1))
+	if(istype(loc,/mob))
+		loc.add_light_range(round(-potency / 10,1))
 	return ..()
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/mushroom/glowshroom/pickup(mob/user)
-//	set_light(0)
-//	user.add_light_range(round(potency / 10,1))
+	set_light(0)
+	user.add_light_range(round(potency / 10,1))
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/mushroom/glowshroom/dropped(mob/user)
-	//user.add_light_range(round(-potency / 10,1))
-//	set_light(round(potency / 10,1))
+	user.add_light_range(round(-potency / 10,1))
+	set_light(round(potency / 10,1))
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/mushroom/glowshroom/glowcap
 	seed = /obj/item/seeds/glowcap

@@ -45,7 +45,7 @@ var/mob/dview/dview_mob = new
 	density = 0
 
 	anchored = 1
-	//var/simulated = 0
+	var/simulated = 0
 
 	see_in_dark = 1e6
 

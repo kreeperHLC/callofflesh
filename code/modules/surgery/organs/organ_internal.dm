@@ -168,7 +168,7 @@
 /obj/item/organ/internal/shadowtumor/process()
 	if(isturf(loc))
 		var/turf/T = loc
-		var/light_count = T//.get_lumcount()
+		var/light_count = T.get_lumcount()
 		if(light_count > LIGHT_DAM_THRESHOLD && health > 0) //Die in the light
 			health--
 		else if(light_count < LIGHT_HEAL_THRESHOLD && health < 3) //Heal in the dark

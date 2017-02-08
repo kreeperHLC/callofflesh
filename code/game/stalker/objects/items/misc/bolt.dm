@@ -51,6 +51,4 @@
 	P.loc = user.loc
 	user.put_in_hands(P)
 	user << "<span class='notice'>Вы достаете болт из кучи.</span>"
-	var/mob/living/carbon/M = user
-	M.throw_mode_on()
 	add_fingerprint(user)

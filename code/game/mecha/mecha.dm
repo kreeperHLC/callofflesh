@@ -1001,10 +1001,10 @@ var/year_integer = text2num(year) // = 2013???
 		return
 	chassis.lights = !chassis.lights
 	if(chassis.lights)
-		//chassis.add_light_range(chassis.lights_power)
+		chassis.add_light_range(chassis.lights_power)
 		button_icon_state = "mech_lights_on"
 	else
-		//chassis.add_light_range(-chassis.lights_power)
+		chassis.add_light_range(-chassis.lights_power)
 		button_icon_state = "mech_lights_off"
 	chassis.occupant_message("Toggled lights [chassis.lights?"on":"off"].")
 	chassis.log_message("Toggled lights [chassis.lights?"on":"off"].")

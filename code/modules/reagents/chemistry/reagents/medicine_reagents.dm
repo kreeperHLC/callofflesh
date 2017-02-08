@@ -116,7 +116,7 @@
 	..()
 	return
 
-/datum/reagent/medicine/cryoxadoneb
+/datum/reagent/medicine/cryoxadone
 	name = "CryoxadoneBlue"
 	id = "cryoxadoneb"
 	description = "A chemical mixture with almost magical healing powers. Its main limitation is that the patient's body temperature must be under 270K for it to metabolise correctly."

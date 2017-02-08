@@ -39,7 +39,7 @@
 
 
 /obj/item/device/lightreplacer
-/*
+
 	name = "light replacer"
 	desc = "A device to automatically replace lights. Refill with working lightbulbs."
 
@@ -84,27 +84,27 @@
 		else
 			user << "<span class='warning'>You need one sheet of glass to replace lights!</span>"
 
-//	if(istype(W, /obj/item/light/tube/large))
-	//	var/obj/item/weapon/light/L = W
-		//if(L.status == 0) // LIGHT OKAY
-	//		if(uses < max_uses)
-	//			if(!user.unEquip(W))
-	//				return
-	//			AddUses(1)
-		//		user << "<span class='notice'>You insert the [L.name] into the [src.name]. You have [uses] lights remaining.</span>"
-	//			qdel(L)
-	//			return
-	//	else
-	//		user << "<span class='warning'>You need a working light!</span>"
-	//		return
-/*
+	if(istype(W, /obj/item/weapon/light))
+		var/obj/item/weapon/light/L = W
+		if(L.status == 0) // LIGHT OKAY
+			if(uses < max_uses)
+				if(!user.unEquip(W))
+					return
+				AddUses(1)
+				user << "<span class='notice'>You insert the [L.name] into the [src.name]. You have [uses] lights remaining.</span>"
+				qdel(L)
+				return
+		else
+			user << "<span class='warning'>You need a working light!</span>"
+			return
+
 	if(istype(W, /obj/item/weapon/storage))
 		var/obj/item/weapon/storage/S = W
 		var/found_good_light = 0
 		var/replaced_something = 0
 
 		for(var/obj/item/I in S.contents)
-			if(istype(I,/obj/item/light/tube/large))
+			if(istype(I,/obj/item/weapon/light))
 				var/obj/item/weapon/light/L = I
 				if(L.status == LIGHT_OK)
 					found_good_light = 1
@@ -124,7 +124,7 @@
 			return
 
 		user << "<span class='notice'>You fill \the [src] with lights from \the [S]. You have [uses] lights remaining.</span>"
-*/
+
 /obj/item/device/lightreplacer/emag_act()
 	if(!emagged)
 		Emag()
@@ -229,7 +229,7 @@
 
 /obj/item/device/lightreplacer/cyborg/janicart_insert(mob/user, obj/structure/janitorialcart/J)
 	return
-	*/
+
 #undef LIGHT_OK
 #undef LIGHT_EMPTY
 #undef LIGHT_BROKEN

@@ -399,14 +399,14 @@
 			T1.shuttleRotate(rotation)
 
 		//lighting stuff
-		//T1.update_light()
+		T1.update_light()
 		SSair.remove_from_active(T1)
 		T1.CalculateAdjacentTurfs()
 		SSair.add_to_active(T1,1)
 
 		T0.ChangeTurf(turf_type)
 
-		//T0.update_light()
+		T0.update_light()
 		SSair.remove_from_active(T0)
 		T0.CalculateAdjacentTurfs()
 		SSair.add_to_active(T0,1)

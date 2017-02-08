@@ -104,7 +104,7 @@
 	// Check for darkness
 	var/turf/T = get_turf(loc)
 	if(T && destination)
-		if(T.lumcount<1 && destination.lumcount<1) // No one can see us in the darkness, right?
+		if(T.lighting_lumcount<1 && destination.lighting_lumcount<1) // No one can see us in the darkness, right?
 			return null
 		if(T == destination)
 			destination = null

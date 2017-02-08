@@ -28,7 +28,7 @@ obj/machinery/campfire/barrel
 		desc = "Бочка с парой сухих дровишек внутри. Можно зажечь спичками или зажигалкой."
 		on = !on
 		update_icon()
-		set_light()
+		set_light(0)
 
 /obj/machinery/campfire/update_icon()
 	icon_state = "campfire[on]"

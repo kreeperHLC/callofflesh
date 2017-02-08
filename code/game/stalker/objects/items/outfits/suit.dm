@@ -141,12 +141,12 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_SUIT_MAX_TEMP_PROTECT
 	flags_inv = HIDEJUMPSUIT
 	flags = STOPSPRESSUREDMAGE | THICKMATERIAL
-	armor = list(melee = 50, bullet = 20, laser = 90, burn = 90, bomb = 40, bio = 90, rad = 100, electro = 90)
+	armor = list(melee = 50, bullet = 20, laser = 90,burn = 90, bomb = 40, bio = 90, rad = 100, electro = 90)
 	hoodtype = /obj/item/clothing/head/winterhood/stalker/ecolog
 	burn_state = FIRE_PROOF
 
 /obj/item/clothing/head/winterhood/stalker/ecolog
-	armor = list(melee = 50, bullet = 20, laser = 90, burn = 90, bomb = 40, bio = 90, rad = 100, electro = 90)
+	armor = list(melee = 50, bullet = 20, laser = 90,burn = 90, bomb = 40, bio = 90, rad = 100, electro = 90)
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_IMMUNITY_HELM_MAX_TEMP_PROTECT
 	icon_state = "ecolog_helmet"

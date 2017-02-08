@@ -40,23 +40,18 @@
 /obj/anomaly/Crossed(atom/A)
 	..()
 	if(!incooldown && !istype(A,/obj/item/projectile) && !istype(A,/obj/item/weapon/artefact))
-		//icon_state = active_icon_state
-		//spawn(10)
-		//	icon_state = inactive_icon_state
+		icon_state = active_icon_state
+		spawn(10)
+			icon_state = inactive_icon_state
 
 		if (istype(A,/mob/living))
-			//playsound(src.loc, src.sound, 50, 1, channel = 0)
-			var/mob/living/M = A
+			playsound(src.loc, src.sound, 50, 1, channel = 0)
+			var/mob/living/carbon/M = A
 			src.trapped.Add(M)
 			if(src.trapped.len == 1 && !incooldown)
 				src.Think()
-			else
-				src.trapped.Remove(M)
 
 		else if(istype(A,/obj/item))
-			icon_state = active_icon_state
-			spawn(10)
-				icon_state = inactive_icon_state
 			src.incooldown = 1
 			spawn(src.cooldown * 10)
 				src.incooldown = 0
@@ -79,25 +74,22 @@
 
 /obj/anomaly/Uncrossed(atom/A)
 	..()
-	if (istype(A,/mob/living))
-		var/mob/living/M = A
+	if (istype(A,/mob/living/carbon))
+		var/mob/living/carbon/M = A
 		src.trapped.Remove(M)
 //	if (istype(A,/obj/item) && !istype(A,/obj/item/projectile) && !istype(A,/obj/item/weapon/artefact))
 //		var/obj/item/O = A
 //		src.trapped.Remove(O)
 
 /obj/anomaly/proc/Think()
-	icon_state = active_icon_state
-	spawn(10)
-		icon_state = inactive_icon_state
 	playsound(src.loc, src.sound, 50, 1, channel = 0)
-	for(var/atom/A in src.trapped)
-		if(istype(A, /mob/living))
-			var/mob/living/M = A
-			spawn(src.delay * 10)
+	spawn(src.delay * 10)
+		for(var/atom/A in src.trapped)
+			if(istype(A, /mob/living))
+				var/mob/living/carbon/human/M = A
 				switch(src.damage_type)
 					if(DMG_TYPE_ENERGY)
-						M.apply_damage(src.damage_amount, BURN, null,  M.getarmor(null, "electro"))
+						M.apply_damage(src.damage_amount, BURN, null, M.getarmor(null, "electro"))
 					if(DMG_TYPE_BIO)
 						M.apply_damage(src.damage_amount, BURN, null, M.getarmor(null, "bio"))
 					if(DMG_TYPE_RADIATION)
@@ -107,16 +99,14 @@
 						trapped.Remove(M)
 					if(DMG_TYPE_IGNITION)
 						A.fire_act()
-						if(istype(A, /mob/living/simple_animal/hostile))
-							M.apply_damage(40, BURN, null, 0)
-			src.set_light(src.activated_luminosity)
-			spawn(10)
-				src.kill_light()
-			src.incooldown = 1
-			spawn(src.cooldown * 10)
-				src.incooldown = 0
-				if(src.trapped.len > 0 && M.stat == 0)
-					src.Think()
+	src.set_light(src.activated_luminosity)
+	spawn(10)
+		src.set_light(src.idle_luminosity)
+	src.incooldown = 1
+	spawn(src.cooldown * 10)
+		src.incooldown = 0
+		if(src.trapped.len > 0)
+			src.Think()
 	return
 
 /obj/anomaly/electro
@@ -253,9 +243,9 @@
 						trapped.Remove(M)
 					if(DMG_TYPE_IGNITION)
 						A.fire_act()
-	//src.set_light(src.activated_luminosity)
-	//spawn(10)
-	//	src.set_light(src.idle_luminosity)
+	src.set_light(src.activated_luminosity)
+	spawn(10)
+		src.set_light(src.idle_luminosity)
 	src.incooldown = 1
 	spawn(src.cooldown * 10)
 		src.incooldown = 0

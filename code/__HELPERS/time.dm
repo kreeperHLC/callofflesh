@@ -1,4 +1,3 @@
-
 //Returns the world time in english
 /proc/worldtime2text()
 	return gameTimestamp("hh:mm")

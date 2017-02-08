@@ -88,22 +88,22 @@
 		lit = 0
 		update_icon()
 		set_light(0)
-		//user.add_light_range(-CANDLE_LUMINOSITY)
+		user.add_light_range(-CANDLE_LUMINOSITY)
 
 
 /obj/item/candle/pickup(mob/user)
 	if(lit)
 		set_light(0)
-		//user.add_light_range(CANDLE_LUMINOSITY)
+		user.add_light_range(CANDLE_LUMINOSITY)
 
 
 /obj/item/candle/dropped(mob/user)
-	//if(lit)
-		//user.add_light_range(-CANDLE_LUMINOSITY)
-		//set_light(CANDLE_LUMINOSITY)
+	if(lit)
+		user.add_light_range(-CANDLE_LUMINOSITY)
+		set_light(CANDLE_LUMINOSITY)
 
 /obj/item/candle/is_hot()
-	return	 lit * heat
+	return lit * heat
 
 
 /obj/item/candle/infinite

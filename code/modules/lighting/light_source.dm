@@ -1,5 +1,5 @@
 //So much copypasta in this file, supposedly in the name of performance. If you change anything make sure to consider other places where the code may have been copied.
-/*
+
 /datum/light_source
 	var/atom/top_atom
 	var/atom/source_atom
@@ -298,4 +298,3 @@
 #undef LUM_FALLOFF
 #undef LUM_DISTANCE
 #undef LUM_ATTENUATION
-*/

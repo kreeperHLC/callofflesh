@@ -123,37 +123,35 @@ obj/structure/grille/stalker/beton/CanPass(atom/movable/mover, turf/target, heig
 	name = "road"
 	icon = 'icons/stalker/Prishtina/asphalt.dmi'
 	icon_state = "road3"
-	layer = 2.01
+	layer = 2.1
 
 /turf/stalker/floor/tropa
 	name = "road"
 	icon = 'icons/stalker/tropa.dmi'
 	icon_state = "road3"
-	layer = 2.01
+	layer = 2.1
 
 /turf/stalker/floor/road
 	name = "road"
 	icon = 'icons/stalker/building_road.dmi'
 	icon_state = "road2"
-	layer = 2.01
+	layer = 2.1
 
 /turf/stalker/floor/road/New()
-	if(prob(80))
+	if(prob(50))
 		icon_state = "road1"
-	else if (prob(50))
-		icon_state = "road2"
 	else if(prob(50))
 		icon_state = "road3"
 	else if (prob(50))
 		icon_state = "road4"
-	else
+	else if (prob(50))
 		icon_state = "road5"
 
 /turf/stalker/floor/gryaz
 	name = "dirt"
 	icon = 'icons/stalker/zemlya.dmi'
 	icon_state = "gryaz1"
-	layer = 2.01
+	layer = 2.2
 
 var/global/list/GryazEdgeCache
 
@@ -162,10 +160,10 @@ var/global/list/GryazEdgeCache
 	if(!GryazEdgeCache || !GryazEdgeCache.len)
 		GryazEdgeCache = list()
 		GryazEdgeCache.len = 4
-		GryazEdgeCache[NORTH_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_n", layer = 2.01)
-		GryazEdgeCache[SOUTH_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_s", layer = 2.01)
-		GryazEdgeCache[EAST_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_e", layer = 2.01)
-		GryazEdgeCache[WEST_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_w", layer = 2.01)
+		GryazEdgeCache[NORTH_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_n", layer = 2.2)
+		GryazEdgeCache[SOUTH_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_s", layer = 2.2)
+		GryazEdgeCache[EAST_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_e", layer = 2.2)
+		GryazEdgeCache[WEST_EDGING] = image('icons/stalker/zemlya.dmi', "gryaz_side_w", layer = 2.2)
 
 	spawn(1)
 		var/turf/T
@@ -209,7 +207,7 @@ var/global/list/GryazEdgeCache
 	name = "rails"
 	icon = 'icons/stalker/rails.dmi'
 	icon_state = "sp"
-	layer = 2.01
+	layer = 2.3
 	anchored = 1
 	density = 0
 	opacity = 0

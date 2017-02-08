@@ -107,21 +107,19 @@
 
 //Mobs on Fire
 /mob/living/proc/IgniteMob()
-	if(fire_stacks > 0 && !on_fire && (src.getarmor(null, "burn") <= 80))
+	if(fire_stacks > 0 && !on_fire)
 		on_fire = 1
 		src.visible_message("<span class='warning'>[src] catches fire!</span>", \
 						"<span class='userdanger'>You're set on fire!</span>")
-		src.set_light()
+		src.add_light_range(3)
 		throw_alert("fire", /obj/screen/alert/fire)
 		update_fire()
-	else
-		src.apply_damage(damage = 20, BURN, null, src.getarmor(null, "burn"))
 
 /mob/living/proc/ExtinguishMob()
 	if(on_fire)
 		on_fire = 0
 		fire_stacks = 0
-		src.kill_light()
+		src.add_light_range(-3)
 		clear_alert("fire")
 		update_fire()
 

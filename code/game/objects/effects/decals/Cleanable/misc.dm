@@ -4,7 +4,7 @@
 	gender = PLURAL
 	density = 0
 	anchored = 1
-	layer = 2.01
+	layer = 2
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "shards"
 
@@ -30,7 +30,7 @@
 	gender = PLURAL
 	density = 0
 	anchored = 1
-	layer = 2.01
+	layer = 2
 	mouse_opacity = 0
 
 /obj/effect/decal/cleanable/flour
@@ -39,7 +39,7 @@
 	gender = PLURAL
 	density = 0
 	anchored = 1
-	layer = 2.01
+	layer = 2
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "flour"
 
@@ -49,7 +49,7 @@
 	gender = PLURAL
 	density = 0
 	anchored = 1
-	layer = 2.01
+	layer = 2
 	luminosity = 1
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "greenglow"
@@ -95,7 +95,7 @@
 	gender = PLURAL
 	density = 0
 	anchored = 1
-	layer = 2.01
+	layer = 2
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "vomit_1"
 	random_icon_states = list("vomit_1", "vomit_2", "vomit_3", "vomit_4")
@@ -112,7 +112,7 @@
 	desc = "It's red."
 	density = 0
 	anchored = 1
-	layer = 2.01
+	layer = 2
 	icon = 'icons/effects/tomatodecal.dmi'
 	random_icon_states = list("tomato_floor1", "tomato_floor2", "tomato_floor3")
 
@@ -121,7 +121,7 @@
 	desc = "Seems like this one won't hatch."
 	density = 0
 	anchored = 1
-	layer = 2.01
+	layer = 2
 	icon = 'icons/effects/tomatodecal.dmi'
 	random_icon_states = list("smashed_egg1", "smashed_egg2", "smashed_egg3")
 
@@ -130,7 +130,7 @@
 	desc = "It's pie cream from a cream pie."
 	density = 0
 	anchored = 1
-	layer = 2.01
+	layer = 2
 	icon = 'icons/effects/tomatodecal.dmi'
 	random_icon_states = list("smashed_pie")
 
@@ -150,7 +150,7 @@
 	gender = PLURAL
 	density = 0
 	anchored = 1
-	layer = 2.01
+	layer = 2
 
 /obj/effect/decal/cleanable/shreds/New()
 	pixel_x = rand(-5, 5)
